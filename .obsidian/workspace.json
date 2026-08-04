@@ -1,0 +1,190 @@
+{
+  "main": {
+    "id": "674842c6c3b7d49d",
+    "type": "split",
+    "children": [
+      {
+        "id": "79b099d40366f0cf",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b1a05472ae316f00",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "关系图谱"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "a9aa6f2b139e61eb",
+    "type": "split",
+    "children": [
+      {
+        "id": "c4ae3e4dc880985f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c9dd62765ab4602f",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "文件列表"
+            }
+          },
+          {
+            "id": "e122373f406bfb66",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "C:\\ST_project\\DP83848_FreeRTOS\\每日开发计划",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "搜索"
+            }
+          },
+          {
+            "id": "d063dac02b4a319b",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "书签"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "06b16d7982ec3225",
+    "type": "split",
+    "children": [
+      {
+        "id": "b8eef9bfe3a308eb",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "3d53e90fe04b72fd",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "反向链接"
+            }
+          },
+          {
+            "id": "a7af9e90ca99ff3e",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "技术文档.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "技术文档 的出链列表"
+            }
+          },
+          {
+            "id": "a17c96b543403a5b",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "标签"
+            }
+          },
+          {
+            "id": "043dc55d797aeceb",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "大纲"
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false
+    }
+  },
+  "active": "b1a05472ae316f00",
+  "lastOpenFiles": [
+    "未命名.canvas",
+    "未命名.md",
+    "CLAUDE-AND-MEMORY-说明.md",
+    "week1-detailed-daily.md",
+    "2026-06-12.md",
+    "技术文档.md",
+    "build/Debug/CMakeFiles/rules.ninja.tmp75a63",
+    "build/Debug/build.ninja.tmpd86b4",
+    "build/Debug/CMakeCache.txt.tmp77dcd",
+    "CLAUDE.md",
+    "CLAUDE.md.tmp.7988.51355d62667d",
+    "build/Debug/build.ninja.tmp9f11d",
+    "build/Debug/CMakeCache.txt.tmpd9100",
+    "build/Debug/build.ninja.tmpcaa58",
+    "README_USART_TEST.md",
+    "技术文档.md.tmp.28136.424f6d9f915c",
+    "技术文档.md.tmp.28136.439409a489b1",
+    "技术文档.md.tmp.28136.626c8e8a1988",
+    "USART_TEST_GUIDE.md",
+    "USART_TEST_CHECKLIST.md",
+    "USART_CHANGES_SUMMARY.md"
+  ]
+}

@@ -1,0 +1,129 @@
+# ============================================================
+# 预览 Diff: 把"任务一 PHY 健壮性修复"套回当前 PF11 版 ethernetif.c
+# 适用范围: 当前磁盘文件 LWIP/Target/ethernetif.c (V3 重生成版, 复位脚=PF11)
+# 说明: 此文件仅供审阅, 未修改任何源码。确认后再由 Edit 工具应用。
+# gpio.c: 无需改动 (50ms 等待已在 L127; PA8 MCO1 已在 V3 删除)
+# ============================================================
+
+diff --git a/LWIP/Target/ethernetif.c b/LWIP/Target/ethernetif.c
+--- a/LWIP/Target/ethernetif.c
++++ b/LWIP/Target/ethernetif.c
+
+# ---------- Hunk 1: 顶部诊断打印辅助函数 (无第三方依赖, Bootloader 安全) ----------
+@@ -34,7 +34,28 @@
+ /* Within 'USER CODE' section, code will be kept by default at each generation */
+ /* USER CODE BEGIN 0 */
++#include <stdio.h>
++#include <stdarg.h>
++
++/* 诊断打印: 节流 1Hz, 避免 RS485 半双工串口(每字节约 2ms)刷屏。
++   Bootloader 目标未实现 __io_putchar(weak, 无默认), 必须做 NULL 检查,
++   否则 Bootloader 跑这份共享代码时会跳 NULL 崩溃。 */
++static uint32_t eth_diag_tick = 0;
++static void eth_diag_print(const char *fmt, ...)
++{
++    extern int __io_putchar(int) __attribute__((weak));
++    if ((int (*)(int))__io_putchar == 0) return;
++    uint32_t now = HAL_GetTick();
++    if (now - eth_diag_tick < 1000U) return;
++    eth_diag_tick = now;
++    char buf[96];
++    va_list ap;
++    va_start(ap, fmt);
++    vsnprintf(buf, sizeof(buf), fmt, ap);
++    va_end(ap);
++    printf("%s", buf);
++}
+ /* USER CODE END 0 */
+
+# ---------- Hunk 2: DP83848_Init 失败重试 (不再静默 return) ----------
+@@ -218,16 +239,34 @@
+   /* Set PHY IO functions */
+   DP83848_RegisterBusIO(&DP83848, &DP83848_IOCtx);
+ 
+-  /* Initialize the DP83848 ETH PHY */
+-  if(DP83848_Init(&DP83848) != DP83848_STATUS_OK)
+-  {
+-    netif_set_link_down(netif);
+-    netif_set_down(netif);
+-    return;
+-  }
++  /* Initialize the DP83848 ETH PHY —— 失败重试, 避免复位后 PHY 未就绪而永久掉网 */
++  {
++    int32_t phy_ret = DP83848_STATUS_ERROR;
++    for (int try = 1; try <= 5; try++)
++    {
++      phy_ret = DP83848_Init(&DP83848);
++      eth_diag_print("[PHY] Init try#%d ret=%ld DevAddr=%ld\r\n",
++                     try, (long)phy_ret, (long)DP83848.DevAddr);
++      if (phy_ret == DP83848_STATUS_OK) break;
++      HAL_Delay(100);
++    }
++    if (phy_ret != DP83848_STATUS_OK)
++    {
++      /* 彻底失败: 打印错误, 但不静默 return;
++         交给 ethernet_link_check_state 在后续周期重新扫描 DevAddr 恢复 */
++      eth_diag_print("[PHY] Init FAILED after 5 tries, ret=%ld\r\n", (long)phy_ret);
++      netif_set_link_down(netif);
++      netif_set_down(netif);
++    }
++  }
+
+ # ---------- Hunk 3: 加链路等待循环 + 启动诊断打印 ----------
+@@ -229,14 +268,20 @@
+   if (hal_eth_init_status == HAL_OK)
+   {
+-  /* Get link state */
+-  ethernet_link_check_state(netif);
++    /* 等待 PHY 链路建立 (最多约 2s), 避免 Init 成功但 link 未起就退出 */
++    for (uint32_t i = 0; i < 200U; i++)
++    {
++      ethernet_link_check_state(netif);
++      if (netif_is_link_up(netif)) break;
++      HAL_Delay(10);
++    }
++    eth_diag_print("[PHY] link=%s gState=%ld\r\n",
++                   netif_is_link_up(netif) ? "UP" : "DOWN", (long)heth.gState);
+   }
+   else
+   {
+     Error_Handler();
+   }
+ #endif /* LWIP_ARP || LWIP_ETHERNET */
+ 
+ /* USER CODE BEGIN LOW_LEVEL_INIT */
+ 
+ /* USER CODE END LOW_LEVEL_INIT */
+
+# ---------- Hunk 4: 链路状态机 DevAddr 失效重初始化 + READ_ERROR 处理 ----------
+@@ -681,7 +726,18 @@
+-  PHYLinkState = DP83848_GetLinkState(&DP83848);
++  PHYLinkState = DP83848_GetLinkState(&DP83848);
++  if (PHYLinkState == DP83848_STATUS_READ_ERROR)
++  {
++    /* MDIO 读失败 (DevAddr 可能已被污染为无效值): 重新注册 IO 并 Init 一次 */
++    if (DP83848.DevAddr > 31U)
++    {
++      DP83848_RegisterBusIO(&DP83848, &DP83848_IOCtx);
++      DP83848_Init(&DP83848);
++    }
++    PHYLinkState = DP83848_GetLinkState(&DP83848);
++  }
+ 
+   if(netif_is_link_up(netif) && (PHYLinkState <= DP83848_STATUS_LINK_DOWN))
+
+ # ---------- Hunk 5: low_level_output 检查发送返回值 ----------
+@@ -291,10 +347,14 @@
+   TxConfig.Length = p->tot_len;
+   TxConfig.TxBuffer = Txbuffer;
+   TxConfig.pData = p;
+ 
+-  HAL_ETH_Transmit(&heth, &TxConfig, ETH_DMA_TRANSMIT_TIMEOUT);
++  if (HAL_ETH_Transmit(&heth, &TxConfig, ETH_DMA_TRANSMIT_TIMEOUT) != HAL_OK)
++  {
++    /* DMA 未启动或发送超时: 标记错误, 不静默丢帧 */
++    errval = ERR_IF;
++  }
+ 
+   return errval;
+ }

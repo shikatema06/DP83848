@@ -1,0 +1,5 @@
+[2026-08-04 16:10:38] ===== 7x24 monitor start: target 172.16.1.69:1030, max_hours=0.0 =====
+[2026-08-04 16:10:38] [connect] stream connected to 172.16.1.69:1030, START_STREAM sent
+[2026-08-04 16:10:38] [ctrl] uptime=7600444ms, frames_total=0, dropped=0
+[2026-08-04 16:10:46] [ctrl] uptime=7608542ms, frames_total=101, dropped=0
+[2026-08-04 16:10:54] [ctrl] uptime=7616627ms, frames_total=202, dropped=0

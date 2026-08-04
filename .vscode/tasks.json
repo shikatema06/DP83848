@@ -1,0 +1,46 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build",
+            "type": "shell",
+            "command": "cmake",
+            "args": ["--build", "${workspaceFolder}/build/Debug"],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": "$gcc"
+        },
+        {
+            "label": "Flash Both (Bootloader + App + boot_valid)",
+            "detail": "Full chip erase, then flash Bootloader.hex + App.hex + boot_valid flag via ST-LINK CLI",
+            "type": "shell",
+            "command": "${workspaceFolder}/.vscode/flash_both.cmd",
+            "group": {
+                "kind": "test",
+                "isDefault": false
+            },
+            "problemMatcher": [],
+            "dependsOn": ["Build"]
+        },
+        {
+            "label": "Flash App Only (no erase)",
+            "detail": "Flash App.hex only (Bootloader & net_config preserved). For iterative App dev.",
+            "type": "shell",
+            "command": "\"C:\\Program Files (x86)\\STMicroelectronics\\STM32 ST-LINK Utility\\ST-LINK Utility\\ST-LINK_CLI.exe\"",
+            "args": [
+                "-c", "SWD",
+                "-P", "${workspaceFolder}/build/Debug/DP83848.hex",
+                "-V",
+                "-Rst"
+            ],
+            "group": {
+                "kind": "test",
+                "isDefault": false
+            },
+            "problemMatcher": [],
+            "dependsOn": ["Build"]
+        }
+    ]
+}

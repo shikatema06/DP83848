@@ -1,0 +1,5 @@
+- [Project Overview](project-overview.md) — STM32F407+DP83848 以太网数据采集系统总体描述
+- [Hardware Config](hardware-config.md) — STM32F407IGT6 引脚配置和外设参数
+- [Build & Flash](build-and-flash.md) — 构建系统配置、命令和烧录方式
+- [Architecture](architecture.md) — 软件架构决策、Flash 分区和关键设计模式
+- [Flash Layout](flash-layout.md) — Flash 分区细节和保护区域
