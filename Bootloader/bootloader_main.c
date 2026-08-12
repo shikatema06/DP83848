@@ -1,41 +1,26 @@
 /**
  * @file    Bootloader/bootloader_main.c
- * @brief   IAP Bootloader entry point.
+ * @brief   Minimal jump-only Bootloader (Milestone 1).
  *
- *          On reset:
- *            - If boot_valid == 0xAA55AA55 at 0x0800FFFC →
- *                verify App SP, then jump to App (0x08010000).
- *            - Otherwise → init ETH + LwIP + TFTP server and wait for firmware.
+ *          Purpose: prove "Bootloader → App" jump is 100% reliable before
+ *          re-adding IAP features. No lwIP, no TFTP, no slot/meta/CRC logic.
+ *
+ *          Flow:
+ *            - Clock + GPIO + USART1 init.
+ *            - Print "BOOT" on USART1, toggle PE7 (diagnostic).
+ *            - After a short delay, jump to App at fixed address 0x08010000.
+ *            - App is responsible for __enable_irq() and its own VTOR.
  */
 
 #include "main.h"
 #include "gpio.h"
+#include "usart.h"
+#include "boot_request.h"
 #include "flash_if.h"
+#include "iap_slot.h"
 #include "lwip_boot.h"
 #include "tftp_server.h"
-
-/* ---- App entry in Flash ---- */
-#define APP_START_ADDR  0x08010000U
-
-/* ---- Fault-capture buffer in RAM (0x2001E000, below main stack) ---- */
-#define FAULT_CAPTURE_ADDR  0x2001E000U
-typedef struct {
-    volatile uint32_t cpu_fault_type;     /* +0:  3=HardFault, 4=MemManage, 5=BusFault, 6=UsageFault */
-    volatile uint32_t stacked_r0;         /* +4 */
-    volatile uint32_t stacked_r1;         /* +8 */
-    volatile uint32_t stacked_r2;         /* +12 */
-    volatile uint32_t stacked_r3;         /* +16 */
-    volatile uint32_t stacked_r12;        /* +20 */
-    volatile uint32_t stacked_lr;         /* +24: LR at fault */
-    volatile uint32_t stacked_pc;         /* +28: PC at fault */
-    volatile uint32_t stacked_xpsr;       /* +32: xPSR at fault */
-    volatile uint32_t cfsr;               /* +36: Configurable Fault Status Register (0xE000ED28) */
-    volatile uint32_t hfsr;               /* +40: HardFault Status Register (0xE000ED2C) */
-    volatile uint32_t mmfar;              /* +44: MemManage Fault Address Register */
-    volatile uint32_t bfar;               /* +48: BusFault Address Register */
-    volatile uint32_t boot_valid_value;   /* +52: boot_valid read at entry */
-    volatile uint32_t entry_lr;           /* +56: EXC_RETURN value (indicates MSP/PSP) */
-} fault_capture_t;
+#include <stdint.h>
 
 typedef void (*pFunction)(void);
 
@@ -43,94 +28,130 @@ typedef void (*pFunction)(void);
 static void SystemClock_Config(void);
 void Error_Handler(void);
 
-/* ---- Fault handlers for Bootloader ---- */
-void NMI_Handler(void);
-void HardFault_Handler(void);
-void MemManage_Handler(void);
-void BusFault_Handler(void);
-void UsageFault_Handler(void);
-
-/**
- * @brief  SysTick ISR — calls HAL tick increment.
- */
+/* ---- Time base: SysTick feeds HAL_GetTick/HAL_Delay ---- */
 void SysTick_Handler(void)
 {
     HAL_IncTick();
 }
 
 /**
- * @brief  Jump to Application at 0x08010000.
+ * @brief  Jump to Application at given address.
+ *
+ *          Clean handoff: disable interrupts, clear NVIC, stop SysTick,
+ *          set VTOR + MSP, then call App Reset_Handler. The App must
+ *          re-enable interrupts itself (both the minimal test App and the
+ *          real App main() already do __enable_irq()).
  */
-static void jump_to_app(void)
+static void jump_to_app(uint32_t app_addr)
 {
-    uint32_t app_sp, app_pc;
+    uint32_t app_sp = *(volatile uint32_t *)app_addr;       /* vector[0] = initial SP */
+    uint32_t app_pc = *(volatile uint32_t *)(app_addr + 4U);/* vector[1] = Reset_Handler */
     pFunction JumpToApp;
+    uint32_t i;
 
-    app_sp = *(volatile uint32_t *)APP_START_ADDR;
-    app_pc = *(volatile uint32_t *)(APP_START_ADDR + 4U);
+    /* STM32F407VG has 192KB SRAM (0x20000000 - 0x20030000) */
+    if (app_sp >= 0x20000000U && app_sp <= 0x20030000U) {
 
-    if (app_sp >= 0x20000000U && app_sp <= 0x20020000U) {
-        SCB->VTOR = APP_START_ADDR;
+        /* 1. Disable all interrupts */
+        __disable_irq();
+
+        /* 2. Clear all NVIC enable bits (ICER0..7, 32-bit each) */
+        for (i = 0; i < 8U; i++) {
+            NVIC->ICER[i] = 0xFFFFFFFFU;
+        }
+        /* 3. Clear all NVIC pending bits (ICPR0..7) */
+        for (i = 0; i < 8U; i++) {
+            NVIC->ICPR[i] = 0xFFFFFFFFU;
+        }
+
+        /* 4. Stop SysTick */
+        SysTick->CTRL = 0U;
+
+        /* 5. Set VTOR and sync */
+        SCB->VTOR = app_addr;
+        __DSB();
+        __ISB();
+
+        /* 6. Set MSP */
         __set_MSP(app_sp);
+
+        /* 7. Jump to App Reset_Handler */
         JumpToApp = (pFunction)app_pc;
         JumpToApp();
     }
-    /* If SP is invalid, return — caller continues IAP mode */
+    /* If SP is invalid, fall through and hang */
+    Error_Handler();
 }
 
 /**
- * @brief  Main entry point.
+ * @brief  Bootloader entry point.
  *
- *          Boot strategy:
- *            - Always enter IAP mode first.
- *            - If boot_valid == MAGIC (App exists) → start 60-second timeout.
- *              After 60s with no TFTP activity, jump to App.
- *            - If boot_valid != MAGIC → wait forever in IAP mode.
+ *          Boot strategy (Milestone 3b):
+ *            - Read boot_request at 0x0800FFF8.
+ *            - BOOT_REQUEST_UPGRADE (0x55AA55AA) → stay in IAP mode.
+ *            - otherwise → iap_slot decides the active slot; jump to it if
+ *              valid, else stay in IAP printing "NO APP".
  */
 int main(void)
 {
-    uint32_t boot_valid;
-    uint32_t iap_start_tick;
-    int       app_exists;
-
-    /* ---- Read boot_valid flag ---- */
-    boot_valid = *(volatile uint32_t *)BOOT_VALID_ADDR;
-    app_exists = (boot_valid == BOOT_VALID_MAGIC);
-
-    /* ================================================================ */
-    /*  IAP (Bootloader) mode                                           */
-    /* ================================================================ */
+    uint32_t boot_request;
+    boot_slot_id_t active;
+    uint32_t app_addr;
 
     HAL_Init();
     SystemClock_Config();
     MX_GPIO_Init();
+    FLASH_If_Init();          /* 解锁 Flash：iap_slot_init / meta_commit 需要 */
+    MX_USART1_UART_Init();
 
-    Boot_LWIP_Init();
-    IAP_tftpd_init();
+    /* RS485 方向：TX 前拉高 RE（PA11），发完拉低 */
+    HAL_GPIO_WritePin(USART1_RE_GPIO_Port, USART1_RE_Pin, GPIO_PIN_SET);
+    HAL_UART_Transmit(&huart1, (uint8_t *)"BOOT\r\n", 6, 100);
+    HAL_GPIO_WritePin(USART1_RE_GPIO_Port, USART1_RE_Pin, GPIO_PIN_RESET);
 
-    iap_start_tick = HAL_GetTick();
+    /* 诊断：Bootloader 跑到这里 → PE7 翻转 */
+    HAL_GPIO_TogglePin(GPIOE, GPIO_PIN_7);
 
-    while (1) {
-        Boot_LWIP_Process();
+    boot_request = *(volatile uint32_t *)BOOT_REQUEST_ADDR;
 
-        if (app_exists) {
-            /* If TFTP transfer started, let it finish — don't timeout */
-            if (IAP_tftpd_has_activity())
-                continue;
+    if (boot_request == BOOT_REQUEST_UPGRADE) {
+        /* IAP 模式：起 lwIP（Entry IP 172.16.1.69）+ TFTP 服务器，永久等待。
+         * TFTP 传输完成时 tftp_server 内部会写 spare 槽 + iap_slot_commit
+         * + NVIC_SystemReset()，复位后 Bootloader 跳到新固件。 */
+        HAL_UART_Transmit(&huart1, (uint8_t *)"BOOT IAP\r\n", 10, 100);
+        HAL_GPIO_WritePin(USART1_RE_GPIO_Port, USART1_RE_Pin, GPIO_PIN_RESET);
 
-            /* 60-second timeout → jump to App */
-            if (HAL_GetTick() - iap_start_tick >= 60000U) {
-                jump_to_app();
-                /* If jump_to_app returns (invalid SP), stay in IAP forever */
-                app_exists = 0;
-            }
+        Boot_LWIP_Init();
+        IAP_tftpd_init();
+
+        while (1) {
+            Boot_LWIP_Process();
         }
+    }
+
+    /* NORMAL：用 iap_slot 状态机决定跳转目标 */
+    iap_slot_init();          /* 修复状态机（dirty boot / 卡在 ERASING 等） */
+    active = iap_slot_get_active();
+
+    if (active != SLOT_ID_NONE && iap_slot_validate(active) == SLOT_IMG_VALID) {
+        app_addr = iap_slot_start_addr(active);
+        HAL_Delay(500);       /* 短暂停留让串口可见 */
+        jump_to_app(app_addr);
+    }
+
+    /* 无有效 App：停 IAP，打印 NO APP */
+    while (1) {
+        HAL_GPIO_TogglePin(GPIOE, GPIO_PIN_7);
+        HAL_GPIO_WritePin(USART1_RE_GPIO_Port, USART1_RE_Pin, GPIO_PIN_SET);
+        HAL_UART_Transmit(&huart1, (uint8_t *)"NO APP\r\n", 8, 100);
+        HAL_GPIO_WritePin(USART1_RE_GPIO_Port, USART1_RE_Pin, GPIO_PIN_RESET);
+        HAL_Delay(300);
     }
 }
 
 /**
  * @brief  System Clock Configuration — identical to Application.
- *         HSE → PLL → 168 MHz SYSCLK.
+ *         HSE 25MHz → PLL → 168 MHz SYSCLK.
  */
 static void SystemClock_Config(void)
 {
@@ -167,87 +188,5 @@ static void SystemClock_Config(void)
 void Error_Handler(void)
 {
     __disable_irq();
-    while (1) {}
+    while (1) { }
 }
-
-/* -------------------------------------------------------------------------- */
-/*  Fault handlers — capture state to FAULT_CAPTURE_ADDR for post-mortem      */
-/* -------------------------------------------------------------------------- */
-
-static void __attribute__((used)) capture_fault(uint32_t *stack_frame, uint32_t fault_type, uint32_t exc_return)
-{
-    fault_capture_t *f = (fault_capture_t *)FAULT_CAPTURE_ADDR;
-
-    f->cpu_fault_type = fault_type;
-    f->stacked_r0     = stack_frame[0];
-    f->stacked_r1     = stack_frame[1];
-    f->stacked_r2     = stack_frame[2];
-    f->stacked_r3     = stack_frame[3];
-    f->stacked_r12    = stack_frame[4];
-    f->stacked_lr     = stack_frame[5];
-    f->stacked_pc     = stack_frame[6];
-    f->stacked_xpsr   = stack_frame[7];
-    f->cfsr           = (*((volatile uint32_t *)0xE000ED28));
-    f->hfsr           = (*((volatile uint32_t *)0xE000ED2C));
-    f->mmfar          = (*((volatile uint32_t *)0xE000ED34));
-    f->bfar           = (*((volatile uint32_t *)0xE000ED38));
-    f->entry_lr       = exc_return;
-
-    __disable_irq();
-    while (1) {}
-}
-
-void NMI_Handler(void)
-{
-    __disable_irq();
-    while (1) {}
-}
-
-__attribute__((naked)) void HardFault_Handler(void)
-{
-    __asm volatile (
-        "mrs  r0, msp           \n"  /* r0 = stack frame pointer */
-        "mov  r1, #3            \n"  /* r1 = fault_type (HardFault) */
-        "mov  r2, lr            \n"  /* r2 = EXC_RETURN */
-        "b    capture_fault     \n"
-    );
-}
-
-__attribute__((naked)) void MemManage_Handler(void)
-{
-    __asm volatile (
-        "mrs  r0, msp           \n"
-        "mov  r1, #4            \n"
-        "mov  r2, lr            \n"
-        "b    capture_fault     \n"
-    );
-}
-
-__attribute__((naked)) void BusFault_Handler(void)
-{
-    __asm volatile (
-        "mrs  r0, msp           \n"
-        "mov  r1, #5            \n"
-        "mov  r2, lr            \n"
-        "b    capture_fault     \n"
-    );
-}
-
-__attribute__((naked)) void UsageFault_Handler(void)
-{
-    __asm volatile (
-        "mrs  r0, msp           \n"
-        "mov  r1, #6            \n"
-        "mov  r2, lr            \n"
-        "b    capture_fault     \n"
-    );
-}
-
-#ifdef USE_FULL_ASSERT
-void assert_failed(uint8_t *file, uint32_t line)
-{
-    (void)file;
-    (void)line;
-    while (1) {}
-}
-#endif

@@ -71,6 +71,21 @@ int main(void)
 
   /* USER CODE BEGIN 1 */
 
+  /*
+   * App 链接到 Slot A (0x08010000) 或 Slot B (0x08060000)，
+   * 必须在启动时将 VTOR 指向 App 自身的向量表。
+   * 使用 GCC 启动文件导出的 g_pfnVectors 符号，
+   * 这样编译到哪个槽，VTOR 就自动指向哪个槽。
+   */
+  extern uint32_t g_pfnVectors[];
+  SCB->VTOR = (uint32_t)g_pfnVectors;
+
+  /* Bootloader 在 jump_to_app() 里调用了 __disable_irq() 并停止 SysTick，
+   * App 启动后 primask 仍是 1。HAL_Delay / lwIP 计时全部基于 SysTick，
+   * 不重新开中断会导致 uwTick 永远是 0，整个 main() 卡死在某个 HAL 延时里。
+   * 这里在 VTOR 重定位之后第一时间把全局中断重新打开。 */
+  __enable_irq();
+
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -91,10 +106,12 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
+  HAL_GPIO_TogglePin(GPIOE, GPIO_PIN_7);   /* 诊断: App 跑到这里 → PE7 翻转 */
+  MX_USART1_UART_Init();    /* USART1 提前初始化：让 App 跳过来后第一行可见 */
+  HAL_UART_Transmit(&huart1, (uint8_t *)"BOOT OK\r\n", 9, 100);
   MX_SPI1_Init();
   MX_SPI2_Init();
   MX_SPI3_Init();
-  MX_USART1_UART_Init();
   MX_USART2_UART_Init();
   MX_USART3_UART_Init();
   MX_LWIP_Init();

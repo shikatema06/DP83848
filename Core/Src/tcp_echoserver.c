@@ -11,14 +11,17 @@
 #include "lwip/debug.h"
 #include "lwip/stats.h"
 #include "lwip/tcp.h"
+#include <stdint.h>
 #include <string.h>
 #include <stdio.h>
 #include <ctype.h>
 #include "main.h"
+#include "pbuf.h"
 #include "spi.h"
 #include "tim.h"
 #include "ads8354.h"
 #include "net_config.h"
+#include "boot_request.h"
 
 /* SPI CS 控制 (与 ads8354.h 一致, 此处冗余定义以确保 CubeMX 安全) */
 #define SPI1_CS_PORT    GPIOB
@@ -45,7 +48,8 @@
 #define CMD_START_STREAM          0x05    /* 开始发送 SPI 数据 */
 #define CMD_STOP_STREAM           0x06    /* 停止发送 SPI 数据 */
 #define CMD_READ_VERSION          0x07    /* 读版本号 */
-#define CMD_LIST_IP               0x08    /* 读 IP 列表 */
+#define CMD_HEALTH_CHECK          0x08    /* 健康监测 */
+#define CMD_LIST_IP               0x09    /* 读 IP 列表 */
 #define CMD_SELECT_IP             0x0A    /* 选择列表项并切换本机 IP */
 #define CMD_RESTORE_DEFAULT_IP    0x0B    /* 恢复列表第 0 项为当前 IP */
 #define CMD_ENTER_BOOTLOADER      0x0C    /* 进入 IAP Bootloader */
@@ -54,6 +58,11 @@
 #define FW_VERSION_MAJOR          1
 #define FW_VERSION_MINOR          0
 #define FW_VERSION_PATCH          0
+
+/* 健康监测参数 */
+#define HEALTH_RESP_LEN           26
+#define HEALTH_TEMP_EXP           0X0019
+#define HEALTH_HUMI_EXP           0X0032
 
 /* -------------------------------------------------------------------------- */
 /*  SPI 数据采集: 硬件定时器 + 帧缓冲区                                         */
@@ -77,6 +86,7 @@ static int32_t  spi_acc[SPI_CHAN_NUM];          /* 累加器 (5 次求和) */
 static uint8_t  spi_avg_cnt;                    /* 0..4 */
 static uint16_t spi_sample_idx;                 /* 0..79 (数据点序号) */
 static uint16_t spi_pkg_index;                  /* 包序号 (递增) */
+static uint8_t  health_check_index;             /* 健康监测序号 (递增) */ 
 
 /* TIM7 句柄由 CubeMX 在 tim.c 中定义并初始化 (MX_TIM7_Init)，此处通过 tim.h 引入全局 htim7 */
 
@@ -154,7 +164,8 @@ static int tcp_echoserver_parse_binary_frame(const uint8_t *data, uint16_t len)
   if (data[0] != FRAME_SOF)
     return -1;
 
-  if (data[6] != FRAME_EOF1 || data[7] != FRAME_EOF2)
+  if (!((data[6] == FRAME_EOF1 && data[7] == FRAME_EOF2) ||
+        (data[6] == 0x0D && data[7] == 0x0A)))
     return -1;
 
   /* 返回命令码 */
@@ -264,7 +275,61 @@ static struct pbuf *tcp_echoserver_handle_binary_cmd(uint8_t cmd, struct tcp_ech
       return tx_pbuf;
     }
 
-  case CMD_LIST_IP:        /* 0x08 — 返回 Flash 中的 IP 列表 */
+
+  case CMD_HEALTH_CHECK:    /* 0x08 0D 0A— 健康监测 */
+    {
+      uint8_t resp[HEALTH_RESP_LEN];
+
+      resp[0] = 0x02;
+      resp[1] = 0x01;
+      resp[2] = 0x25;
+
+      resp[3] = FW_VERSION_MAJOR;
+      resp[4] = FW_VERSION_MINOR;
+      resp[5] = FW_VERSION_PATCH;
+      resp[6] = 0x00;
+
+      resp[7] = health_check_index++;
+
+      resp[8] = (uint8_t)(HEALTH_TEMP_EXP>>8);
+      resp[9] = (uint8_t)(HEALTH_TEMP_EXP&0xFF);
+      resp[10]= (uint8_t)(HEALTH_HUMI_EXP>>8);
+      resp[11]= (uint8_t)(HEALTH_HUMI_EXP&0xFF);
+
+      uint16_t adc1 = spi_read_adc(&hspi1, SPI1_CS_PORT, SPI1_CS_PIN);
+      uint16_t adc2 = spi_read_adc(&hspi2, SPI2_CS_PORT, SPI2_CS_PIN);
+      uint16_t adc3 = spi_read_adc(&hspi3, SPI3_CS_PORT, SPI3_CS_PIN);
+
+      resp[12]= 0x00;
+      resp[13]= (uint8_t)(adc1>>8); 
+      resp[14]= (uint8_t)(adc1&0xFF);
+      resp[15]= 0x00;
+      resp[16]= (uint8_t)(adc2>>8); 
+      resp[17]= (uint8_t)(adc2&0xFF);
+      resp[18]= 0x00;
+      resp[19]= (uint8_t)(adc3>>8); 
+      resp[20]= (uint8_t)(adc3&0xFF);
+
+      resp[21]= iap_data_check(resp, 21);
+      
+      resp[22]= 0xAD;
+      resp[23]= 0xDA;
+      resp[24]= 0xDD;
+      resp[25]= 0xAA;
+    
+      tx_pbuf = pbuf_alloc(PBUF_TRANSPORT, HEALTH_RESP_LEN, PBUF_RAM);
+      if (tx_pbuf == NULL)
+        return NULL;
+      memcpy(tx_pbuf->payload, resp, HEALTH_RESP_LEN);
+      return tx_pbuf;
+
+
+
+    }
+
+
+
+  case CMD_LIST_IP:        /* 0x09 — 返回 Flash 中的 IP 列表 */
     {
       uint8_t list_buf[NET_CONFIG_LIST_RESP_LEN];
       uint16_t resp_len;
@@ -358,7 +423,7 @@ static struct pbuf *tcp_echoserver_handle_binary_cmd(uint8_t cmd, struct tcp_ech
       return tx_pbuf;
     }
 
-  case CMD_ENTER_BOOTLOADER:   /* 0x0C — 写 0 到 boot_valid 并复位进入 IAP */
+  case CMD_ENTER_BOOTLOADER:   /* 0x0C — 请求升级，复位后 Bootloader 进入 IAP/TFTP */
     {
       if (es->streaming)
       {
@@ -368,27 +433,29 @@ static struct pbuf *tcp_echoserver_handle_binary_cmd(uint8_t cmd, struct tcp_ech
         HAL_TIM_Base_Stop_IT(&htim7);
       }
 
-      /* 写 0 到 boot_valid (0x0800FFFC, 与 flash_if.h 保持一致) 使标志失效.
-       * 关中断 → 写 Flash → 开中断. 防止 Flash 编程期间被 DMA/ETH 中断打断. */
+      /* 写 BOOT_REQUEST_UPGRADE 到 BOOT_REQUEST_ADDR (sector 3 末尾).
+       * 关中断 → 写 Flash → 开中断，防止 Flash 编程期间被 DMA/ETH 中断打断。 */
       {
         __disable_irq();
         HAL_FLASH_Unlock();
-        HAL_FLASH_Program(FLASH_TYPEPROGRAM_WORD, 0x0800FFFCU, 0x00000000U);
+        HAL_FLASH_Program(FLASH_TYPEPROGRAM_WORD,
+                          BOOT_REQUEST_ADDR,
+                          BOOT_REQUEST_UPGRADE);
         HAL_FLASH_Lock();
         __enable_irq();
       }
 
       tx_pbuf = pbuf_alloc(PBUF_TRANSPORT, FRAME_LEN, PBUF_RAM);
       if (tx_pbuf != NULL) {
-        uint32_t bv = *(volatile uint32_t *)0x0800FFFCU;
+        uint32_t br = *(volatile uint32_t *)BOOT_REQUEST_ADDR;
         payload = (uint8_t *)tx_pbuf->payload;
         payload[0] = FRAME_SOF;
         payload[1] = 0x01;
         payload[2] = CMD_ENTER_BOOTLOADER;
-        payload[3] = (uint8_t)(bv);
-        payload[4] = (uint8_t)(bv >> 8);
-        payload[5] = (uint8_t)(bv >> 16);
-        payload[6] = (uint8_t)(bv >> 24);
+        payload[3] = (uint8_t)(br);
+        payload[4] = (uint8_t)(br >> 8);
+        payload[5] = (uint8_t)(br >> 16);
+        payload[6] = (uint8_t)(br >> 24);
         payload[7] = FRAME_EOF2;
       }
 

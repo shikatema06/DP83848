@@ -2,8 +2,11 @@
  * @file    Bootloader/lwip_boot.c
  * @brief   Minimal LwIP stack initialisation for the IAP Bootloader.
  *
- *          Reuses net_config.c to obtain the same IP as the Application,
- *          so the field PC does not need to change its network settings.
+ *          Always uses the *Entry IP* (NET_CONFIG_ENTRY_IDX = 172.16.1.69) as
+ *          its source address, regardless of any active-IP the user has set in
+ *          the Application via the TCP 1030 0x0A command. This way a field PC
+ *          knows where to find the Bootloader for TFTP/HTTP upgrade even when
+ *          the running App is on a different subnet.
  */
 
 #include "lwip_boot.h"
@@ -41,10 +44,13 @@ void Boot_LWIP_Init(void)
 
     net_config_init();
 
-    /* Use the same active IP as the Application */
-    if (net_config_get_active_ip(ip, mask) != 0) {
-        /* Fallback (should never happen after net_config_init) */
-        ip[0] = 172; ip[1] = 16; ip[2] = 1; ip[3] = 69;
+    /* Always use Entry IP (idx 0) while in IAP mode so the field PC has a
+     * stable, predictable address (172.16.1.69) regardless of any IP change
+     * the Application made via TCP 1030 command 0x0A.
+     */
+    if (net_config_get_entry_ip(ip, mask) != 0) {
+        /* Fallback if entry slot is corrupt (should never happen after net_config_init) */
+        ip[0]  = 172; ip[1]  = 16; ip[2]  = 1;  ip[3]  = 69;
         mask[0] = 255; mask[1] = 255; mask[2] = 255; mask[3] = 0;
     }
 

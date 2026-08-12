@@ -4,7 +4,7 @@
 **  File        : STM32F407XX_SLOT_A.ld
 **
 **  Abstract    : Linker script for STM32F407VG Application Slot A
-**                384KB FLASH at 0x08010000
+**                320KB FLASH at 0x08010000 (sector 4,5,6: 64+128+128KB)
 **                Bootloader occupies 0x08000000-0x0800FFFF (64KB)
 **
 *****************************************************************************
@@ -18,7 +18,7 @@ MEMORY
 {
 RAM (xrw)      : ORIGIN = 0x20000000, LENGTH = 128K
 CCMRAM (xrw)      : ORIGIN = 0x10000000, LENGTH = 64K
-FLASH (rx)      : ORIGIN = 0x08010000, LENGTH = 384K
+FLASH (rx)      : ORIGIN = 0x08010000, LENGTH = 320K
 }
 
 /* Highest address of the user mode stack */

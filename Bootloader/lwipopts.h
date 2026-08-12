@@ -27,6 +27,9 @@
 #define PBUF_POOL_SIZE          10
 #define PBUF_POOL_BUFSIZE       512
 
+/* ---------- Randomness (avoid newlib rand() in Bootloader) ---------- */
+#define LWIP_RAND()             ((u32_t)HAL_GetTick())
+
 /* ---------- UDP only ---------- */
 #define LWIP_UDP                1
 #define LWIP_TCP                0

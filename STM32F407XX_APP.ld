@@ -1,5 +1,11 @@
 /*
- * Linker script for STM32F407 Application (1024KB at 0x08000000, no bootloader)
+ * Linker script for STM32F407 Application
+ *
+ * App 编译到 Slot A（0x08010000, 320KB, sector 4-6）。
+ * 如需编译到 Slot B，将 FLASH ORIGIN 改为 0x08060000, LENGTH 改为 384K。
+ * 详见 IAP_Flash_Layout.md 分区图。
+ *
+ * 修正历史：原 ORIGIN=0x08000000 与 Bootloader 重叠，已修正为 Slot A 地址。
  */
 
 ENTRY(Reset_Handler)
@@ -8,7 +14,7 @@ MEMORY
 {
     RAM    (xrw) : ORIGIN = 0x20000000, LENGTH = 128K
     CCMRAM (xrw) : ORIGIN = 0x10000000, LENGTH = 64K
-    FLASH  (rx)  : ORIGIN = 0x08000000, LENGTH = 1024K
+    FLASH  (rx)  : ORIGIN = 0x08010000, LENGTH = 320K    /* Slot A: sector 4-6 (64+128+128KB) */
 }
 
 _estack = ORIGIN(RAM) + LENGTH(RAM);

@@ -29,6 +29,7 @@
 #include "lwip/ethip6.h"
 #include "ethernetif.h"
 #include "dp83848.h"
+#include "gpio.h"
 #include <string.h>
 
 /* Within 'USER CODE' section, code will be kept by default at each generation */

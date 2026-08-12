@@ -70,3 +70,15 @@ target_link_libraries(${CMAKE_PROJECT_NAME}
 
     # Add user defined libraries
 )
+
+# Per-target linker script (the global -T was removed in gcc-arm-none-eabi.cmake
+# because it was concatenating with the Bootloader's BOOT.ld and breaking BSS).
+target_link_options(${CMAKE_PROJECT_NAME} PRIVATE
+    -T${CMAKE_SOURCE_DIR}/STM32F407XX_APP.ld
+)
+
+# Bootloader target (IAP/TFTP with A/B slots)
+add_subdirectory(Bootloader)
+
+# Minimal jump-test application (Milestone 1 — proves Bootloader→App jump)
+add_subdirectory(TestApp)
