@@ -1,17 +1,29 @@
 @echo off
 REM ============================================================
-REM  Flash Both: Bootloader (with boot_valid embedded) + App
+REM  Flash Both: Bootloader (with Slot A meta + boot_slot embedded) + App
 REM  Requires: STM32 ST-LINK Utility CLI in PATH or default dir
-REM  Key fix: boot_valid is PATCHED into Bootloader.hex so
-REM  it stays correct regardless of flash erase order.
+REM  Key fix: Slot A meta and boot_slot are PATCHED into Bootloader.hex so
+REM  they stay correct regardless of flash erase order.
 REM ============================================================
 
 setlocal enabledelayedexpansion
 
 set "STLINK=C:\Program Files (x86)\STMicroelectronics\STM32 ST-LINK Utility\ST-LINK Utility\ST-LINK_CLI.exe"
 set "OBJCOPY=arm-none-eabi-objcopy"
-set "BUILD_DIR=%~dp0..\build\Debug"
+set "BUILD_DIR=%~dp0..\build\Debug\Bootloader"
+set "APP_BIN=%~dp0..\build\Debug\DP83848.bin"
 set "PATCH_SCRIPT=%~dp0patch_hex.py"
+
+echo.
+echo ============================================
+echo  Generating App BIN from ELF ...
+echo ============================================
+"%OBJCOPY%" -O binary "%~dp0..\build\Debug\DP83848.elf" "%APP_BIN%"
+if %ERRORLEVEL% NEQ 0 (
+    echo [FAIL] App objcopy failed
+    exit /b 1
+)
+echo [OK] App BIN generated
 
 echo.
 echo ============================================
@@ -48,7 +60,7 @@ echo.
 echo ============================================
 echo  STEP 2/4: Flashing Bootloader -^> 0x08000000 ...
 echo ============================================
-REM Bootloader.hex now includes boot_valid=0xAA55AA55 at 0x0800FFFC (end of sector 3)
+REM Bootloader.hex now includes Slot A meta + boot_slot at 0x0800FFD0-0x0800FFFF
 "%STLINK%" -c SWD -P "%BUILD_DIR%\DP83848_BOOT.hex" -V
 if %ERRORLEVEL% NEQ 0 (
     echo [FAIL] Bootloader flash failed
@@ -59,7 +71,8 @@ echo.
 echo ============================================
 echo  STEP 3/4: Flashing App -^> 0x08010000 ...
 echo ============================================
-"%STLINK%" -c SWD -P "%BUILD_DIR%\DP83848.hex" -V
+REM Use binary file with explicit address so gaps of 0x00 are preserved.
+"%STLINK%" -c SWD -P "%APP_BIN%" 0x08010000 -V
 if %ERRORLEVEL% NEQ 0 (
     echo [FAIL] App flash failed
     exit /b 1
@@ -79,8 +92,8 @@ echo.
 echo ============================================
 echo  SUCCESS - Device is ready
 echo  Bootloader: 0x08000000  (64KB)
-echo  App:        0x08010000  (832KB)
-echo  boot_valid: 0xAA55AA55 @ 0x0800FFFC  (embedded in Bootloader)
+echo  App:        0x08010000  (832KB) via DP83848.bin
+ echo  Slot A meta + boot_slot embedded in Bootloader sector 3
 echo ============================================
 echo.
 echo  After reset, Bootloader jumps to App.

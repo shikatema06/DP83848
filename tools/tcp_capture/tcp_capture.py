@@ -215,6 +215,67 @@ def cmd_stream(args):
     cmd_analyze(analyze_args)
 
 
+def cmd_health(args):
+    """发送健康检测命令, 接收并打印 26 字节回复."""
+    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    s.settimeout(5)
+    s.connect((args.ip, args.port))
+    # 命令帧: 02 01 08 00 00 00 0D 0A
+    s.sendall(bytes.fromhex("0201080000000D0A"))
+    print("[health] connected to {}:{}, CMD_HEALTH_CHECK sent".format(args.ip, args.port))
+
+    resp = b""
+    s.settimeout(3)
+    try:
+        while len(resp) < 26:
+            chunk = s.recv(26 - len(resp))
+            if not chunk:
+                break
+            resp += chunk
+    finally:
+        s.close()
+
+    if len(resp) < 26:
+        print("[health] ERROR: only received {} bytes, expected 26".format(len(resp)))
+        return
+
+    print("[health] received {} bytes:".format(len(resp)))
+    print("  raw: " + " ".join("{:02X}".format(b) for b in resp))
+
+    # 校验包头包尾
+    hdr_ok = resp[0:3] == bytes.fromhex("020125")
+    tail_ok = resp[22:26] == bytes.fromhex("ADDADDAA")
+    # 校验和 (前 21 字节累加和低 8 位)
+    cksum_calc = sum(resp[0:21]) & 0xFF
+    cksum_ok = (resp[21] == cksum_calc)
+
+    # 字段解析
+    version = "{}.{}.{}".format(resp[3], resp[4], resp[5])
+    index = resp[7]
+    temp = (resp[8] << 8) | resp[9]
+    humi = (resp[10] << 8) | resp[11]
+    adc1 = (resp[13] << 8) | resp[14]
+    adc2 = (resp[16] << 8) | resp[17]
+    adc3 = (resp[19] << 8) | resp[20]
+
+    print("\n[health] field parse:")
+    print("  header   [0:3]   : {}  {}".format(resp[0:3].hex(' '), "OK" if hdr_ok else "FAIL"))
+    print("  version  [3:7]   : {}  (V{})".format(resp[3:7].hex(' '), version))
+    print("  index    [7]     : {:02X}  ({})".format(resp[7], index))
+    print("  temp     [8:10]  : {}  ({} raw)".format(resp[8:10].hex(' '), temp))
+    print("  humi     [10:12] : {}  ({} raw)".format(resp[10:12].hex(' '), humi))
+    print("  sensor1  [12:15] : {}  (adc1=0x{:04X})".format(resp[12:15].hex(' '), adc1))
+    print("  sensor2  [15:18] : {}  (adc2=0x{:04X})".format(resp[15:18].hex(' '), adc2))
+    print("  sensor3  [18:21] : {}  (adc3=0x{:04X})".format(resp[18:21].hex(' '), adc3))
+    print("  checksum [21]    : {:02X}  (calc={:02X} {})".format(resp[21], cksum_calc, "OK" if cksum_ok else "FAIL"))
+    print("  tail     [22:26] : {}  {}".format(resp[22:26].hex(' '), "OK" if tail_ok else "FAIL"))
+
+    if hdr_ok and tail_ok and cksum_ok:
+        print("\n[health] RESULT: PASS")
+    else:
+        print("\n[health] RESULT: FAIL")
+
+
 def main():
     p = argparse.ArgumentParser(description="DP83848 TCP SPI 数据流验证工具集")
     sub = p.add_subparsers(dest="cmd", required=True)
@@ -239,9 +300,14 @@ def main():
     p_str.add_argument("--port", type=int, default=1030)
     p_str.add_argument("--duration", type=float, default=60.0)
 
+    p_hlt = sub.add_parser("health", help="发送健康检测命令, 接收 26 字节回复")
+    p_hlt.add_argument("--ip", default="172.16.1.69")
+    p_hlt.add_argument("--port", type=int, default=1030)
+
     args = p.parse_args()
     {"capture": cmd_capture, "extract": cmd_extract,
-     "analyze": cmd_analyze, "stream":  cmd_stream}[args.cmd](args)
+     "analyze": cmd_analyze, "stream":  cmd_stream,
+     "health":  cmd_health}[args.cmd](args)
 
 
 if __name__ == "__main__":

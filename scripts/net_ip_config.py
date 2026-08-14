@@ -28,7 +28,7 @@ FACTORY_IPS = [
     "172.16.170.1",
 ]
 
-CMD_LIST_IP = 0x08
+CMD_LIST_IP = 0x09
 CMD_SELECT_IP = 0x0A
 CMD_RESTORE_DEFAULT = 0x0B
 
@@ -38,7 +38,8 @@ def cmd_frame(cmd: int, byte3: int = 0) -> bytes:
 
 
 def parse_list_response(data: bytes) -> tuple[int, int, list[tuple[str, bool]]]:
-    if len(data) < 7 or data[0] != FRAME_SOF or data[2] != CMD_LIST_IP:
+    # 固件响应帧 cmd 字节写死为 0x08，故同时兼容 0x08/0x09
+    if len(data) < 7 or data[0] != FRAME_SOF or data[2] not in (0x08, 0x09):
         raise ValueError(f"unexpected LIST response: {data.hex()}")
     count = data[3]
     active = data[4]

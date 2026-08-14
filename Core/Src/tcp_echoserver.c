@@ -54,10 +54,16 @@
 #define CMD_RESTORE_DEFAULT_IP    0x0B    /* 恢复列表第 0 项为当前 IP */
 #define CMD_ENTER_BOOTLOADER      0x0C    /* 进入 IAP Bootloader */
 
-/* 版本号 */
+/* 版本号 — 允许不同 slot 构建用 -D 覆盖以区分 A/B/C */
+#ifndef FW_VERSION_MAJOR
 #define FW_VERSION_MAJOR          1
+#endif
+#ifndef FW_VERSION_MINOR
 #define FW_VERSION_MINOR          0
+#endif
+#ifndef FW_VERSION_PATCH
 #define FW_VERSION_PATCH          0
+#endif
 
 /* 健康监测参数 */
 #define HEALTH_RESP_LEN           26
@@ -183,6 +189,14 @@ static int tcp_echoserver_parse_binary_frame(const uint8_t *data, uint16_t len)
   * @param  es:  当前连接状态结构体
   * @retval 响应 pbuf，失败返回 NULL
   */
+static char tcp_echoserver_active_slot(void)
+{
+  uint32_t w = *(volatile uint32_t *)BOOT_SLOT_ADDR;
+  if ((w & 0xFFFF0000U) != BOOT_SLOT_MAGIC)
+    return '?';
+  return (BOOT_SLOT_DECODE(w) == 1U) ? 'B' : 'A';  /* 槽 id: 0=A, 1=B */
+}
+
 static struct pbuf *tcp_echoserver_handle_binary_cmd(uint8_t cmd, struct tcp_echoserver_struct *es,
                                                      const uint8_t *frame)
 {
@@ -265,9 +279,11 @@ static struct pbuf *tcp_echoserver_handle_binary_cmd(uint8_t cmd, struct tcp_ech
       net_config_format_active_ip(ip_str, sizeof(ip_str));
       resp_len = snprintf(resp, sizeof(resp),
         "Version %d.%d.%d, STM32F407 + DP83848 + ADS8354\r\n"
-        "Active IP: %s (idx %u)\r\n",
+        "Active IP: %s (idx %u)\r\n"
+        "Active slot: %c\r\n",
         FW_VERSION_MAJOR, FW_VERSION_MINOR, FW_VERSION_PATCH,
-        ip_str, (unsigned)net_config_get_active_index());
+        ip_str, (unsigned)net_config_get_active_index(),
+        tcp_echoserver_active_slot());
 
       tx_pbuf = pbuf_alloc(PBUF_TRANSPORT, resp_len, PBUF_RAM);
       if (tx_pbuf == NULL) return NULL;
@@ -538,8 +554,10 @@ static struct pbuf *tcp_echoserver_handle_text_cmd(const char *data, uint16_t le
   {
     resp_len = snprintf(response, sizeof(response),
       "TCP Echo Server v%d.%d.%d\r\n"
-      "STM32F407 + DP83848 + LwIP\r\n",
-      FW_VERSION_MAJOR, FW_VERSION_MINOR, FW_VERSION_PATCH);
+      "STM32F407 + DP83848 + LwIP\r\n"
+      "Active slot: %c\r\n",
+      FW_VERSION_MAJOR, FW_VERSION_MINOR, FW_VERSION_PATCH,
+      tcp_echoserver_active_slot());
   }
   else if (strcmp(cmd, "uptime") == 0)
   {

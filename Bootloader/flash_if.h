@@ -23,8 +23,7 @@
 
 #include "boot_request.h"
 
-/* 槽管理标志区（sector 3 末尾） */
-#define BOOT_SLOT_ADDR              0x0800FFFCU        /* sector3末尾：槽管理结构体（原 boot_valid 位置） */
+/* 槽管理标志区（sector 3 末尾）— BOOT_SLOT_ADDR 定义见 boot_request.h（App/Boot 共享） */
 
 /* App 区（Slot A + Slot B + Reserved） */
 #define USER_FLASH_FIRST_PAGE_ADDR  0x08010000U        /* App 区起始 */

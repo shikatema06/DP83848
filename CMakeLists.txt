@@ -82,3 +82,35 @@ add_subdirectory(Bootloader)
 
 # Minimal jump-test application (Milestone 1 — proves Bootloader→App jump)
 add_subdirectory(TestApp)
+
+# ---- Slot App builds (A/B/C firmware, distinct version numbers) ----
+# Reuses CubeMX application sources + HAL/LwIP, links to a specific slot
+# address, and overrides FW_VERSION_* so each image reports a distinct
+# version (readable via TCP 1030 command 0x07).
+function(add_slot_app NAME LINK_SCRIPT VMAJ VMIN VPATCH)
+    add_executable(${NAME})
+    target_include_directories(${NAME} PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/ADS8354)
+    target_sources(${NAME} PRIVATE
+        ${MX_Application_Src}
+        ${CMAKE_CURRENT_SOURCE_DIR}/Core/Src/net_config.c
+        ${CMAKE_CURRENT_SOURCE_DIR}/Core/Src/tcp_echoserver.c
+        ${CMAKE_CURRENT_SOURCE_DIR}/ADS8354/ads8354.c
+    )
+    target_compile_definitions(${NAME} PRIVATE
+        FW_VERSION_MAJOR=${VMAJ} FW_VERSION_MINOR=${VMIN} FW_VERSION_PATCH=${VPATCH}
+    )
+    target_link_libraries(${NAME} ${MX_LINK_LIBS})
+    target_link_options(${NAME} PRIVATE -T${LINK_SCRIPT})
+    add_custom_command(TARGET ${NAME} POST_BUILD
+        COMMAND ${CMAKE_OBJCOPY} -O binary
+            $<TARGET_FILE:${NAME}>
+            $<TARGET_FILE_DIR:${NAME}>/${NAME}.bin)
+endfunction()
+
+# app_a: Slot A (0x08010000) v1.0.0 — 当前版本
+add_slot_app(app_a ${CMAKE_SOURCE_DIR}/STM32F407XX_APP.ld    1 0 0)
+# app_b: Slot B (0x08060000) v2.0.0
+add_slot_app(app_b ${CMAKE_SOURCE_DIR}/STM32F407XX_SLOT_B.ld  2 0 0)
+# app_c: Slot B (0x08060000) v3.0.0 — 用于 TFTP 升级验证
+add_slot_app(app_c ${CMAKE_SOURCE_DIR}/STM32F407XX_SLOT_B.ld  3 0 0)
+

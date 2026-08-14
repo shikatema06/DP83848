@@ -166,11 +166,15 @@ set(MX_LINK_DIRS
 
 )
 # Project static libraries
-set(MX_LINK_LIBS 
+set(MX_LINK_LIBS
     STM32_Drivers
     ${TOOLCHAIN_LINK_LIBRARIES}
-    LwIP	
+    LwIP
 )
+# Export to parent scope so extra App targets (e.g. Slot B builds) can reuse
+# the same CubeMX-generated application sources and link libs.
+set(MX_LINK_LIBS ${MX_LINK_LIBS} PARENT_SCOPE)
+set(MX_Application_Src ${MX_Application_Src} PARENT_SCOPE)
 # Interface library for includes and symbols
 add_library(stm32cubemx INTERFACE)
 target_include_directories(stm32cubemx INTERFACE ${MX_Include_Dirs})
