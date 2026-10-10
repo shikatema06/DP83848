@@ -1,0 +1,1465 @@
+[2026-08-10 00:00:00] 
+===== HOURLY SUMMARY 2026-08-10 00:00 =====
+  frames        : 45001 (~12.50/s)
+  cksum errors  : 0
+  seq dropped   : 0
+  dups          : 0
+  reboots       : 0
+  stream disc.  : 0
+  ctrl failures : 0
+  stalls        : 0
+  --- cumulative ---
+  frames        : 4890115
+  dropped total : 0
+  reboots total : 0
+==============================
+
+[2026-08-10 00:00:31] [ctrl] uptime=391938999ms, frames_total=4890512, dropped=0
+[2026-08-10 00:01:31] [ctrl] uptime=391999078ms, frames_total=4891263, dropped=0
+[2026-08-10 00:02:31] [ctrl] uptime=392059138ms, frames_total=4892014, dropped=0
+[2026-08-10 00:03:32] [ctrl] uptime=392119237ms, frames_total=4892765, dropped=0
+[2026-08-10 00:04:32] [ctrl] uptime=392179298ms, frames_total=4893516, dropped=0
+[2026-08-10 00:05:32] [ctrl] uptime=392239379ms, frames_total=4894267, dropped=0
+[2026-08-10 00:06:32] [ctrl] uptime=392299458ms, frames_total=4895018, dropped=0
+[2026-08-10 00:07:32] [ctrl] uptime=392359538ms, frames_total=4895769, dropped=0
+[2026-08-10 00:08:32] [ctrl] uptime=392419618ms, frames_total=4896520, dropped=0
+[2026-08-10 00:09:32] [ctrl] uptime=392479698ms, frames_total=4897271, dropped=0
+[2026-08-10 00:10:32] [ctrl] uptime=392539802ms, frames_total=4898022, dropped=0
+[2026-08-10 00:11:32] [ctrl] uptime=392599858ms, frames_total=4898773, dropped=0
+[2026-08-10 00:12:32] [ctrl] uptime=392659938ms, frames_total=4899524, dropped=0
+[2026-08-10 00:13:32] [ctrl] uptime=392720018ms, frames_total=4900275, dropped=0
+[2026-08-10 00:14:32] [ctrl] uptime=392780099ms, frames_total=4901026, dropped=0
+[2026-08-10 00:15:32] [ctrl] uptime=392840178ms, frames_total=4901777, dropped=0
+[2026-08-10 00:16:33] [ctrl] uptime=392900258ms, frames_total=4902528, dropped=0
+[2026-08-10 00:17:33] [ctrl] uptime=392960338ms, frames_total=4903279, dropped=0
+[2026-08-10 00:18:33] [ctrl] uptime=393020418ms, frames_total=4904030, dropped=0
+[2026-08-10 00:19:33] [ctrl] uptime=393080498ms, frames_total=4904781, dropped=0
+[2026-08-10 00:20:33] [ctrl] uptime=393140578ms, frames_total=4905532, dropped=0
+[2026-08-10 00:21:33] [ctrl] uptime=393200658ms, frames_total=4906283, dropped=0
+[2026-08-10 00:22:33] [ctrl] uptime=393260759ms, frames_total=4907034, dropped=0
+[2026-08-10 00:23:33] [ctrl] uptime=393320818ms, frames_total=4907785, dropped=0
+[2026-08-10 00:24:33] [ctrl] uptime=393380898ms, frames_total=4908536, dropped=0
+[2026-08-10 00:25:33] [ctrl] uptime=393440978ms, frames_total=4909287, dropped=0
+[2026-08-10 00:26:33] [ctrl] uptime=393501073ms, frames_total=4910038, dropped=0
+[2026-08-10 00:27:33] [ctrl] uptime=393561138ms, frames_total=4910789, dropped=0
+[2026-08-10 00:28:33] [ctrl] uptime=393621218ms, frames_total=4911540, dropped=0
+[2026-08-10 00:29:34] [ctrl] uptime=393681298ms, frames_total=4912291, dropped=0
+[2026-08-10 00:30:34] [ctrl] uptime=393741402ms, frames_total=4913042, dropped=0
+[2026-08-10 00:31:34] [ctrl] uptime=393801474ms, frames_total=4913793, dropped=0
+[2026-08-10 00:32:34] [ctrl] uptime=393861538ms, frames_total=4914544, dropped=0
+[2026-08-10 00:33:34] [ctrl] uptime=393921618ms, frames_total=4915295, dropped=0
+[2026-08-10 00:34:34] [ctrl] uptime=393981715ms, frames_total=4916046, dropped=0
+[2026-08-10 00:35:34] [ctrl] uptime=394041794ms, frames_total=4916797, dropped=0
+[2026-08-10 00:36:34] [ctrl] uptime=394101858ms, frames_total=4917548, dropped=0
+[2026-08-10 00:37:34] [ctrl] uptime=394161938ms, frames_total=4918299, dropped=0
+[2026-08-10 00:38:34] [ctrl] uptime=394222018ms, frames_total=4919050, dropped=0
+[2026-08-10 00:39:34] [ctrl] uptime=394282107ms, frames_total=4919801, dropped=0
+[2026-08-10 00:40:34] [ctrl] uptime=394342195ms, frames_total=4920552, dropped=0
+[2026-08-10 00:41:34] [ctrl] uptime=394402268ms, frames_total=4921303, dropped=0
+[2026-08-10 00:42:35] [ctrl] uptime=394462338ms, frames_total=4922054, dropped=0
+[2026-08-10 00:43:35] [ctrl] uptime=394522418ms, frames_total=4922805, dropped=0
+[2026-08-10 00:44:35] [ctrl] uptime=394582498ms, frames_total=4923556, dropped=0
+[2026-08-10 00:45:35] [ctrl] uptime=394642578ms, frames_total=4924307, dropped=0
+[2026-08-10 00:46:35] [ctrl] uptime=394702674ms, frames_total=4925058, dropped=0
+[2026-08-10 00:47:35] [ctrl] uptime=394762750ms, frames_total=4925809, dropped=0
+[2026-08-10 00:48:35] [ctrl] uptime=394822818ms, frames_total=4926560, dropped=0
+[2026-08-10 00:49:35] [ctrl] uptime=394882912ms, frames_total=4927311, dropped=0
+[2026-08-10 00:50:35] [ctrl] uptime=394942979ms, frames_total=4928062, dropped=0
+[2026-08-10 00:51:35] [ctrl] uptime=395003058ms, frames_total=4928813, dropped=0
+[2026-08-10 00:52:35] [ctrl] uptime=395063138ms, frames_total=4929564, dropped=0
+[2026-08-10 00:53:35] [ctrl] uptime=395123218ms, frames_total=4930315, dropped=0
+[2026-08-10 00:54:36] [ctrl] uptime=395183298ms, frames_total=4931066, dropped=0
+[2026-08-10 00:55:36] [ctrl] uptime=395243378ms, frames_total=4931817, dropped=0
+[2026-08-10 00:56:36] [ctrl] uptime=395303470ms, frames_total=4932568, dropped=0
+[2026-08-10 00:57:36] [ctrl] uptime=395363538ms, frames_total=4933319, dropped=0
+[2026-08-10 00:58:36] [ctrl] uptime=395423618ms, frames_total=4934070, dropped=0
+[2026-08-10 00:59:36] [ctrl] uptime=395483698ms, frames_total=4934821, dropped=0
+[2026-08-10 01:00:00] 
+===== HOURLY SUMMARY 2026-08-10 01:00 =====
+  frames        : 45002 (~12.50/s)
+  cksum errors  : 0
+  seq dropped   : 0
+  dups          : 0
+  reboots       : 0
+  stream disc.  : 0
+  ctrl failures : 0
+  stalls        : 0
+  --- cumulative ---
+  frames        : 4935117
+  dropped total : 0
+  reboots total : 0
+==============================
+
+[2026-08-10 01:00:36] [ctrl] uptime=395543778ms, frames_total=4935572, dropped=0
+[2026-08-10 01:01:36] [ctrl] uptime=395603859ms, frames_total=4936323, dropped=0
+[2026-08-10 01:02:36] [ctrl] uptime=395663962ms, frames_total=4937074, dropped=0
+[2026-08-10 01:03:36] [ctrl] uptime=395724019ms, frames_total=4937825, dropped=0
+[2026-08-10 01:04:36] [ctrl] uptime=395784098ms, frames_total=4938576, dropped=0
+[2026-08-10 01:05:36] [ctrl] uptime=395844179ms, frames_total=4939327, dropped=0
+[2026-08-10 01:06:36] [ctrl] uptime=395904259ms, frames_total=4940078, dropped=0
+[2026-08-10 01:07:37] [ctrl] uptime=395964338ms, frames_total=4940829, dropped=0
+[2026-08-10 01:08:37] [ctrl] uptime=396024418ms, frames_total=4941580, dropped=0
+[2026-08-10 01:09:37] [ctrl] uptime=396084499ms, frames_total=4942331, dropped=0
+[2026-08-10 01:10:37] [ctrl] uptime=396144578ms, frames_total=4943082, dropped=0
+[2026-08-10 01:11:37] [ctrl] uptime=396204669ms, frames_total=4943833, dropped=0
+[2026-08-10 01:12:37] [ctrl] uptime=396264738ms, frames_total=4944584, dropped=0
+[2026-08-10 01:13:37] [ctrl] uptime=396324819ms, frames_total=4945335, dropped=0
+[2026-08-10 01:14:37] [ctrl] uptime=396384924ms, frames_total=4946086, dropped=0
+[2026-08-10 01:15:37] [ctrl] uptime=396444978ms, frames_total=4946837, dropped=0
+[2026-08-10 01:16:37] [ctrl] uptime=396505078ms, frames_total=4947588, dropped=0
+[2026-08-10 01:17:37] [ctrl] uptime=396565138ms, frames_total=4948339, dropped=0
+[2026-08-10 01:18:37] [ctrl] uptime=396625218ms, frames_total=4949090, dropped=0
+[2026-08-10 01:19:37] [ctrl] uptime=396685298ms, frames_total=4949841, dropped=0
+[2026-08-10 01:20:38] [ctrl] uptime=396745378ms, frames_total=4950592, dropped=0
+[2026-08-10 01:21:38] [ctrl] uptime=396805459ms, frames_total=4951343, dropped=0
+[2026-08-10 01:22:38] [ctrl] uptime=396865538ms, frames_total=4952094, dropped=0
+[2026-08-10 01:23:38] [ctrl] uptime=396925618ms, frames_total=4952845, dropped=0
+[2026-08-10 01:24:38] [ctrl] uptime=396985698ms, frames_total=4953596, dropped=0
+[2026-08-10 01:25:38] [ctrl] uptime=397045778ms, frames_total=4954347, dropped=0
+[2026-08-10 01:26:38] [ctrl] uptime=397105858ms, frames_total=4955098, dropped=0
+[2026-08-10 01:27:38] [ctrl] uptime=397165939ms, frames_total=4955849, dropped=0
+[2026-08-10 01:28:38] [ctrl] uptime=397226018ms, frames_total=4956600, dropped=0
+[2026-08-10 01:29:38] [ctrl] uptime=397286099ms, frames_total=4957351, dropped=0
+[2026-08-10 01:30:38] [ctrl] uptime=397346190ms, frames_total=4958102, dropped=0
+[2026-08-10 01:31:38] [ctrl] uptime=397406272ms, frames_total=4958853, dropped=0
+[2026-08-10 01:32:38] [ctrl] uptime=397466338ms, frames_total=4959604, dropped=0
+[2026-08-10 01:33:39] [ctrl] uptime=397526418ms, frames_total=4960355, dropped=0
+[2026-08-10 01:34:39] [ctrl] uptime=397586498ms, frames_total=4961106, dropped=0
+[2026-08-10 01:35:39] [ctrl] uptime=397646578ms, frames_total=4961857, dropped=0
+[2026-08-10 01:36:39] [ctrl] uptime=397706657ms, frames_total=4962608, dropped=0
+[2026-08-10 01:37:39] [ctrl] uptime=397766738ms, frames_total=4963359, dropped=0
+[2026-08-10 01:38:39] [ctrl] uptime=397826819ms, frames_total=4964110, dropped=0
+[2026-08-10 01:39:39] [ctrl] uptime=397886898ms, frames_total=4964861, dropped=0
+[2026-08-10 01:40:39] [ctrl] uptime=397946978ms, frames_total=4965612, dropped=0
+[2026-08-10 01:41:39] [ctrl] uptime=398007059ms, frames_total=4966363, dropped=0
+[2026-08-10 01:42:39] [ctrl] uptime=398067140ms, frames_total=4967114, dropped=0
+[2026-08-10 01:43:39] [ctrl] uptime=398127218ms, frames_total=4967865, dropped=0
+[2026-08-10 01:44:39] [ctrl] uptime=398187312ms, frames_total=4968616, dropped=0
+[2026-08-10 01:45:39] [ctrl] uptime=398247378ms, frames_total=4969367, dropped=0
+[2026-08-10 01:46:40] [ctrl] uptime=398307458ms, frames_total=4970118, dropped=0
+[2026-08-10 01:47:40] [ctrl] uptime=398367539ms, frames_total=4970869, dropped=0
+[2026-08-10 01:48:40] [ctrl] uptime=398427618ms, frames_total=4971620, dropped=0
+[2026-08-10 01:49:40] [ctrl] uptime=398487698ms, frames_total=4972371, dropped=0
+[2026-08-10 01:50:40] [ctrl] uptime=398547790ms, frames_total=4973122, dropped=0
+[2026-08-10 01:51:40] [ctrl] uptime=398607858ms, frames_total=4973873, dropped=0
+[2026-08-10 01:52:40] [ctrl] uptime=398667938ms, frames_total=4974624, dropped=0
+[2026-08-10 01:53:40] [ctrl] uptime=398728018ms, frames_total=4975375, dropped=0
+[2026-08-10 01:54:40] [ctrl] uptime=398788121ms, frames_total=4976126, dropped=0
+[2026-08-10 01:55:40] [ctrl] uptime=398848178ms, frames_total=4976877, dropped=0
+[2026-08-10 01:56:40] [ctrl] uptime=398908258ms, frames_total=4977628, dropped=0
+[2026-08-10 01:57:40] [ctrl] uptime=398968338ms, frames_total=4978379, dropped=0
+[2026-08-10 01:58:41] [ctrl] uptime=399028432ms, frames_total=4979130, dropped=0
+[2026-08-10 01:59:41] [ctrl] uptime=399088498ms, frames_total=4979881, dropped=0
+[2026-08-10 02:00:00] 
+===== HOURLY SUMMARY 2026-08-10 02:00 =====
+  frames        : 45001 (~12.50/s)
+  cksum errors  : 0
+  seq dropped   : 0
+  dups          : 0
+  reboots       : 0
+  stream disc.  : 0
+  ctrl failures : 0
+  stalls        : 0
+  --- cumulative ---
+  frames        : 4980118
+  dropped total : 0
+  reboots total : 0
+==============================
+
+[2026-08-10 02:00:41] [ctrl] uptime=399148578ms, frames_total=4980632, dropped=0
+[2026-08-10 02:01:41] [ctrl] uptime=399208658ms, frames_total=4981383, dropped=0
+[2026-08-10 02:02:41] [ctrl] uptime=399268738ms, frames_total=4982134, dropped=0
+[2026-08-10 02:03:41] [ctrl] uptime=399328818ms, frames_total=4982885, dropped=0
+[2026-08-10 02:04:41] [ctrl] uptime=399388898ms, frames_total=4983636, dropped=0
+[2026-08-10 02:05:41] [ctrl] uptime=399448978ms, frames_total=4984387, dropped=0
+[2026-08-10 02:06:41] [ctrl] uptime=399509079ms, frames_total=4985138, dropped=0
+[2026-08-10 02:07:41] [ctrl] uptime=399569138ms, frames_total=4985889, dropped=0
+[2026-08-10 02:08:41] [ctrl] uptime=399629218ms, frames_total=4986640, dropped=0
+[2026-08-10 02:09:41] [ctrl] uptime=399689298ms, frames_total=4987391, dropped=0
+[2026-08-10 02:10:41] [ctrl] uptime=399749394ms, frames_total=4988142, dropped=0
+[2026-08-10 02:11:42] [ctrl] uptime=399809458ms, frames_total=4988893, dropped=0
+[2026-08-10 02:12:42] [ctrl] uptime=399869539ms, frames_total=4989644, dropped=0
+[2026-08-10 02:13:42] [ctrl] uptime=399929618ms, frames_total=4990395, dropped=0
+[2026-08-10 02:14:42] [ctrl] uptime=399989719ms, frames_total=4991146, dropped=0
+[2026-08-10 02:15:42] [ctrl] uptime=400049802ms, frames_total=4991897, dropped=0
+[2026-08-10 02:16:42] [ctrl] uptime=400109858ms, frames_total=4992648, dropped=0
+[2026-08-10 02:17:42] [ctrl] uptime=400169938ms, frames_total=4993399, dropped=0
+[2026-08-10 02:18:42] [ctrl] uptime=400230018ms, frames_total=4994150, dropped=0
+[2026-08-10 02:19:42] [ctrl] uptime=400290098ms, frames_total=4994901, dropped=0
+[2026-08-10 02:20:42] [ctrl] uptime=400350178ms, frames_total=4995652, dropped=0
+[2026-08-10 02:21:42] [ctrl] uptime=400410258ms, frames_total=4996403, dropped=0
+[2026-08-10 02:22:42] [ctrl] uptime=400470348ms, frames_total=4997154, dropped=0
+[2026-08-10 02:23:42] [ctrl] uptime=400530417ms, frames_total=4997905, dropped=0
+[2026-08-10 02:24:43] [ctrl] uptime=400590498ms, frames_total=4998656, dropped=0
+[2026-08-10 02:25:43] [ctrl] uptime=400650578ms, frames_total=4999407, dropped=0
+[2026-08-10 02:26:43] [ctrl] uptime=400710679ms, frames_total=5000158, dropped=0
+[2026-08-10 02:27:43] [ctrl] uptime=400770738ms, frames_total=5000909, dropped=0
+[2026-08-10 02:28:43] [ctrl] uptime=400830833ms, frames_total=5001660, dropped=0
+[2026-08-10 02:29:43] [ctrl] uptime=400890898ms, frames_total=5002411, dropped=0
+[2026-08-10 02:30:43] [ctrl] uptime=400950978ms, frames_total=5003162, dropped=0
+[2026-08-10 02:31:43] [ctrl] uptime=401011072ms, frames_total=5003913, dropped=0
+[2026-08-10 02:32:43] [ctrl] uptime=401071139ms, frames_total=5004664, dropped=0
+[2026-08-10 02:33:43] [ctrl] uptime=401131218ms, frames_total=5005415, dropped=0
+[2026-08-10 02:34:43] [ctrl] uptime=401191298ms, frames_total=5006166, dropped=0
+[2026-08-10 02:35:43] [ctrl] uptime=401251378ms, frames_total=5006917, dropped=0
+[2026-08-10 02:36:43] [ctrl] uptime=401311479ms, frames_total=5007668, dropped=0
+[2026-08-10 02:37:44] [ctrl] uptime=401371538ms, frames_total=5008419, dropped=0
+[2026-08-10 02:38:44] [ctrl] uptime=401431619ms, frames_total=5009170, dropped=0
+[2026-08-10 02:39:44] [ctrl] uptime=401491698ms, frames_total=5009921, dropped=0
+[2026-08-10 02:40:44] [ctrl] uptime=401551778ms, frames_total=5010672, dropped=0
+[2026-08-10 02:41:44] [ctrl] uptime=401611859ms, frames_total=5011423, dropped=0
+[2026-08-10 02:42:44] [ctrl] uptime=401671952ms, frames_total=5012174, dropped=0
+[2026-08-10 02:43:44] [ctrl] uptime=401732018ms, frames_total=5012925, dropped=0
+[2026-08-10 02:44:44] [ctrl] uptime=401792118ms, frames_total=5013676, dropped=0
+[2026-08-10 02:45:44] [ctrl] uptime=401852178ms, frames_total=5014427, dropped=0
+[2026-08-10 02:46:44] [ctrl] uptime=401912258ms, frames_total=5015178, dropped=0
+[2026-08-10 02:47:44] [ctrl] uptime=401972362ms, frames_total=5015929, dropped=0
+[2026-08-10 02:48:44] [ctrl] uptime=402032419ms, frames_total=5016680, dropped=0
+[2026-08-10 02:49:44] [ctrl] uptime=402092498ms, frames_total=5017431, dropped=0
+[2026-08-10 02:50:45] [ctrl] uptime=402152579ms, frames_total=5018182, dropped=0
+[2026-08-10 02:51:45] [ctrl] uptime=402212658ms, frames_total=5018933, dropped=0
+[2026-08-10 02:52:45] [ctrl] uptime=402272738ms, frames_total=5019684, dropped=0
+[2026-08-10 02:53:45] [ctrl] uptime=402332818ms, frames_total=5020435, dropped=0
+[2026-08-10 02:54:45] [ctrl] uptime=402392917ms, frames_total=5021186, dropped=0
+[2026-08-10 02:55:45] [ctrl] uptime=402452978ms, frames_total=5021937, dropped=0
+[2026-08-10 02:56:45] [ctrl] uptime=402513058ms, frames_total=5022688, dropped=0
+[2026-08-10 02:57:45] [ctrl] uptime=402573138ms, frames_total=5023439, dropped=0
+[2026-08-10 02:58:45] [ctrl] uptime=402633218ms, frames_total=5024190, dropped=0
+[2026-08-10 02:59:45] [ctrl] uptime=402693299ms, frames_total=5024941, dropped=0
+[2026-08-10 03:00:00] 
+===== HOURLY SUMMARY 2026-08-10 03:00 =====
+  frames        : 45001 (~12.50/s)
+  cksum errors  : 0
+  seq dropped   : 0
+  dups          : 0
+  reboots       : 0
+  stream disc.  : 0
+  ctrl failures : 0
+  stalls        : 0
+  --- cumulative ---
+  frames        : 5025119
+  dropped total : 0
+  reboots total : 0
+==============================
+
+[2026-08-10 03:00:45] [ctrl] uptime=402753378ms, frames_total=5025692, dropped=0
+[2026-08-10 03:01:45] [ctrl] uptime=402813468ms, frames_total=5026443, dropped=0
+[2026-08-10 03:02:46] [ctrl] uptime=402873549ms, frames_total=5027194, dropped=0
+[2026-08-10 03:03:46] [ctrl] uptime=402933618ms, frames_total=5027945, dropped=0
+[2026-08-10 03:04:46] [ctrl] uptime=402993717ms, frames_total=5028696, dropped=0
+[2026-08-10 03:05:46] [ctrl] uptime=403053778ms, frames_total=5029447, dropped=0
+[2026-08-10 03:06:46] [ctrl] uptime=403113858ms, frames_total=5030198, dropped=0
+[2026-08-10 03:07:46] [ctrl] uptime=403173938ms, frames_total=5030949, dropped=0
+[2026-08-10 03:08:46] [ctrl] uptime=403234032ms, frames_total=5031700, dropped=0
+[2026-08-10 03:09:46] [ctrl] uptime=403294098ms, frames_total=5032451, dropped=0
+[2026-08-10 03:10:46] [ctrl] uptime=403354178ms, frames_total=5033202, dropped=0
+[2026-08-10 03:11:46] [ctrl] uptime=403414271ms, frames_total=5033953, dropped=0
+[2026-08-10 03:12:46] [ctrl] uptime=403474338ms, frames_total=5034704, dropped=0
+[2026-08-10 03:13:46] [ctrl] uptime=403534418ms, frames_total=5035455, dropped=0
+[2026-08-10 03:14:46] [ctrl] uptime=403594498ms, frames_total=5036206, dropped=0
+[2026-08-10 03:15:47] [ctrl] uptime=403654578ms, frames_total=5036957, dropped=0
+[2026-08-10 03:16:47] [ctrl] uptime=403714658ms, frames_total=5037708, dropped=0
+[2026-08-10 03:17:47] [ctrl] uptime=403774738ms, frames_total=5038459, dropped=0
+[2026-08-10 03:18:47] [ctrl] uptime=403834828ms, frames_total=5039210, dropped=0
+[2026-08-10 03:19:47] [ctrl] uptime=403894898ms, frames_total=5039961, dropped=0
+[2026-08-10 03:20:47] [ctrl] uptime=403954978ms, frames_total=5040712, dropped=0
+[2026-08-10 03:21:47] [ctrl] uptime=404015058ms, frames_total=5041463, dropped=0
+[2026-08-10 03:22:47] [ctrl] uptime=404075138ms, frames_total=5042214, dropped=0
+[2026-08-10 03:23:47] [ctrl] uptime=404135218ms, frames_total=5042965, dropped=0
+[2026-08-10 03:24:47] [ctrl] uptime=404195299ms, frames_total=5043716, dropped=0
+[2026-08-10 03:25:47] [ctrl] uptime=404255378ms, frames_total=5044467, dropped=0
+[2026-08-10 03:26:47] [ctrl] uptime=404315469ms, frames_total=5045218, dropped=0
+[2026-08-10 03:27:47] [ctrl] uptime=404375551ms, frames_total=5045969, dropped=0
+[2026-08-10 03:28:48] [ctrl] uptime=404435633ms, frames_total=5046720, dropped=0
+[2026-08-10 03:29:48] [ctrl] uptime=404495698ms, frames_total=5047471, dropped=0
+[2026-08-10 03:30:48] [ctrl] uptime=404555778ms, frames_total=5048222, dropped=0
+[2026-08-10 03:31:48] [ctrl] uptime=404615859ms, frames_total=5048973, dropped=0
+[2026-08-10 03:32:48] [ctrl] uptime=404675939ms, frames_total=5049724, dropped=0
+[2026-08-10 03:33:48] [ctrl] uptime=404736018ms, frames_total=5050475, dropped=0
+[2026-08-10 03:34:48] [ctrl] uptime=404796098ms, frames_total=5051226, dropped=0
+[2026-08-10 03:35:48] [ctrl] uptime=404856178ms, frames_total=5051977, dropped=0
+[2026-08-10 03:36:48] [ctrl] uptime=404916258ms, frames_total=5052728, dropped=0
+[2026-08-10 03:37:48] [ctrl] uptime=404976338ms, frames_total=5053479, dropped=0
+[2026-08-10 03:38:48] [ctrl] uptime=405036432ms, frames_total=5054230, dropped=0
+[2026-08-10 03:39:48] [ctrl] uptime=405096522ms, frames_total=5054981, dropped=0
+[2026-08-10 03:40:48] [ctrl] uptime=405156578ms, frames_total=5055732, dropped=0
+[2026-08-10 03:41:49] [ctrl] uptime=405216657ms, frames_total=5056483, dropped=0
+[2026-08-10 03:42:49] [ctrl] uptime=405276762ms, frames_total=5057234, dropped=0
+[2026-08-10 03:43:49] [ctrl] uptime=405336829ms, frames_total=5057985, dropped=0
+[2026-08-10 03:44:49] [ctrl] uptime=405396898ms, frames_total=5058736, dropped=0
+[2026-08-10 03:45:49] [ctrl] uptime=405456978ms, frames_total=5059487, dropped=0
+[2026-08-10 03:46:49] [ctrl] uptime=405517072ms, frames_total=5060238, dropped=0
+[2026-08-10 03:47:49] [ctrl] uptime=405577138ms, frames_total=5060989, dropped=0
+[2026-08-10 03:48:49] [ctrl] uptime=405637242ms, frames_total=5061740, dropped=0
+[2026-08-10 03:49:49] [ctrl] uptime=405697298ms, frames_total=5062491, dropped=0
+[2026-08-10 03:50:49] [ctrl] uptime=405757390ms, frames_total=5063242, dropped=0
+[2026-08-10 03:51:49] [ctrl] uptime=405817458ms, frames_total=5063993, dropped=0
+[2026-08-10 03:52:49] [ctrl] uptime=405877539ms, frames_total=5064744, dropped=0
+[2026-08-10 03:53:49] [ctrl] uptime=405937618ms, frames_total=5065495, dropped=0
+[2026-08-10 03:54:50] [ctrl] uptime=405997698ms, frames_total=5066246, dropped=0
+[2026-08-10 03:55:50] [ctrl] uptime=406057778ms, frames_total=5066997, dropped=0
+[2026-08-10 03:56:50] [ctrl] uptime=406117858ms, frames_total=5067748, dropped=0
+[2026-08-10 03:57:50] [ctrl] uptime=406177939ms, frames_total=5068499, dropped=0
+[2026-08-10 03:58:50] [ctrl] uptime=406238019ms, frames_total=5069250, dropped=0
+[2026-08-10 03:59:50] [ctrl] uptime=406298118ms, frames_total=5070001, dropped=0
+[2026-08-10 04:00:00] 
+===== HOURLY SUMMARY 2026-08-10 04:00 =====
+  frames        : 45002 (~12.50/s)
+  cksum errors  : 0
+  seq dropped   : 0
+  dups          : 0
+  reboots       : 0
+  stream disc.  : 0
+  ctrl failures : 0
+  stalls        : 0
+  --- cumulative ---
+  frames        : 5070121
+  dropped total : 0
+  reboots total : 0
+==============================
+
+[2026-08-10 04:00:50] [ctrl] uptime=406358178ms, frames_total=5070752, dropped=0
+[2026-08-10 04:01:50] [ctrl] uptime=406418258ms, frames_total=5071503, dropped=0
+[2026-08-10 04:02:50] [ctrl] uptime=406478349ms, frames_total=5072254, dropped=0
+[2026-08-10 04:03:50] [ctrl] uptime=406538418ms, frames_total=5073005, dropped=0
+[2026-08-10 04:04:50] [ctrl] uptime=406598520ms, frames_total=5073756, dropped=0
+[2026-08-10 04:05:50] [ctrl] uptime=406658578ms, frames_total=5074507, dropped=0
+[2026-08-10 04:06:50] [ctrl] uptime=406718658ms, frames_total=5075258, dropped=0
+[2026-08-10 04:07:51] [ctrl] uptime=406778738ms, frames_total=5076009, dropped=0
+[2026-08-10 04:08:51] [ctrl] uptime=406838829ms, frames_total=5076760, dropped=0
+[2026-08-10 04:09:51] [ctrl] uptime=406898898ms, frames_total=5077511, dropped=0
+[2026-08-10 04:10:51] [ctrl] uptime=406959002ms, frames_total=5078262, dropped=0
+[2026-08-10 04:11:51] [ctrl] uptime=407019058ms, frames_total=5079013, dropped=0
+[2026-08-10 04:12:51] [ctrl] uptime=407079138ms, frames_total=5079764, dropped=0
+[2026-08-10 04:13:51] [ctrl] uptime=407139218ms, frames_total=5080515, dropped=0
+[2026-08-10 04:14:51] [ctrl] uptime=407199320ms, frames_total=5081266, dropped=0
+[2026-08-10 04:15:51] [ctrl] uptime=407259395ms, frames_total=5082017, dropped=0
+[2026-08-10 04:16:51] [ctrl] uptime=407319458ms, frames_total=5082768, dropped=0
+[2026-08-10 04:17:51] [ctrl] uptime=407379551ms, frames_total=5083519, dropped=0
+[2026-08-10 04:18:51] [ctrl] uptime=407439635ms, frames_total=5084270, dropped=0
+[2026-08-10 04:19:52] [ctrl] uptime=407499699ms, frames_total=5085021, dropped=0
+[2026-08-10 04:20:52] [ctrl] uptime=407559778ms, frames_total=5085772, dropped=0
+[2026-08-10 04:21:52] [ctrl] uptime=407619858ms, frames_total=5086523, dropped=0
+[2026-08-10 04:22:52] [ctrl] uptime=407679957ms, frames_total=5087274, dropped=0
+[2026-08-10 04:23:52] [ctrl] uptime=407740018ms, frames_total=5088025, dropped=0
+[2026-08-10 04:24:52] [ctrl] uptime=407800099ms, frames_total=5088776, dropped=0
+[2026-08-10 04:25:52] [ctrl] uptime=407860178ms, frames_total=5089527, dropped=0
+[2026-08-10 04:26:52] [ctrl] uptime=407920275ms, frames_total=5090278, dropped=0
+[2026-08-10 04:27:52] [ctrl] uptime=407980350ms, frames_total=5091029, dropped=0
+[2026-08-10 04:28:52] [ctrl] uptime=408040418ms, frames_total=5091780, dropped=0
+[2026-08-10 04:29:52] [ctrl] uptime=408100518ms, frames_total=5092531, dropped=0
+[2026-08-10 04:30:52] [ctrl] uptime=408160600ms, frames_total=5093282, dropped=0
+[2026-08-10 04:31:52] [ctrl] uptime=408220658ms, frames_total=5094033, dropped=0
+[2026-08-10 04:32:53] [ctrl] uptime=408280758ms, frames_total=5094784, dropped=0
+[2026-08-10 04:33:53] [ctrl] uptime=408340830ms, frames_total=5095535, dropped=0
+[2026-08-10 04:34:53] [ctrl] uptime=408400909ms, frames_total=5096286, dropped=0
+[2026-08-10 04:35:53] [ctrl] uptime=408460978ms, frames_total=5097037, dropped=0
+[2026-08-10 04:36:53] [ctrl] uptime=408521071ms, frames_total=5097788, dropped=0
+[2026-08-10 04:37:53] [ctrl] uptime=408581139ms, frames_total=5098539, dropped=0
+[2026-08-10 04:38:53] [ctrl] uptime=408641218ms, frames_total=5099290, dropped=0
+[2026-08-10 04:39:53] [ctrl] uptime=408701299ms, frames_total=5100041, dropped=0
+[2026-08-10 04:40:53] [ctrl] uptime=408761378ms, frames_total=5100792, dropped=0
+[2026-08-10 04:41:53] [ctrl] uptime=408821459ms, frames_total=5101543, dropped=0
+[2026-08-10 04:42:53] [ctrl] uptime=408881538ms, frames_total=5102294, dropped=0
+[2026-08-10 04:43:53] [ctrl] uptime=408941617ms, frames_total=5103045, dropped=0
+[2026-08-10 04:44:53] [ctrl] uptime=409001698ms, frames_total=5103796, dropped=0
+[2026-08-10 04:45:54] [ctrl] uptime=409061778ms, frames_total=5104547, dropped=0
+[2026-08-10 04:46:54] [ctrl] uptime=409121858ms, frames_total=5105298, dropped=0
+[2026-08-10 04:47:54] [ctrl] uptime=409181938ms, frames_total=5106049, dropped=0
+[2026-08-10 04:48:54] [ctrl] uptime=409242018ms, frames_total=5106800, dropped=0
+[2026-08-10 04:49:54] [ctrl] uptime=409302097ms, frames_total=5107551, dropped=0
+[2026-08-10 04:50:54] [ctrl] uptime=409362178ms, frames_total=5108302, dropped=0
+[2026-08-10 04:51:54] [ctrl] uptime=409422258ms, frames_total=5109053, dropped=0
+[2026-08-10 04:52:54] [ctrl] uptime=409482362ms, frames_total=5109804, dropped=0
+[2026-08-10 04:53:54] [ctrl] uptime=409542418ms, frames_total=5110555, dropped=0
+[2026-08-10 04:54:54] [ctrl] uptime=409602512ms, frames_total=5111306, dropped=0
+[2026-08-10 04:55:54] [ctrl] uptime=409662593ms, frames_total=5112057, dropped=0
+[2026-08-10 04:56:54] [ctrl] uptime=409722659ms, frames_total=5112808, dropped=0
+[2026-08-10 04:57:54] [ctrl] uptime=409782739ms, frames_total=5113559, dropped=0
+[2026-08-10 04:58:55] [ctrl] uptime=409842831ms, frames_total=5114310, dropped=0
+[2026-08-10 04:59:55] [ctrl] uptime=409902898ms, frames_total=5115061, dropped=0
+[2026-08-10 05:00:00] 
+===== HOURLY SUMMARY 2026-08-10 05:00 =====
+  frames        : 45001 (~12.50/s)
+  cksum errors  : 0
+  seq dropped   : 0
+  dups          : 0
+  reboots       : 0
+  stream disc.  : 0
+  ctrl failures : 0
+  stalls        : 0
+  --- cumulative ---
+  frames        : 5115122
+  dropped total : 0
+  reboots total : 0
+==============================
+
+[2026-08-10 05:00:55] [ctrl] uptime=409962978ms, frames_total=5115812, dropped=0
+[2026-08-10 05:01:55] [ctrl] uptime=410023074ms, frames_total=5116563, dropped=0
+[2026-08-10 05:02:55] [ctrl] uptime=410083138ms, frames_total=5117314, dropped=0
+[2026-08-10 05:03:55] [ctrl] uptime=410143218ms, frames_total=5118065, dropped=0
+[2026-08-10 05:04:55] [ctrl] uptime=410203298ms, frames_total=5118816, dropped=0
+[2026-08-10 05:05:55] [ctrl] uptime=410263393ms, frames_total=5119567, dropped=0
+[2026-08-10 05:06:55] [ctrl] uptime=410323480ms, frames_total=5120318, dropped=0
+[2026-08-10 05:07:55] [ctrl] uptime=410383538ms, frames_total=5121069, dropped=0
+[2026-08-10 05:08:55] [ctrl] uptime=410443618ms, frames_total=5121820, dropped=0
+[2026-08-10 05:09:55] [ctrl] uptime=410503698ms, frames_total=5122571, dropped=0
+[2026-08-10 05:10:56] [ctrl] uptime=410563794ms, frames_total=5123322, dropped=0
+[2026-08-10 05:11:56] [ctrl] uptime=410623857ms, frames_total=5124073, dropped=0
+[2026-08-10 05:12:56] [ctrl] uptime=410683938ms, frames_total=5124824, dropped=0
+[2026-08-10 05:13:56] [ctrl] uptime=410744041ms, frames_total=5125575, dropped=0
+[2026-08-10 05:14:56] [ctrl] uptime=410804120ms, frames_total=5126326, dropped=0
+[2026-08-10 05:15:56] [ctrl] uptime=410864178ms, frames_total=5127077, dropped=0
+[2026-08-10 05:16:56] [ctrl] uptime=410924258ms, frames_total=5127828, dropped=0
+[2026-08-10 05:17:56] [ctrl] uptime=410984338ms, frames_total=5128579, dropped=0
+[2026-08-10 05:18:56] [ctrl] uptime=411044441ms, frames_total=5129330, dropped=0
+[2026-08-10 05:19:56] [ctrl] uptime=411104498ms, frames_total=5130081, dropped=0
+[2026-08-10 05:20:56] [ctrl] uptime=411164578ms, frames_total=5130832, dropped=0
+[2026-08-10 05:21:56] [ctrl] uptime=411224659ms, frames_total=5131583, dropped=0
+[2026-08-10 05:22:56] [ctrl] uptime=411284738ms, frames_total=5132334, dropped=0
+[2026-08-10 05:23:57] [ctrl] uptime=411344818ms, frames_total=5133085, dropped=0
+[2026-08-10 05:24:57] [ctrl] uptime=411404898ms, frames_total=5133836, dropped=0
+[2026-08-10 05:25:57] [ctrl] uptime=411464978ms, frames_total=5134587, dropped=0
+[2026-08-10 05:26:57] [ctrl] uptime=411525073ms, frames_total=5135338, dropped=0
+[2026-08-10 05:27:57] [ctrl] uptime=411585139ms, frames_total=5136089, dropped=0
+[2026-08-10 05:28:57] [ctrl] uptime=411645218ms, frames_total=5136840, dropped=0
+[2026-08-10 05:29:57] [ctrl] uptime=411705321ms, frames_total=5137591, dropped=0
+[2026-08-10 05:30:57] [ctrl] uptime=411765378ms, frames_total=5138342, dropped=0
+[2026-08-10 05:31:57] [ctrl] uptime=411825458ms, frames_total=5139093, dropped=0
+[2026-08-10 05:32:57] [ctrl] uptime=411885538ms, frames_total=5139844, dropped=0
+[2026-08-10 05:33:57] [ctrl] uptime=411945636ms, frames_total=5140595, dropped=0
+[2026-08-10 05:34:57] [ctrl] uptime=412005698ms, frames_total=5141346, dropped=0
+[2026-08-10 05:35:57] [ctrl] uptime=412065778ms, frames_total=5142097, dropped=0
+[2026-08-10 05:36:58] [ctrl] uptime=412125870ms, frames_total=5142848, dropped=0
+[2026-08-10 05:37:58] [ctrl] uptime=412185956ms, frames_total=5143599, dropped=0
+[2026-08-10 05:38:58] [ctrl] uptime=412246019ms, frames_total=5144350, dropped=0
+[2026-08-10 05:39:58] [ctrl] uptime=412306108ms, frames_total=5145101, dropped=0
+[2026-08-10 05:40:58] [ctrl] uptime=412366199ms, frames_total=5145852, dropped=0
+[2026-08-10 05:41:58] [ctrl] uptime=412426273ms, frames_total=5146603, dropped=0
+[2026-08-10 05:42:58] [ctrl] uptime=412486337ms, frames_total=5147354, dropped=0
+[2026-08-10 05:43:58] [ctrl] uptime=412546419ms, frames_total=5148105, dropped=0
+[2026-08-10 05:44:58] [ctrl] uptime=412606498ms, frames_total=5148856, dropped=0
+[2026-08-10 05:45:58] [ctrl] uptime=412666591ms, frames_total=5149607, dropped=0
+[2026-08-10 05:46:58] [ctrl] uptime=412726658ms, frames_total=5150358, dropped=0
+[2026-08-10 05:47:58] [ctrl] uptime=412786739ms, frames_total=5151109, dropped=0
+[2026-08-10 05:48:58] [ctrl] uptime=412846829ms, frames_total=5151860, dropped=0
+[2026-08-10 05:49:59] [ctrl] uptime=412906908ms, frames_total=5152611, dropped=0
+[2026-08-10 05:50:59] [ctrl] uptime=412966978ms, frames_total=5153362, dropped=0
+[2026-08-10 05:51:59] [ctrl] uptime=413027059ms, frames_total=5154113, dropped=0
+[2026-08-10 05:52:59] [ctrl] uptime=413087139ms, frames_total=5154864, dropped=0
+[2026-08-10 05:53:59] [ctrl] uptime=413147236ms, frames_total=5155615, dropped=0
+[2026-08-10 05:54:59] [ctrl] uptime=413207321ms, frames_total=5156366, dropped=0
+[2026-08-10 05:55:59] [ctrl] uptime=413267378ms, frames_total=5157117, dropped=0
+[2026-08-10 05:56:59] [ctrl] uptime=413327458ms, frames_total=5157868, dropped=0
+[2026-08-10 05:57:59] [ctrl] uptime=413387537ms, frames_total=5158619, dropped=0
+[2026-08-10 05:58:59] [ctrl] uptime=413447618ms, frames_total=5159370, dropped=0
+[2026-08-10 05:59:59] [ctrl] uptime=413507698ms, frames_total=5160121, dropped=0
+[2026-08-10 06:00:00] 
+===== HOURLY SUMMARY 2026-08-10 06:00 =====
+  frames        : 45002 (~12.50/s)
+  cksum errors  : 0
+  seq dropped   : 0
+  dups          : 0
+  reboots       : 0
+  stream disc.  : 0
+  ctrl failures : 0
+  stalls        : 0
+  --- cumulative ---
+  frames        : 5160124
+  dropped total : 0
+  reboots total : 0
+==============================
+
+[2026-08-10 06:00:59] [ctrl] uptime=413567778ms, frames_total=5160872, dropped=0
+[2026-08-10 06:01:59] [ctrl] uptime=413627874ms, frames_total=5161623, dropped=0
+[2026-08-10 06:03:00] [ctrl] uptime=413687939ms, frames_total=5162374, dropped=0
+[2026-08-10 06:04:00] [ctrl] uptime=413748033ms, frames_total=5163125, dropped=0
+[2026-08-10 06:05:00] [ctrl] uptime=413808098ms, frames_total=5163876, dropped=0
+[2026-08-10 06:06:00] [ctrl] uptime=413868178ms, frames_total=5164627, dropped=0
+[2026-08-10 06:07:00] [ctrl] uptime=413928257ms, frames_total=5165378, dropped=0
+[2026-08-10 06:08:00] [ctrl] uptime=413988338ms, frames_total=5166129, dropped=0
+[2026-08-10 06:09:00] [ctrl] uptime=414048418ms, frames_total=5166880, dropped=0
+[2026-08-10 06:10:00] [ctrl] uptime=414108514ms, frames_total=5167631, dropped=0
+[2026-08-10 06:11:00] [ctrl] uptime=414168578ms, frames_total=5168382, dropped=0
+[2026-08-10 06:12:00] [ctrl] uptime=414228659ms, frames_total=5169133, dropped=0
+[2026-08-10 06:13:00] [ctrl] uptime=414288738ms, frames_total=5169884, dropped=0
+[2026-08-10 06:14:00] [ctrl] uptime=414348837ms, frames_total=5170635, dropped=0
+[2026-08-10 06:15:00] [ctrl] uptime=414408898ms, frames_total=5171386, dropped=0
+[2026-08-10 06:16:01] [ctrl] uptime=414468978ms, frames_total=5172137, dropped=0
+[2026-08-10 06:17:01] [ctrl] uptime=414529058ms, frames_total=5172888, dropped=0
+[2026-08-10 06:18:01] [ctrl] uptime=414589138ms, frames_total=5173639, dropped=0
+[2026-08-10 06:19:01] [ctrl] uptime=414649229ms, frames_total=5174390, dropped=0
+[2026-08-10 06:20:01] [ctrl] uptime=414709298ms, frames_total=5175141, dropped=0
+[2026-08-10 06:21:01] [ctrl] uptime=414769378ms, frames_total=5175892, dropped=0
+[2026-08-10 06:22:01] [ctrl] uptime=414829458ms, frames_total=5176643, dropped=0
+[2026-08-10 06:23:01] [ctrl] uptime=414889554ms, frames_total=5177394, dropped=0
+[2026-08-10 06:24:01] [ctrl] uptime=414949618ms, frames_total=5178145, dropped=0
+[2026-08-10 06:25:01] [ctrl] uptime=415009698ms, frames_total=5178896, dropped=0
+[2026-08-10 06:26:01] [ctrl] uptime=415069779ms, frames_total=5179647, dropped=0
+[2026-08-10 06:27:01] [ctrl] uptime=415129879ms, frames_total=5180398, dropped=0
+[2026-08-10 06:28:02] [ctrl] uptime=415189953ms, frames_total=5181149, dropped=0
+[2026-08-10 06:29:02] [ctrl] uptime=415250018ms, frames_total=5181900, dropped=0
+[2026-08-10 06:30:02] [ctrl] uptime=415310113ms, frames_total=5182651, dropped=0
+[2026-08-10 06:31:02] [ctrl] uptime=415370197ms, frames_total=5183402, dropped=0
+[2026-08-10 06:32:02] [ctrl] uptime=415430259ms, frames_total=5184153, dropped=0
+[2026-08-10 06:33:02] [ctrl] uptime=415490337ms, frames_total=5184904, dropped=0
+[2026-08-10 06:34:02] [ctrl] uptime=415550434ms, frames_total=5185655, dropped=0
+[2026-08-10 06:35:02] [ctrl] uptime=415610498ms, frames_total=5186406, dropped=0
+[2026-08-10 06:36:02] [ctrl] uptime=415670578ms, frames_total=5187157, dropped=0
+[2026-08-10 06:37:02] [ctrl] uptime=415730657ms, frames_total=5187908, dropped=0
+[2026-08-10 06:38:02] [ctrl] uptime=415790738ms, frames_total=5188659, dropped=0
+[2026-08-10 06:39:02] [ctrl] uptime=415850833ms, frames_total=5189410, dropped=0
+[2026-08-10 06:40:02] [ctrl] uptime=415910898ms, frames_total=5190161, dropped=0
+[2026-08-10 06:41:03] [ctrl] uptime=415970978ms, frames_total=5190912, dropped=0
+[2026-08-10 06:42:03] [ctrl] uptime=416031058ms, frames_total=5191663, dropped=0
+[2026-08-10 06:43:03] [ctrl] uptime=416091155ms, frames_total=5192414, dropped=0
+[2026-08-10 06:44:03] [ctrl] uptime=416151218ms, frames_total=5193165, dropped=0
+[2026-08-10 06:45:03] [ctrl] uptime=416211298ms, frames_total=5193916, dropped=0
+[2026-08-10 06:46:03] [ctrl] uptime=416271378ms, frames_total=5194667, dropped=0
+[2026-08-10 06:47:03] [ctrl] uptime=416331458ms, frames_total=5195418, dropped=0
+[2026-08-10 06:48:03] [ctrl] uptime=416391538ms, frames_total=5196169, dropped=0
+[2026-08-10 06:49:03] [ctrl] uptime=416451618ms, frames_total=5196920, dropped=0
+[2026-08-10 06:50:03] [ctrl] uptime=416511723ms, frames_total=5197671, dropped=0
+[2026-08-10 06:51:03] [ctrl] uptime=416571794ms, frames_total=5198422, dropped=0
+[2026-08-10 06:52:03] [ctrl] uptime=416631858ms, frames_total=5199173, dropped=0
+[2026-08-10 06:53:03] [ctrl] uptime=416691937ms, frames_total=5199924, dropped=0
+[2026-08-10 06:54:04] [ctrl] uptime=416752018ms, frames_total=5200675, dropped=0
+[2026-08-10 06:55:04] [ctrl] uptime=416812098ms, frames_total=5201426, dropped=0
+[2026-08-10 06:56:04] [ctrl] uptime=416872178ms, frames_total=5202177, dropped=0
+[2026-08-10 06:57:04] [ctrl] uptime=416932258ms, frames_total=5202928, dropped=0
+[2026-08-10 06:58:04] [ctrl] uptime=416992338ms, frames_total=5203679, dropped=0
+[2026-08-10 06:59:04] [ctrl] uptime=417052418ms, frames_total=5204430, dropped=0
+[2026-08-10 07:00:00] 
+===== HOURLY SUMMARY 2026-08-10 07:00 =====
+  frames        : 45001 (~12.50/s)
+  cksum errors  : 0
+  seq dropped   : 0
+  dups          : 0
+  reboots       : 0
+  stream disc.  : 0
+  ctrl failures : 0
+  stalls        : 0
+  --- cumulative ---
+  frames        : 5205125
+  dropped total : 0
+  reboots total : 0
+==============================
+
+[2026-08-10 07:00:04] [ctrl] uptime=417112498ms, frames_total=5205181, dropped=0
+[2026-08-10 07:01:04] [ctrl] uptime=417172578ms, frames_total=5205932, dropped=0
+[2026-08-10 07:02:04] [ctrl] uptime=417232672ms, frames_total=5206683, dropped=0
+[2026-08-10 07:03:04] [ctrl] uptime=417292738ms, frames_total=5207434, dropped=0
+[2026-08-10 07:04:04] [ctrl] uptime=417352819ms, frames_total=5208185, dropped=0
+[2026-08-10 07:05:04] [ctrl] uptime=417412898ms, frames_total=5208936, dropped=0
+[2026-08-10 07:06:04] [ctrl] uptime=417472989ms, frames_total=5209687, dropped=0
+[2026-08-10 07:07:05] [ctrl] uptime=417533072ms, frames_total=5210438, dropped=0
+[2026-08-10 07:08:05] [ctrl] uptime=417593139ms, frames_total=5211189, dropped=0
+[2026-08-10 07:09:05] [ctrl] uptime=417653220ms, frames_total=5211940, dropped=0
+[2026-08-10 07:10:05] [ctrl] uptime=417713309ms, frames_total=5212691, dropped=0
+[2026-08-10 07:11:05] [ctrl] uptime=417773394ms, frames_total=5213442, dropped=0
+[2026-08-10 07:12:05] [ctrl] uptime=417833459ms, frames_total=5214193, dropped=0
+[2026-08-10 07:13:05] [ctrl] uptime=417893538ms, frames_total=5214944, dropped=0
+[2026-08-10 07:14:05] [ctrl] uptime=417953618ms, frames_total=5215695, dropped=0
+[2026-08-10 07:15:05] [ctrl] uptime=418013712ms, frames_total=5216446, dropped=0
+[2026-08-10 07:16:05] [ctrl] uptime=418073778ms, frames_total=5217197, dropped=0
+[2026-08-10 07:17:05] [ctrl] uptime=418133858ms, frames_total=5217948, dropped=0
+[2026-08-10 07:18:05] [ctrl] uptime=418193949ms, frames_total=5218699, dropped=0
+[2026-08-10 07:19:05] [ctrl] uptime=418254018ms, frames_total=5219450, dropped=0
+[2026-08-10 07:20:06] [ctrl] uptime=418314098ms, frames_total=5220201, dropped=0
+[2026-08-10 07:21:06] [ctrl] uptime=418374178ms, frames_total=5220952, dropped=0
+[2026-08-10 07:22:06] [ctrl] uptime=418434257ms, frames_total=5221703, dropped=0
+[2026-08-10 07:23:06] [ctrl] uptime=418494338ms, frames_total=5222454, dropped=0
+[2026-08-10 07:24:06] [ctrl] uptime=418554419ms, frames_total=5223205, dropped=0
+[2026-08-10 07:25:06] [ctrl] uptime=418614498ms, frames_total=5223956, dropped=0
+[2026-08-10 07:26:06] [ctrl] uptime=418674600ms, frames_total=5224707, dropped=0
+[2026-08-10 07:27:06] [ctrl] uptime=418734673ms, frames_total=5225458, dropped=0
+[2026-08-10 07:28:06] [ctrl] uptime=418794738ms, frames_total=5226209, dropped=0
+[2026-08-10 07:29:06] [ctrl] uptime=418854831ms, frames_total=5226960, dropped=0
+[2026-08-10 07:30:06] [ctrl] uptime=418914898ms, frames_total=5227711, dropped=0
+[2026-08-10 07:31:06] [ctrl] uptime=418974977ms, frames_total=5228462, dropped=0
+[2026-08-10 07:32:06] [ctrl] uptime=419035058ms, frames_total=5229213, dropped=0
+[2026-08-10 07:33:07] [ctrl] uptime=419095139ms, frames_total=5229964, dropped=0
+[2026-08-10 07:34:07] [ctrl] uptime=419155240ms, frames_total=5230715, dropped=0
+[2026-08-10 07:35:07] [ctrl] uptime=419215314ms, frames_total=5231466, dropped=0
+[2026-08-10 07:36:07] [ctrl] uptime=419275378ms, frames_total=5232217, dropped=0
+[2026-08-10 07:37:07] [ctrl] uptime=419335458ms, frames_total=5232968, dropped=0
+[2026-08-10 07:38:07] [ctrl] uptime=419395550ms, frames_total=5233719, dropped=0
+[2026-08-10 07:39:07] [ctrl] uptime=419455618ms, frames_total=5234470, dropped=0
+[2026-08-10 07:40:07] [ctrl] uptime=419515698ms, frames_total=5235221, dropped=0
+[2026-08-10 07:41:07] [ctrl] uptime=419575778ms, frames_total=5235972, dropped=0
+[2026-08-10 07:42:07] [ctrl] uptime=419635874ms, frames_total=5236723, dropped=0
+[2026-08-10 07:43:07] [ctrl] uptime=419695938ms, frames_total=5237474, dropped=0
+[2026-08-10 07:44:07] [ctrl] uptime=419756018ms, frames_total=5238225, dropped=0
+[2026-08-10 07:45:08] [ctrl] uptime=419816098ms, frames_total=5238976, dropped=0
+[2026-08-10 07:46:08] [ctrl] uptime=419876179ms, frames_total=5239727, dropped=0
+[2026-08-10 07:47:08] [ctrl] uptime=419936283ms, frames_total=5240478, dropped=0
+[2026-08-10 07:48:08] [ctrl] uptime=419996348ms, frames_total=5241229, dropped=0
+[2026-08-10 07:49:08] [ctrl] uptime=420056418ms, frames_total=5241980, dropped=0
+[2026-08-10 07:50:08] [ctrl] uptime=420116518ms, frames_total=5242731, dropped=0
+[2026-08-10 07:51:08] [ctrl] uptime=420176578ms, frames_total=5243482, dropped=0
+[2026-08-10 07:52:08] [ctrl] uptime=420236659ms, frames_total=5244233, dropped=0
+[2026-08-10 07:53:08] [ctrl] uptime=420296738ms, frames_total=5244984, dropped=0
+[2026-08-10 07:54:08] [ctrl] uptime=420356840ms, frames_total=5245735, dropped=0
+[2026-08-10 07:55:08] [ctrl] uptime=420416898ms, frames_total=5246486, dropped=0
+[2026-08-10 07:56:08] [ctrl] uptime=420476978ms, frames_total=5247237, dropped=0
+[2026-08-10 07:57:08] [ctrl] uptime=420537068ms, frames_total=5247988, dropped=0
+[2026-08-10 07:58:09] [ctrl] uptime=420597159ms, frames_total=5248739, dropped=0
+[2026-08-10 07:59:09] [ctrl] uptime=420657219ms, frames_total=5249490, dropped=0
+[2026-08-10 08:00:00] 
+===== HOURLY SUMMARY 2026-08-10 08:00 =====
+  frames        : 45002 (~12.50/s)
+  cksum errors  : 0
+  seq dropped   : 0
+  dups          : 0
+  reboots       : 0
+  stream disc.  : 0
+  ctrl failures : 0
+  stalls        : 0
+  --- cumulative ---
+  frames        : 5250127
+  dropped total : 0
+  reboots total : 0
+==============================
+
+[2026-08-10 08:00:09] [ctrl] uptime=420717298ms, frames_total=5250241, dropped=0
+[2026-08-10 08:01:09] [ctrl] uptime=420777378ms, frames_total=5250992, dropped=0
+[2026-08-10 08:02:09] [ctrl] uptime=420837476ms, frames_total=5251743, dropped=0
+[2026-08-10 08:03:09] [ctrl] uptime=420897538ms, frames_total=5252494, dropped=0
+[2026-08-10 08:04:09] [ctrl] uptime=420957618ms, frames_total=5253245, dropped=0
+[2026-08-10 08:05:09] [ctrl] uptime=421017715ms, frames_total=5253996, dropped=0
+[2026-08-10 08:06:09] [ctrl] uptime=421077778ms, frames_total=5254747, dropped=0
+[2026-08-10 08:07:09] [ctrl] uptime=421137858ms, frames_total=5255498, dropped=0
+[2026-08-10 08:08:09] [ctrl] uptime=421197938ms, frames_total=5256249, dropped=0
+[2026-08-10 08:09:09] [ctrl] uptime=421258018ms, frames_total=5257000, dropped=0
+[2026-08-10 08:10:09] [ctrl] uptime=421318098ms, frames_total=5257751, dropped=0
+[2026-08-10 08:11:10] [ctrl] uptime=421378201ms, frames_total=5258502, dropped=0
+[2026-08-10 08:12:10] [ctrl] uptime=421438273ms, frames_total=5259253, dropped=0
+[2026-08-10 08:13:10] [ctrl] uptime=421498338ms, frames_total=5260004, dropped=0
+[2026-08-10 08:14:10] [ctrl] uptime=421558435ms, frames_total=5260755, dropped=0
+[2026-08-10 08:15:10] [ctrl] uptime=421618512ms, frames_total=5261506, dropped=0
+[2026-08-10 08:16:10] [ctrl] uptime=421678578ms, frames_total=5262257, dropped=0
+[2026-08-10 08:17:10] [ctrl] uptime=421738658ms, frames_total=5263008, dropped=0
+[2026-08-10 08:18:10] [ctrl] uptime=421798738ms, frames_total=5263759, dropped=0
+[2026-08-10 08:19:10] [ctrl] uptime=421858818ms, frames_total=5264510, dropped=0
+[2026-08-10 08:20:10] [ctrl] uptime=421918915ms, frames_total=5265261, dropped=0
+[2026-08-10 08:21:10] [ctrl] uptime=421978978ms, frames_total=5266012, dropped=0
+[2026-08-10 08:22:10] [ctrl] uptime=422039075ms, frames_total=5266763, dropped=0
+[2026-08-10 08:23:10] [ctrl] uptime=422099157ms, frames_total=5267514, dropped=0
+[2026-08-10 08:24:11] [ctrl] uptime=422159218ms, frames_total=5268265, dropped=0
+[2026-08-10 08:25:11] [ctrl] uptime=422219298ms, frames_total=5269016, dropped=0
+[2026-08-10 08:26:11] [ctrl] uptime=422279392ms, frames_total=5269767, dropped=0
+[2026-08-10 08:27:11] [ctrl] uptime=422339458ms, frames_total=5270518, dropped=0
+[2026-08-10 08:28:11] [ctrl] uptime=422399552ms, frames_total=5271269, dropped=0
+[2026-08-10 08:29:11] [ctrl] uptime=422459618ms, frames_total=5272020, dropped=0
+[2026-08-10 08:30:11] [ctrl] uptime=422519712ms, frames_total=5272771, dropped=0
+[2026-08-10 08:31:11] [ctrl] uptime=422579778ms, frames_total=5273522, dropped=0
+[2026-08-10 08:32:11] [ctrl] uptime=422639873ms, frames_total=5274273, dropped=0
+[2026-08-10 08:33:11] [ctrl] uptime=422699938ms, frames_total=5275024, dropped=0
+[2026-08-10 08:34:11] [ctrl] uptime=422760018ms, frames_total=5275775, dropped=0
+[2026-08-10 08:35:11] [ctrl] uptime=422820122ms, frames_total=5276526, dropped=0
+[2026-08-10 08:36:11] [ctrl] uptime=422880178ms, frames_total=5277277, dropped=0
+[2026-08-10 08:37:12] [ctrl] uptime=422940258ms, frames_total=5278028, dropped=0
+[2026-08-10 08:38:12] [ctrl] uptime=423000338ms, frames_total=5278779, dropped=0
+[2026-08-10 08:39:12] [ctrl] uptime=423060418ms, frames_total=5279530, dropped=0
+[2026-08-10 08:40:12] [ctrl] uptime=423120511ms, frames_total=5280281, dropped=0
+[2026-08-10 08:41:12] [ctrl] uptime=423180578ms, frames_total=5281032, dropped=0
+[2026-08-10 08:42:12] [ctrl] uptime=423240684ms, frames_total=5281783, dropped=0
+[2026-08-10 08:43:12] [ctrl] uptime=423300759ms, frames_total=5282534, dropped=0
+[2026-08-10 08:44:12] [ctrl] uptime=423360841ms, frames_total=5283285, dropped=0
+[2026-08-10 08:45:12] [ctrl] uptime=423420899ms, frames_total=5284036, dropped=0
+[2026-08-10 08:46:12] [ctrl] uptime=423480978ms, frames_total=5284787, dropped=0
+[2026-08-10 08:47:12] [ctrl] uptime=423541058ms, frames_total=5285538, dropped=0
+[2026-08-10 08:48:12] [ctrl] uptime=423601138ms, frames_total=5286289, dropped=0
+[2026-08-10 08:49:13] [ctrl] uptime=423661218ms, frames_total=5287040, dropped=0
+[2026-08-10 08:50:13] [ctrl] uptime=423721298ms, frames_total=5287791, dropped=0
+[2026-08-10 08:51:13] [ctrl] uptime=423781378ms, frames_total=5288542, dropped=0
+[2026-08-10 08:52:13] [ctrl] uptime=423841458ms, frames_total=5289293, dropped=0
+[2026-08-10 08:53:13] [ctrl] uptime=423901537ms, frames_total=5290044, dropped=0
+[2026-08-10 08:54:13] [ctrl] uptime=423961639ms, frames_total=5290795, dropped=0
+[2026-08-10 08:55:13] [ctrl] uptime=424021698ms, frames_total=5291546, dropped=0
+[2026-08-10 08:56:13] [ctrl] uptime=424081778ms, frames_total=5292297, dropped=0
+[2026-08-10 08:57:13] [ctrl] uptime=424141877ms, frames_total=5293048, dropped=0
+[2026-08-10 08:58:13] [ctrl] uptime=424201959ms, frames_total=5293799, dropped=0
+[2026-08-10 08:59:13] [ctrl] uptime=424262018ms, frames_total=5294550, dropped=0
+[2026-08-10 09:00:00] 
+===== HOURLY SUMMARY 2026-08-10 09:00 =====
+  frames        : 45001 (~12.50/s)
+  cksum errors  : 0
+  seq dropped   : 0
+  dups          : 0
+  reboots       : 0
+  stream disc.  : 0
+  ctrl failures : 0
+  stalls        : 0
+  --- cumulative ---
+  frames        : 5295128
+  dropped total : 0
+  reboots total : 0
+==============================
+
+[2026-08-10 09:00:13] [ctrl] uptime=424322098ms, frames_total=5295301, dropped=0
+[2026-08-10 09:01:13] [ctrl] uptime=424382178ms, frames_total=5296052, dropped=0
+[2026-08-10 09:02:14] [ctrl] uptime=424442272ms, frames_total=5296803, dropped=0
+[2026-08-10 09:03:14] [ctrl] uptime=424502339ms, frames_total=5297554, dropped=0
+[2026-08-10 09:04:14] [ctrl] uptime=424562419ms, frames_total=5298305, dropped=0
+[2026-08-10 09:05:14] [ctrl] uptime=424622512ms, frames_total=5299056, dropped=0
+[2026-08-10 09:06:14] [ctrl] uptime=424682594ms, frames_total=5299807, dropped=0
+[2026-08-10 09:07:14] [ctrl] uptime=424742658ms, frames_total=5300558, dropped=0
+[2026-08-10 09:08:14] [ctrl] uptime=424802738ms, frames_total=5301309, dropped=0
+[2026-08-10 09:09:14] [ctrl] uptime=424862818ms, frames_total=5302060, dropped=0
+[2026-08-10 09:10:14] [ctrl] uptime=424922898ms, frames_total=5302811, dropped=0
+[2026-08-10 09:11:14] [ctrl] uptime=424982978ms, frames_total=5303562, dropped=0
+[2026-08-10 09:12:14] [ctrl] uptime=425043076ms, frames_total=5304313, dropped=0
+[2026-08-10 09:13:14] [ctrl] uptime=425103156ms, frames_total=5305064, dropped=0
+[2026-08-10 09:14:14] [ctrl] uptime=425163233ms, frames_total=5305815, dropped=0
+[2026-08-10 09:15:15] [ctrl] uptime=425223299ms, frames_total=5306566, dropped=0
+[2026-08-10 09:16:15] [ctrl] uptime=425283379ms, frames_total=5307317, dropped=0
+[2026-08-10 09:17:15] [ctrl] uptime=425343458ms, frames_total=5308068, dropped=0
+[2026-08-10 09:18:15] [ctrl] uptime=425403538ms, frames_total=5308819, dropped=0
+[2026-08-10 09:19:15] [ctrl] uptime=425463618ms, frames_total=5309570, dropped=0
+[2026-08-10 09:20:15] [ctrl] uptime=425523698ms, frames_total=5310321, dropped=0
+[2026-08-10 09:21:15] [ctrl] uptime=425583779ms, frames_total=5311072, dropped=0
+[2026-08-10 09:22:15] [ctrl] uptime=425643858ms, frames_total=5311823, dropped=0
+[2026-08-10 09:23:15] [ctrl] uptime=425703938ms, frames_total=5312574, dropped=0
+[2026-08-10 09:24:15] [ctrl] uptime=425764034ms, frames_total=5313325, dropped=0
+[2026-08-10 09:25:15] [ctrl] uptime=425824099ms, frames_total=5314076, dropped=0
+[2026-08-10 09:26:15] [ctrl] uptime=425884189ms, frames_total=5314827, dropped=0
+[2026-08-10 09:27:15] [ctrl] uptime=425944258ms, frames_total=5315578, dropped=0
+[2026-08-10 09:28:16] [ctrl] uptime=426004338ms, frames_total=5316329, dropped=0
+[2026-08-10 09:29:16] [ctrl] uptime=426064418ms, frames_total=5317080, dropped=0
+[2026-08-10 09:30:16] [ctrl] uptime=426124513ms, frames_total=5317831, dropped=0
+[2026-08-10 09:31:16] [ctrl] uptime=426184579ms, frames_total=5318582, dropped=0
+[2026-08-10 09:32:16] [ctrl] uptime=426244658ms, frames_total=5319333, dropped=0
+[2026-08-10 09:33:16] [ctrl] uptime=426304758ms, frames_total=5320084, dropped=0
+[2026-08-10 09:34:16] [ctrl] uptime=426364818ms, frames_total=5320835, dropped=0
+[2026-08-10 09:35:16] [ctrl] uptime=426424898ms, frames_total=5321586, dropped=0
+[2026-08-10 09:36:16] [ctrl] uptime=426484978ms, frames_total=5322337, dropped=0
+[2026-08-10 09:37:16] [ctrl] uptime=426545058ms, frames_total=5323088, dropped=0
+[2026-08-10 09:38:16] [ctrl] uptime=426605163ms, frames_total=5323839, dropped=0
+[2026-08-10 09:39:16] [ctrl] uptime=426665229ms, frames_total=5324590, dropped=0
+[2026-08-10 09:40:16] [ctrl] uptime=426725298ms, frames_total=5325341, dropped=0
+[2026-08-10 09:41:17] [ctrl] uptime=426785403ms, frames_total=5326092, dropped=0
+[2026-08-10 09:42:17] [ctrl] uptime=426845458ms, frames_total=5326843, dropped=0
+[2026-08-10 09:43:17] [ctrl] uptime=426905538ms, frames_total=5327594, dropped=0
+[2026-08-10 09:44:17] [ctrl] uptime=426965617ms, frames_total=5328345, dropped=0
+[2026-08-10 09:45:17] [ctrl] uptime=427025698ms, frames_total=5329096, dropped=0
+[2026-08-10 09:46:17] [ctrl] uptime=427085778ms, frames_total=5329847, dropped=0
+[2026-08-10 09:47:17] [ctrl] uptime=427145874ms, frames_total=5330598, dropped=0
+[2026-08-10 09:48:17] [ctrl] uptime=427205938ms, frames_total=5331349, dropped=0
+[2026-08-10 09:49:17] [ctrl] uptime=427266018ms, frames_total=5332100, dropped=0
+[2026-08-10 09:50:17] [ctrl] uptime=427326123ms, frames_total=5332851, dropped=0
+[2026-08-10 09:51:17] [ctrl] uptime=427386178ms, frames_total=5333602, dropped=0
+[2026-08-10 09:52:17] [ctrl] uptime=427446258ms, frames_total=5334353, dropped=0
+[2026-08-10 09:53:18] [ctrl] uptime=427506356ms, frames_total=5335104, dropped=0
+[2026-08-10 09:54:18] [ctrl] uptime=427566418ms, frames_total=5335855, dropped=0
+[2026-08-10 09:55:18] [ctrl] uptime=427626498ms, frames_total=5336606, dropped=0
+[2026-08-10 09:56:18] [ctrl] uptime=427686579ms, frames_total=5337357, dropped=0
+[2026-08-10 09:57:18] [ctrl] uptime=427746678ms, frames_total=5338108, dropped=0
+[2026-08-10 09:58:18] [ctrl] uptime=427806759ms, frames_total=5338859, dropped=0
+[2026-08-10 09:59:18] [ctrl] uptime=427866827ms, frames_total=5339610, dropped=0
+[2026-08-10 10:00:00] 
+===== HOURLY SUMMARY 2026-08-10 10:00 =====
+  frames        : 45002 (~12.50/s)
+  cksum errors  : 0
+  seq dropped   : 0
+  dups          : 0
+  reboots       : 0
+  stream disc.  : 0
+  ctrl failures : 0
+  stalls        : 0
+  --- cumulative ---
+  frames        : 5340130
+  dropped total : 0
+  reboots total : 0
+==============================
+
+[2026-08-10 10:00:18] [ctrl] uptime=427926912ms, frames_total=5340361, dropped=0
+[2026-08-10 10:01:18] [ctrl] uptime=427986998ms, frames_total=5341112, dropped=0
+[2026-08-10 10:02:18] [ctrl] uptime=428047058ms, frames_total=5341863, dropped=0
+[2026-08-10 10:03:18] [ctrl] uptime=428107148ms, frames_total=5342614, dropped=0
+[2026-08-10 10:04:18] [ctrl] uptime=428167218ms, frames_total=5343365, dropped=0
+[2026-08-10 10:05:18] [ctrl] uptime=428227298ms, frames_total=5344116, dropped=0
+[2026-08-10 10:06:19] [ctrl] uptime=428287391ms, frames_total=5344867, dropped=0
+[2026-08-10 10:07:19] [ctrl] uptime=428347458ms, frames_total=5345618, dropped=0
+[2026-08-10 10:08:19] [ctrl] uptime=428407558ms, frames_total=5346369, dropped=0
+[2026-08-10 10:09:19] [ctrl] uptime=428467630ms, frames_total=5347120, dropped=0
+[2026-08-10 10:10:19] [ctrl] uptime=428527698ms, frames_total=5347871, dropped=0
+[2026-08-10 10:11:19] [ctrl] uptime=428587792ms, frames_total=5348622, dropped=0
+[2026-08-10 10:12:19] [ctrl] uptime=428647858ms, frames_total=5349373, dropped=0
+[2026-08-10 10:13:19] [ctrl] uptime=428707954ms, frames_total=5350124, dropped=0
+[2026-08-10 10:14:19] [ctrl] uptime=428768018ms, frames_total=5350875, dropped=0
+[2026-08-10 10:15:19] [ctrl] uptime=428828113ms, frames_total=5351626, dropped=0
+[2026-08-10 10:16:19] [ctrl] uptime=428888200ms, frames_total=5352377, dropped=0
+[2026-08-10 10:17:19] [ctrl] uptime=428948258ms, frames_total=5353128, dropped=0
+[2026-08-10 10:18:19] [ctrl] uptime=429008338ms, frames_total=5353879, dropped=0
+[2026-08-10 10:19:20] [ctrl] uptime=429068418ms, frames_total=5354630, dropped=0
+[2026-08-10 10:20:20] [ctrl] uptime=429128521ms, frames_total=5355381, dropped=0
+[2026-08-10 10:21:20] [ctrl] uptime=429188578ms, frames_total=5356132, dropped=0
+[2026-08-10 10:22:20] [ctrl] uptime=429248658ms, frames_total=5356883, dropped=0
+[2026-08-10 10:23:20] [ctrl] uptime=429308739ms, frames_total=5357634, dropped=0
+[2026-08-10 10:24:20] [ctrl] uptime=429368819ms, frames_total=5358385, dropped=0
+[2026-08-10 10:25:20] [ctrl] uptime=429428899ms, frames_total=5359136, dropped=0
+[2026-08-10 10:26:20] [ctrl] uptime=429488978ms, frames_total=5359887, dropped=0
+[2026-08-10 10:27:20] [ctrl] uptime=429549070ms, frames_total=5360638, dropped=0
+[2026-08-10 10:28:20] [ctrl] uptime=429609138ms, frames_total=5361389, dropped=0
+[2026-08-10 10:29:20] [ctrl] uptime=429669217ms, frames_total=5362140, dropped=0
+[2026-08-10 10:30:20] [ctrl] uptime=429729317ms, frames_total=5362891, dropped=0
+[2026-08-10 10:31:20] [ctrl] uptime=429789393ms, frames_total=5363642, dropped=0
+[2026-08-10 10:32:21] [ctrl] uptime=429849459ms, frames_total=5364393, dropped=0
+[2026-08-10 10:33:21] [ctrl] uptime=429909538ms, frames_total=5365144, dropped=0
+[2026-08-10 10:34:21] [ctrl] uptime=429969618ms, frames_total=5365895, dropped=0
+[2026-08-10 10:35:21] [ctrl] uptime=430029713ms, frames_total=5366646, dropped=0
+[2026-08-10 10:36:21] [ctrl] uptime=430089778ms, frames_total=5367397, dropped=0
+[2026-08-10 10:37:21] [ctrl] uptime=430149858ms, frames_total=5368148, dropped=0
+[2026-08-10 10:38:21] [ctrl] uptime=430209959ms, frames_total=5368899, dropped=0
+[2026-08-10 10:39:21] [ctrl] uptime=430270018ms, frames_total=5369650, dropped=0
+[2026-08-10 10:40:21] [ctrl] uptime=430330098ms, frames_total=5370401, dropped=0
+[2026-08-10 10:41:21] [ctrl] uptime=430390193ms, frames_total=5371152, dropped=0
+[2026-08-10 10:42:21] [ctrl] uptime=430450280ms, frames_total=5371903, dropped=0
+[2026-08-10 10:43:21] [ctrl] uptime=430510338ms, frames_total=5372654, dropped=0
+[2026-08-10 10:44:21] [ctrl] uptime=430570418ms, frames_total=5373405, dropped=0
+[2026-08-10 10:45:22] [ctrl] uptime=430630498ms, frames_total=5374156, dropped=0
+[2026-08-10 10:46:22] [ctrl] uptime=430690593ms, frames_total=5374907, dropped=0
+[2026-08-10 10:47:22] [ctrl] uptime=430750658ms, frames_total=5375658, dropped=0
+[2026-08-10 10:48:22] [ctrl] uptime=430810738ms, frames_total=5376409, dropped=0
+[2026-08-10 10:49:22] [ctrl] uptime=430870819ms, frames_total=5377160, dropped=0
+[2026-08-10 10:50:22] [ctrl] uptime=430930912ms, frames_total=5377911, dropped=0
+[2026-08-10 10:51:22] [ctrl] uptime=430990978ms, frames_total=5378662, dropped=0
+[2026-08-10 10:52:22] [ctrl] uptime=431051058ms, frames_total=5379413, dropped=0
+[2026-08-10 10:53:22] [ctrl] uptime=431111162ms, frames_total=5380164, dropped=0
+[2026-08-10 10:54:22] [ctrl] uptime=431171219ms, frames_total=5380915, dropped=0
+[2026-08-10 10:55:22] [ctrl] uptime=431231314ms, frames_total=5381666, dropped=0
+[2026-08-10 10:56:22] [ctrl] uptime=431291379ms, frames_total=5382417, dropped=0
+[2026-08-10 10:57:23] [ctrl] uptime=431351475ms, frames_total=5383168, dropped=0
+[2026-08-10 10:58:23] [ctrl] uptime=431411561ms, frames_total=5383919, dropped=0
+[2026-08-10 10:59:23] [ctrl] uptime=431471632ms, frames_total=5384670, dropped=0
+[2026-08-10 11:00:00] 
+===== HOURLY SUMMARY 2026-08-10 11:00 =====
+  frames        : 45001 (~12.50/s)
+  cksum errors  : 0
+  seq dropped   : 0
+  dups          : 0
+  reboots       : 0
+  stream disc.  : 0
+  ctrl failures : 0
+  stalls        : 0
+  --- cumulative ---
+  frames        : 5385131
+  dropped total : 0
+  reboots total : 0
+==============================
+
+[2026-08-10 11:00:23] [ctrl] uptime=431531698ms, frames_total=5385421, dropped=0
+[2026-08-10 11:01:23] [ctrl] uptime=431591781ms, frames_total=5386172, dropped=0
+[2026-08-10 11:02:23] [ctrl] uptime=431651858ms, frames_total=5386923, dropped=0
+[2026-08-10 11:03:23] [ctrl] uptime=431711938ms, frames_total=5387674, dropped=0
+[2026-08-10 11:04:23] [ctrl] uptime=431772018ms, frames_total=5388425, dropped=0
+[2026-08-10 11:05:23] [ctrl] uptime=431832098ms, frames_total=5389176, dropped=0
+[2026-08-10 11:06:23] [ctrl] uptime=431892178ms, frames_total=5389927, dropped=0
+[2026-08-10 11:07:23] [ctrl] uptime=431952275ms, frames_total=5390678, dropped=0
+[2026-08-10 11:08:23] [ctrl] uptime=432012362ms, frames_total=5391429, dropped=0
+[2026-08-10 11:09:23] [ctrl] uptime=432072418ms, frames_total=5392180, dropped=0
+[2026-08-10 11:10:24] [ctrl] uptime=432132523ms, frames_total=5392931, dropped=0
+[2026-08-10 11:11:24] [ctrl] uptime=432192578ms, frames_total=5393682, dropped=0
+[2026-08-10 11:12:24] [ctrl] uptime=432252677ms, frames_total=5394433, dropped=0
+[2026-08-10 11:13:24] [ctrl] uptime=432312738ms, frames_total=5395184, dropped=0
+[2026-08-10 11:14:24] [ctrl] uptime=432372838ms, frames_total=5395935, dropped=0
+[2026-08-10 11:15:24] [ctrl] uptime=432432913ms, frames_total=5396686, dropped=0
+[2026-08-10 11:16:24] [ctrl] uptime=432492978ms, frames_total=5397437, dropped=0
+[2026-08-10 11:17:24] [ctrl] uptime=432553058ms, frames_total=5398188, dropped=0
+[2026-08-10 11:18:24] [ctrl] uptime=432613138ms, frames_total=5398939, dropped=0
+[2026-08-10 11:19:24] [ctrl] uptime=432673220ms, frames_total=5399690, dropped=0
+[2026-08-10 11:20:24] [ctrl] uptime=432733298ms, frames_total=5400441, dropped=0
+[2026-08-10 11:21:24] [ctrl] uptime=432793378ms, frames_total=5401192, dropped=0
+[2026-08-10 11:22:24] [ctrl] uptime=432853469ms, frames_total=5401943, dropped=0
+[2026-08-10 11:23:25] [ctrl] uptime=432913551ms, frames_total=5402694, dropped=0
+[2026-08-10 11:24:25] [ctrl] uptime=432973618ms, frames_total=5403445, dropped=0
+[2026-08-10 11:25:25] [ctrl] uptime=433033699ms, frames_total=5404196, dropped=0
+[2026-08-10 11:26:25] [ctrl] uptime=433093789ms, frames_total=5404947, dropped=0
+[2026-08-10 11:27:25] [ctrl] uptime=433153882ms, frames_total=5405698, dropped=0
+[2026-08-10 11:28:25] [ctrl] uptime=433213939ms, frames_total=5406449, dropped=0
+[2026-08-10 11:29:25] [ctrl] uptime=433274018ms, frames_total=5407200, dropped=0
+[2026-08-10 11:30:25] [ctrl] uptime=433334098ms, frames_total=5407951, dropped=0
+[2026-08-10 11:31:25] [ctrl] uptime=433394178ms, frames_total=5408702, dropped=0
+[2026-08-10 11:32:25] [ctrl] uptime=433454278ms, frames_total=5409453, dropped=0
+[2026-08-10 11:33:25] [ctrl] uptime=433514339ms, frames_total=5410204, dropped=0
+[2026-08-10 11:34:25] [ctrl] uptime=433574439ms, frames_total=5410955, dropped=0
+[2026-08-10 11:35:25] [ctrl] uptime=433634522ms, frames_total=5411706, dropped=0
+[2026-08-10 11:36:26] [ctrl] uptime=433694578ms, frames_total=5412457, dropped=0
+[2026-08-10 11:37:26] [ctrl] uptime=433754658ms, frames_total=5413208, dropped=0
+[2026-08-10 11:38:26] [ctrl] uptime=433814738ms, frames_total=5413959, dropped=0
+[2026-08-10 11:39:26] [ctrl] uptime=433874840ms, frames_total=5414710, dropped=0
+[2026-08-10 11:40:26] [ctrl] uptime=433934911ms, frames_total=5415461, dropped=0
+[2026-08-10 11:41:26] [ctrl] uptime=433994979ms, frames_total=5416212, dropped=0
+[2026-08-10 11:42:26] [ctrl] uptime=434055068ms, frames_total=5416963, dropped=0
+[2026-08-10 11:43:26] [ctrl] uptime=434115164ms, frames_total=5417714, dropped=0
+[2026-08-10 11:44:26] [ctrl] uptime=434175233ms, frames_total=5418465, dropped=0
+[2026-08-10 11:45:26] [ctrl] uptime=434235313ms, frames_total=5419216, dropped=0
+[2026-08-10 11:46:26] [ctrl] uptime=434295378ms, frames_total=5419967, dropped=0
+[2026-08-10 11:47:26] [ctrl] uptime=434355458ms, frames_total=5420718, dropped=0
+[2026-08-10 11:48:26] [ctrl] uptime=434415538ms, frames_total=5421469, dropped=0
+[2026-08-10 11:49:27] [ctrl] uptime=434475618ms, frames_total=5422220, dropped=0
+[2026-08-10 11:50:27] [ctrl] uptime=434535698ms, frames_total=5422971, dropped=0
+[2026-08-10 11:51:27] [ctrl] uptime=434595778ms, frames_total=5423722, dropped=0
+[2026-08-10 11:52:27] [ctrl] uptime=434655858ms, frames_total=5424473, dropped=0
+[2026-08-10 11:53:27] [ctrl] uptime=434715962ms, frames_total=5425224, dropped=0
+[2026-08-10 11:54:27] [ctrl] uptime=434776018ms, frames_total=5425975, dropped=0
+[2026-08-10 11:55:27] [ctrl] uptime=434836098ms, frames_total=5426726, dropped=0
+[2026-08-10 11:56:27] [ctrl] uptime=434896179ms, frames_total=5427477, dropped=0
+[2026-08-10 11:57:27] [ctrl] uptime=434956271ms, frames_total=5428228, dropped=0
+[2026-08-10 11:58:27] [ctrl] uptime=435016338ms, frames_total=5428979, dropped=0
+[2026-08-10 11:59:27] [ctrl] uptime=435076419ms, frames_total=5429730, dropped=0
+[2026-08-10 12:00:00] 
+===== HOURLY SUMMARY 2026-08-10 12:00 =====
+  frames        : 45002 (~12.50/s)
+  cksum errors  : 0
+  seq dropped   : 0
+  dups          : 0
+  reboots       : 0
+  stream disc.  : 0
+  ctrl failures : 0
+  stalls        : 0
+  --- cumulative ---
+  frames        : 5430133
+  dropped total : 0
+  reboots total : 0
+==============================
+
+[2026-08-10 12:00:27] [ctrl] uptime=435136498ms, frames_total=5430481, dropped=0
+[2026-08-10 12:01:27] [ctrl] uptime=435196578ms, frames_total=5431232, dropped=0
+[2026-08-10 12:02:28] [ctrl] uptime=435256677ms, frames_total=5431983, dropped=0
+[2026-08-10 12:03:28] [ctrl] uptime=435316738ms, frames_total=5432734, dropped=0
+[2026-08-10 12:04:28] [ctrl] uptime=435376834ms, frames_total=5433485, dropped=0
+[2026-08-10 12:05:28] [ctrl] uptime=435436907ms, frames_total=5434236, dropped=0
+[2026-08-10 12:06:28] [ctrl] uptime=435496997ms, frames_total=5434987, dropped=0
+[2026-08-10 12:07:28] [ctrl] uptime=435557058ms, frames_total=5435738, dropped=0
+[2026-08-10 12:08:28] [ctrl] uptime=435617138ms, frames_total=5436489, dropped=0
+[2026-08-10 12:09:28] [ctrl] uptime=435677242ms, frames_total=5437240, dropped=0
+[2026-08-10 12:10:28] [ctrl] uptime=435737299ms, frames_total=5437991, dropped=0
+[2026-08-10 12:11:28] [ctrl] uptime=435797379ms, frames_total=5438742, dropped=0
+[2026-08-10 12:12:28] [ctrl] uptime=435857478ms, frames_total=5439493, dropped=0
+[2026-08-10 12:13:28] [ctrl] uptime=435917538ms, frames_total=5440244, dropped=0
+[2026-08-10 12:14:29] [ctrl] uptime=435977618ms, frames_total=5440995, dropped=0
+[2026-08-10 12:15:29] [ctrl] uptime=436037698ms, frames_total=5441746, dropped=0
+[2026-08-10 12:16:29] [ctrl] uptime=436097778ms, frames_total=5442497, dropped=0
+[2026-08-10 12:17:29] [ctrl] uptime=436157859ms, frames_total=5443248, dropped=0
+[2026-08-10 12:18:29] [ctrl] uptime=436217939ms, frames_total=5443999, dropped=0
+[2026-08-10 12:19:29] [ctrl] uptime=436278018ms, frames_total=5444750, dropped=0
+[2026-08-10 12:20:29] [ctrl] uptime=436338098ms, frames_total=5445501, dropped=0
+[2026-08-10 12:21:29] [ctrl] uptime=436398178ms, frames_total=5446252, dropped=0
+[2026-08-10 12:22:29] [ctrl] uptime=436458258ms, frames_total=5447003, dropped=0
+[2026-08-10 12:23:29] [ctrl] uptime=436518338ms, frames_total=5447754, dropped=0
+[2026-08-10 12:24:29] [ctrl] uptime=436578419ms, frames_total=5448505, dropped=0
+[2026-08-10 12:25:29] [ctrl] uptime=436638513ms, frames_total=5449256, dropped=0
+[2026-08-10 12:26:29] [ctrl] uptime=436698579ms, frames_total=5450007, dropped=0
+[2026-08-10 12:27:30] [ctrl] uptime=436758659ms, frames_total=5450758, dropped=0
+[2026-08-10 12:28:30] [ctrl] uptime=436818738ms, frames_total=5451509, dropped=0
+[2026-08-10 12:29:30] [ctrl] uptime=436878843ms, frames_total=5452260, dropped=0
+[2026-08-10 12:30:30] [ctrl] uptime=436938898ms, frames_total=5453011, dropped=0
+[2026-08-10 12:31:30] [ctrl] uptime=436998978ms, frames_total=5453762, dropped=0
+[2026-08-10 12:32:30] [ctrl] uptime=437059059ms, frames_total=5454513, dropped=0
+[2026-08-10 12:33:30] [ctrl] uptime=437119138ms, frames_total=5455264, dropped=0
+[2026-08-10 12:34:30] [ctrl] uptime=437179218ms, frames_total=5456015, dropped=0
+[2026-08-10 12:35:30] [ctrl] uptime=437239299ms, frames_total=5456766, dropped=0
+[2026-08-10 12:36:30] [ctrl] uptime=437299379ms, frames_total=5457517, dropped=0
+[2026-08-10 12:37:30] [ctrl] uptime=437359479ms, frames_total=5458268, dropped=0
+[2026-08-10 12:38:30] [ctrl] uptime=437419560ms, frames_total=5459019, dropped=0
+[2026-08-10 12:39:30] [ctrl] uptime=437479618ms, frames_total=5459770, dropped=0
+[2026-08-10 12:40:31] [ctrl] uptime=437539699ms, frames_total=5460521, dropped=0
+[2026-08-10 12:41:31] [ctrl] uptime=437599778ms, frames_total=5461272, dropped=0
+[2026-08-10 12:42:31] [ctrl] uptime=437659876ms, frames_total=5462023, dropped=0
+[2026-08-10 12:43:31] [ctrl] uptime=437719938ms, frames_total=5462774, dropped=0
+[2026-08-10 12:44:31] [ctrl] uptime=437780018ms, frames_total=5463525, dropped=0
+[2026-08-10 12:45:31] [ctrl] uptime=437840098ms, frames_total=5464276, dropped=0
+[2026-08-10 12:46:31] [ctrl] uptime=437900178ms, frames_total=5465027, dropped=0
+[2026-08-10 12:47:31] [ctrl] uptime=437960281ms, frames_total=5465778, dropped=0
+[2026-08-10 12:48:31] [ctrl] uptime=438020362ms, frames_total=5466529, dropped=0
+[2026-08-10 12:49:31] [ctrl] uptime=438080418ms, frames_total=5467280, dropped=0
+[2026-08-10 12:50:31] [ctrl] uptime=438140517ms, frames_total=5468031, dropped=0
+[2026-08-10 12:51:31] [ctrl] uptime=438200579ms, frames_total=5468782, dropped=0
+[2026-08-10 12:52:31] [ctrl] uptime=438260659ms, frames_total=5469533, dropped=0
+[2026-08-10 12:53:32] [ctrl] uptime=438320752ms, frames_total=5470284, dropped=0
+[2026-08-10 12:54:32] [ctrl] uptime=438380818ms, frames_total=5471035, dropped=0
+[2026-08-10 12:55:32] [ctrl] uptime=438440899ms, frames_total=5471786, dropped=0
+[2026-08-10 12:56:32] [ctrl] uptime=438500978ms, frames_total=5472537, dropped=0
+[2026-08-10 12:57:32] [ctrl] uptime=438561058ms, frames_total=5473288, dropped=0
+[2026-08-10 12:58:32] [ctrl] uptime=438621162ms, frames_total=5474039, dropped=0
+[2026-08-10 12:59:32] [ctrl] uptime=438681218ms, frames_total=5474790, dropped=0
+[2026-08-10 13:00:00] 
+===== HOURLY SUMMARY 2026-08-10 13:00 =====
+  frames        : 45001 (~12.50/s)
+  cksum errors  : 0
+  seq dropped   : 0
+  dups          : 0
+  reboots       : 0
+  stream disc.  : 0
+  ctrl failures : 0
+  stalls        : 0
+  --- cumulative ---
+  frames        : 5475134
+  dropped total : 0
+  reboots total : 0
+==============================
+
+[2026-08-10 13:00:32] [ctrl] uptime=438741311ms, frames_total=5475541, dropped=0
+[2026-08-10 13:01:32] [ctrl] uptime=438801379ms, frames_total=5476292, dropped=0
+[2026-08-10 13:02:32] [ctrl] uptime=438861459ms, frames_total=5477043, dropped=0
+[2026-08-10 13:03:32] [ctrl] uptime=438921538ms, frames_total=5477794, dropped=0
+[2026-08-10 13:04:32] [ctrl] uptime=438981617ms, frames_total=5478545, dropped=0
+[2026-08-10 13:05:32] [ctrl] uptime=439041699ms, frames_total=5479296, dropped=0
+[2026-08-10 13:06:33] [ctrl] uptime=439101779ms, frames_total=5480047, dropped=0
+[2026-08-10 13:07:33] [ctrl] uptime=439161859ms, frames_total=5480798, dropped=0
+[2026-08-10 13:08:33] [ctrl] uptime=439221956ms, frames_total=5481549, dropped=0
+[2026-08-10 13:09:33] [ctrl] uptime=439282018ms, frames_total=5482300, dropped=0
+[2026-08-10 13:10:33] [ctrl] uptime=439342098ms, frames_total=5483051, dropped=0
+[2026-08-10 13:11:33] [ctrl] uptime=439402178ms, frames_total=5483802, dropped=0
+[2026-08-10 13:12:33] [ctrl] uptime=439462259ms, frames_total=5484553, dropped=0
+[2026-08-10 13:13:33] [ctrl] uptime=439522339ms, frames_total=5485304, dropped=0
+[2026-08-10 13:14:33] [ctrl] uptime=439582419ms, frames_total=5486055, dropped=0
+[2026-08-10 13:15:33] [ctrl] uptime=439642498ms, frames_total=5486806, dropped=0
+[2026-08-10 13:16:33] [ctrl] uptime=439702579ms, frames_total=5487557, dropped=0
+[2026-08-10 13:17:33] [ctrl] uptime=439762659ms, frames_total=5488308, dropped=0
+[2026-08-10 13:18:34] [ctrl] uptime=439822739ms, frames_total=5489059, dropped=0
+[2026-08-10 13:19:34] [ctrl] uptime=439882831ms, frames_total=5489810, dropped=0
+[2026-08-10 13:20:34] [ctrl] uptime=439942898ms, frames_total=5490561, dropped=0
+[2026-08-10 13:21:34] [ctrl] uptime=440002978ms, frames_total=5491312, dropped=0
+[2026-08-10 13:22:34] [ctrl] uptime=440063060ms, frames_total=5492063, dropped=0
+[2026-08-10 13:23:34] [ctrl] uptime=440123139ms, frames_total=5492814, dropped=0
+[2026-08-10 13:24:34] [ctrl] uptime=440183218ms, frames_total=5493565, dropped=0
+[2026-08-10 13:25:34] [ctrl] uptime=440243299ms, frames_total=5494316, dropped=0
+[2026-08-10 13:26:34] [ctrl] uptime=440303379ms, frames_total=5495067, dropped=0
+[2026-08-10 13:27:34] [ctrl] uptime=440363458ms, frames_total=5495818, dropped=0
+[2026-08-10 13:28:34] [ctrl] uptime=440423538ms, frames_total=5496569, dropped=0
+[2026-08-10 13:29:34] [ctrl] uptime=440483642ms, frames_total=5497320, dropped=0
+[2026-08-10 13:30:34] [ctrl] uptime=440543699ms, frames_total=5498071, dropped=0
+[2026-08-10 13:31:35] [ctrl] uptime=440603778ms, frames_total=5498822, dropped=0
+[2026-08-10 13:32:35] [ctrl] uptime=440663858ms, frames_total=5499573, dropped=0
+[2026-08-10 13:33:35] [ctrl] uptime=440723948ms, frames_total=5500324, dropped=0
+[2026-08-10 13:34:35] [ctrl] uptime=440784031ms, frames_total=5501075, dropped=0
+[2026-08-10 13:35:35] [ctrl] uptime=440844098ms, frames_total=5501826, dropped=0
+[2026-08-10 13:36:35] [ctrl] uptime=440904202ms, frames_total=5502577, dropped=0
+[2026-08-10 13:37:35] [ctrl] uptime=440964258ms, frames_total=5503328, dropped=0
+[2026-08-10 13:38:35] [ctrl] uptime=441024361ms, frames_total=5504079, dropped=0
+[2026-08-10 13:39:35] [ctrl] uptime=441084418ms, frames_total=5504830, dropped=0
+[2026-08-10 13:40:35] [ctrl] uptime=441144498ms, frames_total=5505581, dropped=0
+[2026-08-10 13:41:35] [ctrl] uptime=441204578ms, frames_total=5506332, dropped=0
+[2026-08-10 13:42:35] [ctrl] uptime=441264659ms, frames_total=5507083, dropped=0
+[2026-08-10 13:43:35] [ctrl] uptime=441324737ms, frames_total=5507834, dropped=0
+[2026-08-10 13:44:36] [ctrl] uptime=441384827ms, frames_total=5508585, dropped=0
+[2026-08-10 13:45:36] [ctrl] uptime=441444909ms, frames_total=5509336, dropped=0
+[2026-08-10 13:46:36] [ctrl] uptime=441504978ms, frames_total=5510087, dropped=0
+[2026-08-10 13:47:36] [ctrl] uptime=441565070ms, frames_total=5510838, dropped=0
+[2026-08-10 13:48:36] [ctrl] uptime=441625138ms, frames_total=5511589, dropped=0
+[2026-08-10 13:49:36] [ctrl] uptime=441685218ms, frames_total=5512340, dropped=0
+[2026-08-10 13:50:36] [ctrl] uptime=441745311ms, frames_total=5513091, dropped=0
+[2026-08-10 13:51:36] [ctrl] uptime=441805397ms, frames_total=5513842, dropped=0
+[2026-08-10 13:52:36] [ctrl] uptime=441865458ms, frames_total=5514593, dropped=0
+[2026-08-10 13:53:36] [ctrl] uptime=441925554ms, frames_total=5515344, dropped=0
+[2026-08-10 13:54:36] [ctrl] uptime=441985627ms, frames_total=5516095, dropped=0
+[2026-08-10 13:55:36] [ctrl] uptime=442045698ms, frames_total=5516846, dropped=0
+[2026-08-10 13:56:36] [ctrl] uptime=442105798ms, frames_total=5517597, dropped=0
+[2026-08-10 13:57:37] [ctrl] uptime=442165858ms, frames_total=5518348, dropped=0
+[2026-08-10 13:58:37] [ctrl] uptime=442225939ms, frames_total=5519099, dropped=0
+[2026-08-10 13:59:37] [ctrl] uptime=442286030ms, frames_total=5519850, dropped=0
+[2026-08-10 14:00:00] 
+===== HOURLY SUMMARY 2026-08-10 14:00 =====
+  frames        : 45001 (~12.50/s)
+  cksum errors  : 0
+  seq dropped   : 0
+  dups          : 0
+  reboots       : 0
+  stream disc.  : 0
+  ctrl failures : 0
+  stalls        : 0
+  --- cumulative ---
+  frames        : 5520135
+  dropped total : 0
+  reboots total : 0
+==============================
+
+[2026-08-10 14:00:37] [ctrl] uptime=442346113ms, frames_total=5520601, dropped=0
+[2026-08-10 14:01:37] [ctrl] uptime=442406202ms, frames_total=5521352, dropped=0
+[2026-08-10 14:02:37] [ctrl] uptime=442466258ms, frames_total=5522103, dropped=0
+[2026-08-10 14:03:37] [ctrl] uptime=442526338ms, frames_total=5522854, dropped=0
+[2026-08-10 14:04:37] [ctrl] uptime=442586437ms, frames_total=5523605, dropped=0
+[2026-08-10 14:05:37] [ctrl] uptime=442646498ms, frames_total=5524356, dropped=0
+[2026-08-10 14:06:37] [ctrl] uptime=442706602ms, frames_total=5525107, dropped=0
+[2026-08-10 14:07:37] [ctrl] uptime=442766658ms, frames_total=5525858, dropped=0
+[2026-08-10 14:08:37] [ctrl] uptime=442826738ms, frames_total=5526609, dropped=0
+[2026-08-10 14:09:37] [ctrl] uptime=442886818ms, frames_total=5527360, dropped=0
+[2026-08-10 14:10:38] [ctrl] uptime=442946898ms, frames_total=5528111, dropped=0
+[2026-08-10 14:11:38] [ctrl] uptime=443006994ms, frames_total=5528862, dropped=0
+[2026-08-10 14:12:38] [ctrl] uptime=443067058ms, frames_total=5529613, dropped=0
+[2026-08-10 14:13:38] [ctrl] uptime=443127138ms, frames_total=5530364, dropped=0
+[2026-08-10 14:14:38] [ctrl] uptime=443187217ms, frames_total=5531115, dropped=0
+[2026-08-10 14:15:38] [ctrl] uptime=443247322ms, frames_total=5531866, dropped=0
+[2026-08-10 14:16:38] [ctrl] uptime=443307378ms, frames_total=5532617, dropped=0
+[2026-08-10 14:17:38] [ctrl] uptime=443367458ms, frames_total=5533368, dropped=0
+[2026-08-10 14:18:38] [ctrl] uptime=443427538ms, frames_total=5534119, dropped=0
+[2026-08-10 14:19:38] [ctrl] uptime=443487636ms, frames_total=5534870, dropped=0
+[2026-08-10 14:20:38] [ctrl] uptime=443547721ms, frames_total=5535621, dropped=0
+[2026-08-10 14:21:38] [ctrl] uptime=443607797ms, frames_total=5536372, dropped=0
+[2026-08-10 14:22:39] [ctrl] uptime=443667858ms, frames_total=5537123, dropped=0
+[2026-08-10 14:23:39] [ctrl] uptime=443727956ms, frames_total=5537874, dropped=0
+[2026-08-10 14:24:39] [ctrl] uptime=443788031ms, frames_total=5538625, dropped=0
+[2026-08-10 14:25:39] [ctrl] uptime=443848098ms, frames_total=5539376, dropped=0
+[2026-08-10 14:26:39] [ctrl] uptime=443908179ms, frames_total=5540127, dropped=0
+[2026-08-10 14:27:39] [ctrl] uptime=443968279ms, frames_total=5540878, dropped=0
+[2026-08-10 14:28:39] [ctrl] uptime=444028338ms, frames_total=5541629, dropped=0
+[2026-08-10 14:29:39] [ctrl] uptime=444088418ms, frames_total=5542380, dropped=0
+[2026-08-10 14:30:39] [ctrl] uptime=444148513ms, frames_total=5543131, dropped=0
+[2026-08-10 14:31:39] [ctrl] uptime=444208591ms, frames_total=5543882, dropped=0
+[2026-08-10 14:32:39] [ctrl] uptime=444268673ms, frames_total=5544633, dropped=0
+[2026-08-10 14:33:39] [ctrl] uptime=444328738ms, frames_total=5545384, dropped=0
+[2026-08-10 14:34:39] [ctrl] uptime=444388818ms, frames_total=5546135, dropped=0
+[2026-08-10 14:35:40] [ctrl] uptime=444448920ms, frames_total=5546886, dropped=0
+[2026-08-10 14:36:40] [ctrl] uptime=444508977ms, frames_total=5547637, dropped=0
+[2026-08-10 14:37:40] [ctrl] uptime=444569058ms, frames_total=5548388, dropped=0
+[2026-08-10 14:38:40] [ctrl] uptime=444629138ms, frames_total=5549139, dropped=0
+[2026-08-10 14:39:40] [ctrl] uptime=444689229ms, frames_total=5549890, dropped=0
+[2026-08-10 14:40:40] [ctrl] uptime=444749298ms, frames_total=5550641, dropped=0
+[2026-08-10 14:41:40] [ctrl] uptime=444809399ms, frames_total=5551392, dropped=0
+[2026-08-10 14:42:40] [ctrl] uptime=444869458ms, frames_total=5552143, dropped=0
+[2026-08-10 14:43:40] [ctrl] uptime=444929547ms, frames_total=5552894, dropped=0
+[2026-08-10 14:44:40] [ctrl] uptime=444989638ms, frames_total=5553645, dropped=0
+[2026-08-10 14:45:40] [ctrl] uptime=445049710ms, frames_total=5554396, dropped=0
+[2026-08-10 14:46:40] [ctrl] uptime=445109796ms, frames_total=5555147, dropped=0
+[2026-08-10 14:47:40] [ctrl] uptime=445169858ms, frames_total=5555898, dropped=0
+[2026-08-10 14:48:41] [ctrl] uptime=445229948ms, frames_total=5556649, dropped=0
+[2026-08-10 14:49:41] [ctrl] uptime=445290028ms, frames_total=5557400, dropped=0
+[2026-08-10 14:50:41] [ctrl] uptime=445350120ms, frames_total=5558151, dropped=0
+[2026-08-10 14:51:41] [ctrl] uptime=445410178ms, frames_total=5558902, dropped=0
+[2026-08-10 14:52:41] [ctrl] uptime=445470273ms, frames_total=5559653, dropped=0
+[2026-08-10 14:53:41] [ctrl] uptime=445530351ms, frames_total=5560404, dropped=0
+[2026-08-10 14:54:41] [ctrl] uptime=445590441ms, frames_total=5561155, dropped=0
+[2026-08-10 14:55:41] [ctrl] uptime=445650498ms, frames_total=5561906, dropped=0
+[2026-08-10 14:56:41] [ctrl] uptime=445710578ms, frames_total=5562657, dropped=0
+[2026-08-10 14:57:41] [ctrl] uptime=445770677ms, frames_total=5563408, dropped=0
+[2026-08-10 14:58:41] [ctrl] uptime=445830749ms, frames_total=5564159, dropped=0
+[2026-08-10 14:59:41] [ctrl] uptime=445890835ms, frames_total=5564910, dropped=0
+[2026-08-10 15:00:00] 
+===== HOURLY SUMMARY 2026-08-10 15:00 =====
+  frames        : 45002 (~12.50/s)
+  cksum errors  : 0
+  seq dropped   : 0
+  dups          : 0
+  reboots       : 0
+  stream disc.  : 0
+  ctrl failures : 0
+  stalls        : 0
+  --- cumulative ---
+  frames        : 5565137
+  dropped total : 0
+  reboots total : 0
+==============================
+
+[2026-08-10 15:00:41] [ctrl] uptime=445950898ms, frames_total=5565661, dropped=0
+[2026-08-10 15:01:42] [ctrl] uptime=446010978ms, frames_total=5566412, dropped=0
+[2026-08-10 15:02:42] [ctrl] uptime=446071073ms, frames_total=5567163, dropped=0
+[2026-08-10 15:03:42] [ctrl] uptime=446131138ms, frames_total=5567914, dropped=0
+[2026-08-10 15:04:42] [ctrl] uptime=446191218ms, frames_total=5568665, dropped=0
+[2026-08-10 15:05:42] [ctrl] uptime=446251316ms, frames_total=5569416, dropped=0
+[2026-08-10 15:06:42] [ctrl] uptime=446311378ms, frames_total=5570167, dropped=0
+[2026-08-10 15:07:42] [ctrl] uptime=446371458ms, frames_total=5570918, dropped=0
+[2026-08-10 15:08:42] [ctrl] uptime=446431538ms, frames_total=5571669, dropped=0
+[2026-08-10 15:09:42] [ctrl] uptime=446491620ms, frames_total=5572420, dropped=0
+[2026-08-10 15:10:42] [ctrl] uptime=446551699ms, frames_total=5573171, dropped=0
+[2026-08-10 15:11:42] [ctrl] uptime=446611778ms, frames_total=5573922, dropped=0
+[2026-08-10 15:12:42] [ctrl] uptime=446671858ms, frames_total=5574673, dropped=0
+[2026-08-10 15:13:42] [ctrl] uptime=446731953ms, frames_total=5575424, dropped=0
+[2026-08-10 15:14:43] [ctrl] uptime=446792018ms, frames_total=5576175, dropped=0
+[2026-08-10 15:15:43] [ctrl] uptime=446852098ms, frames_total=5576926, dropped=0
+[2026-08-10 15:16:43] [ctrl] uptime=446912178ms, frames_total=5577677, dropped=0
+[2026-08-10 15:17:43] [ctrl] uptime=446972258ms, frames_total=5578428, dropped=0
+[2026-08-10 15:18:43] [ctrl] uptime=447032338ms, frames_total=5579179, dropped=0
+[2026-08-10 15:19:43] [ctrl] uptime=447092418ms, frames_total=5579930, dropped=0
+[2026-08-10 15:20:43] [ctrl] uptime=447152498ms, frames_total=5580681, dropped=0
+[2026-08-10 15:21:43] [ctrl] uptime=447212578ms, frames_total=5581432, dropped=0
+[2026-08-10 15:22:43] [ctrl] uptime=447272658ms, frames_total=5582183, dropped=0
+[2026-08-10 15:23:43] [ctrl] uptime=447332738ms, frames_total=5582934, dropped=0
+[2026-08-10 15:24:43] [ctrl] uptime=447392817ms, frames_total=5583685, dropped=0
+[2026-08-10 15:25:43] [ctrl] uptime=447452910ms, frames_total=5584436, dropped=0
+[2026-08-10 15:26:43] [ctrl] uptime=447512978ms, frames_total=5585187, dropped=0
+[2026-08-10 15:27:44] [ctrl] uptime=447573058ms, frames_total=5585938, dropped=0
+[2026-08-10 15:28:44] [ctrl] uptime=447633138ms, frames_total=5586689, dropped=0
+[2026-08-10 15:29:44] [ctrl] uptime=447693233ms, frames_total=5587440, dropped=0
+[2026-08-10 15:30:44] [ctrl] uptime=447753322ms, frames_total=5588191, dropped=0
+[2026-08-10 15:31:44] [ctrl] uptime=447813389ms, frames_total=5588942, dropped=0
+[2026-08-10 15:32:44] [ctrl] uptime=447873458ms, frames_total=5589693, dropped=0
+[2026-08-10 15:33:44] [ctrl] uptime=447933549ms, frames_total=5590444, dropped=0
+[2026-08-10 15:34:44] [ctrl] uptime=447993618ms, frames_total=5591195, dropped=0
+[2026-08-10 15:35:44] [ctrl] uptime=448053698ms, frames_total=5591946, dropped=0
+[2026-08-10 15:36:44] [ctrl] uptime=448113800ms, frames_total=5592697, dropped=0
+[2026-08-10 15:37:44] [ctrl] uptime=448173857ms, frames_total=5593448, dropped=0
+[2026-08-10 15:38:44] [ctrl] uptime=448233959ms, frames_total=5594199, dropped=0
+[2026-08-10 15:39:45] [ctrl] uptime=448294039ms, frames_total=5594950, dropped=0
+[2026-08-10 15:40:45] [ctrl] uptime=448354098ms, frames_total=5595701, dropped=0
+[2026-08-10 15:41:45] [ctrl] uptime=448414203ms, frames_total=5596452, dropped=0
+[2026-08-10 15:42:45] [ctrl] uptime=448474258ms, frames_total=5597203, dropped=0
+[2026-08-10 15:43:45] [ctrl] uptime=448534352ms, frames_total=5597954, dropped=0
+[2026-08-10 15:44:45] [ctrl] uptime=448594417ms, frames_total=5598705, dropped=0
+[2026-08-10 15:45:45] [ctrl] uptime=448654498ms, frames_total=5599456, dropped=0
+[2026-08-10 15:46:45] [ctrl] uptime=448714597ms, frames_total=5600207, dropped=0
+[2026-08-10 15:47:45] [ctrl] uptime=448774681ms, frames_total=5600958, dropped=0
+[2026-08-10 15:48:45] [ctrl] uptime=448834753ms, frames_total=5601709, dropped=0
+[2026-08-10 15:49:45] [ctrl] uptime=448894829ms, frames_total=5602460, dropped=0
+[2026-08-10 15:50:45] [ctrl] uptime=448954898ms, frames_total=5603211, dropped=0
+[2026-08-10 15:51:45] [ctrl] uptime=449014978ms, frames_total=5603962, dropped=0
+[2026-08-10 15:52:46] [ctrl] uptime=449075077ms, frames_total=5604713, dropped=0
+[2026-08-10 15:53:46] [ctrl] uptime=449135138ms, frames_total=5605464, dropped=0
+[2026-08-10 15:54:46] [ctrl] uptime=449195218ms, frames_total=5606215, dropped=0
+[2026-08-10 15:55:46] [ctrl] uptime=449255298ms, frames_total=5606966, dropped=0
+[2026-08-10 15:56:46] [ctrl] uptime=449315401ms, frames_total=5607717, dropped=0
+[2026-08-10 15:57:46] [ctrl] uptime=449375458ms, frames_total=5608468, dropped=0
+[2026-08-10 15:58:46] [ctrl] uptime=449435539ms, frames_total=5609219, dropped=0
+[2026-08-10 15:59:47] [ctrl] uptime=449495618ms, frames_total=5609970, dropped=0
+[2026-08-10 16:00:00] 
+===== HOURLY SUMMARY 2026-08-10 16:00 =====
+  frames        : 44985 (~12.50/s)
+  cksum errors  : 0
+  seq dropped   : 0
+  dups          : 0
+  reboots       : 0
+  stream disc.  : 0
+  ctrl failures : 0
+  stalls        : 0
+  --- cumulative ---
+  frames        : 5610122
+  dropped total : 0
+  reboots total : 0
+==============================
+
+[2026-08-10 16:00:47] [ctrl] uptime=449555698ms, frames_total=5610721, dropped=0
+[2026-08-10 16:01:48] [ctrl] uptime=449615778ms, frames_total=5611472, dropped=0
+[2026-08-10 16:02:48] [ctrl] uptime=449675872ms, frames_total=5612223, dropped=0
+[2026-08-10 16:03:48] [ctrl] uptime=449735939ms, frames_total=5612974, dropped=0
+[2026-08-10 16:04:48] [ctrl] uptime=449796018ms, frames_total=5613725, dropped=0
+[2026-08-10 16:05:48] [ctrl] uptime=449856119ms, frames_total=5614476, dropped=0
+[2026-08-10 16:06:48] [ctrl] uptime=449916188ms, frames_total=5615227, dropped=0
+[2026-08-10 16:07:48] [ctrl] uptime=449976280ms, frames_total=5615978, dropped=0
+[2026-08-10 16:08:48] [ctrl] uptime=450036338ms, frames_total=5616729, dropped=0
+[2026-08-10 16:09:48] [ctrl] uptime=450096418ms, frames_total=5617480, dropped=0
+[2026-08-10 16:10:48] [ctrl] uptime=450156498ms, frames_total=5618231, dropped=0
+[2026-08-10 16:11:48] [ctrl] uptime=450216578ms, frames_total=5618982, dropped=0
+[2026-08-10 16:12:48] [ctrl] uptime=450276670ms, frames_total=5619733, dropped=0
+[2026-08-10 16:13:49] [ctrl] uptime=450336754ms, frames_total=5620484, dropped=0
+[2026-08-10 16:14:49] [ctrl] uptime=450396842ms, frames_total=5621235, dropped=0
+[2026-08-10 16:15:49] [ctrl] uptime=450456898ms, frames_total=5621986, dropped=0
+[2026-08-10 16:16:49] [ctrl] uptime=450516999ms, frames_total=5622737, dropped=0
+[2026-08-10 16:17:49] [ctrl] uptime=450577058ms, frames_total=5623488, dropped=0
+[2026-08-10 16:18:49] [ctrl] uptime=450637139ms, frames_total=5624239, dropped=0
+[2026-08-10 16:19:49] [ctrl] uptime=450697218ms, frames_total=5624990, dropped=0
+[2026-08-10 16:20:49] [ctrl] uptime=450757298ms, frames_total=5625741, dropped=0
+[2026-08-10 16:21:49] [ctrl] uptime=450817378ms, frames_total=5626492, dropped=0
+[2026-08-10 16:22:49] [ctrl] uptime=450877474ms, frames_total=5627243, dropped=0
+[2026-08-10 16:23:49] [ctrl] uptime=450937553ms, frames_total=5627994, dropped=0
+[2026-08-10 16:24:49] [ctrl] uptime=450997618ms, frames_total=5628745, dropped=0
+[2026-08-10 16:25:49] [ctrl] uptime=451057698ms, frames_total=5629496, dropped=0
+[2026-08-10 16:26:50] [ctrl] uptime=451117790ms, frames_total=5630247, dropped=0
+[2026-08-10 16:27:50] [ctrl] uptime=451177879ms, frames_total=5630998, dropped=0
+[2026-08-10 16:28:50] [ctrl] uptime=451237956ms, frames_total=5631749, dropped=0
+[2026-08-10 16:29:50] [ctrl] uptime=451298018ms, frames_total=5632500, dropped=0
+[2026-08-10 16:30:50] [ctrl] uptime=451358111ms, frames_total=5633251, dropped=0
+[2026-08-10 16:31:50] [ctrl] uptime=451418178ms, frames_total=5634002, dropped=0
+[2026-08-10 16:32:50] [ctrl] uptime=451478258ms, frames_total=5634753, dropped=0
+[2026-08-10 16:33:50] [ctrl] uptime=451538350ms, frames_total=5635504, dropped=0
+[2026-08-10 16:34:50] [ctrl] uptime=451598434ms, frames_total=5636255, dropped=0
+[2026-08-10 16:35:50] [ctrl] uptime=451658515ms, frames_total=5637006, dropped=0
+[2026-08-10 16:36:50] [ctrl] uptime=451718596ms, frames_total=5637757, dropped=0
+[2026-08-10 16:37:50] [ctrl] uptime=451778658ms, frames_total=5638508, dropped=0
+[2026-08-10 16:38:50] [ctrl] uptime=451838757ms, frames_total=5639259, dropped=0
+[2026-08-10 16:39:51] [ctrl] uptime=451898840ms, frames_total=5640010, dropped=0
+[2026-08-10 16:40:51] [ctrl] uptime=451958898ms, frames_total=5640761, dropped=0
+[2026-08-10 16:41:51] [ctrl] uptime=452018997ms, frames_total=5641512, dropped=0
+[2026-08-10 16:42:51] [ctrl] uptime=452079058ms, frames_total=5642263, dropped=0
+[2026-08-10 16:43:51] [ctrl] uptime=452139155ms, frames_total=5643014, dropped=0
+[2026-08-10 16:44:51] [ctrl] uptime=452199217ms, frames_total=5643765, dropped=0
+[2026-08-10 16:45:51] [ctrl] uptime=452259298ms, frames_total=5644516, dropped=0
+[2026-08-10 16:46:51] [ctrl] uptime=452319378ms, frames_total=5645267, dropped=0
+[2026-08-10 16:47:51] [ctrl] uptime=452379470ms, frames_total=5646018, dropped=0
+[2026-08-10 16:48:51] [ctrl] uptime=452439564ms, frames_total=5646769, dropped=0
+[2026-08-10 16:49:51] [ctrl] uptime=452499641ms, frames_total=5647520, dropped=0
+[2026-08-10 16:50:51] [ctrl] uptime=452559712ms, frames_total=5648271, dropped=0
+[2026-08-10 16:51:51] [ctrl] uptime=452619778ms, frames_total=5649022, dropped=0
+[2026-08-10 16:52:52] [ctrl] uptime=452679883ms, frames_total=5649773, dropped=0
+[2026-08-10 16:53:52] [ctrl] uptime=452739938ms, frames_total=5650524, dropped=0
+[2026-08-10 16:54:52] [ctrl] uptime=452800042ms, frames_total=5651275, dropped=0
+[2026-08-10 16:55:52] [ctrl] uptime=452860118ms, frames_total=5652026, dropped=0
+[2026-08-10 16:56:52] [ctrl] uptime=452920202ms, frames_total=5652777, dropped=0
+[2026-08-10 16:57:52] [ctrl] uptime=452980258ms, frames_total=5653528, dropped=0
+[2026-08-10 16:58:52] [ctrl] uptime=453040362ms, frames_total=5654279, dropped=0
+[2026-08-10 16:59:52] [ctrl] uptime=453100432ms, frames_total=5655030, dropped=0
+[2026-08-10 17:00:00] 
+===== HOURLY SUMMARY 2026-08-10 17:00 =====
+  frames        : 45001 (~12.50/s)
+  cksum errors  : 0
+  seq dropped   : 0
+  dups          : 0
+  reboots       : 0
+  stream disc.  : 0
+  ctrl failures : 0
+  stalls        : 0
+  --- cumulative ---
+  frames        : 5655123
+  dropped total : 0
+  reboots total : 0
+==============================
+
+[2026-08-10 17:00:52] [ctrl] uptime=453160515ms, frames_total=5655781, dropped=0
+[2026-08-10 17:01:52] [ctrl] uptime=453220601ms, frames_total=5656532, dropped=0
+[2026-08-10 17:02:52] [ctrl] uptime=453280675ms, frames_total=5657283, dropped=0
+[2026-08-10 17:03:52] [ctrl] uptime=453340738ms, frames_total=5658034, dropped=0
+[2026-08-10 17:04:52] [ctrl] uptime=453400818ms, frames_total=5658785, dropped=0
+[2026-08-10 17:05:53] [ctrl] uptime=453460898ms, frames_total=5659536, dropped=0
+[2026-08-10 17:06:53] [ctrl] uptime=453520978ms, frames_total=5660287, dropped=0
+[2026-08-10 17:07:53] [ctrl] uptime=453581058ms, frames_total=5661038, dropped=0
+[2026-08-10 17:08:53] [ctrl] uptime=453641138ms, frames_total=5661789, dropped=0
+[2026-08-10 17:09:53] [ctrl] uptime=453701218ms, frames_total=5662540, dropped=0
+[2026-08-10 17:10:53] [ctrl] uptime=453761298ms, frames_total=5663291, dropped=0
+[2026-08-10 17:11:53] [ctrl] uptime=453821378ms, frames_total=5664042, dropped=0
+[2026-08-10 17:12:53] [ctrl] uptime=453881482ms, frames_total=5664793, dropped=0
+[2026-08-10 17:13:53] [ctrl] uptime=453941538ms, frames_total=5665544, dropped=0
+[2026-08-10 17:14:53] [ctrl] uptime=454001629ms, frames_total=5666295, dropped=0
+[2026-08-10 17:15:53] [ctrl] uptime=454061722ms, frames_total=5667046, dropped=0
+[2026-08-10 17:16:53] [ctrl] uptime=454121790ms, frames_total=5667797, dropped=0
+[2026-08-10 17:17:53] [ctrl] uptime=454181874ms, frames_total=5668548, dropped=0
+[2026-08-10 17:18:54] [ctrl] uptime=454241953ms, frames_total=5669299, dropped=0
+[2026-08-10 17:19:54] [ctrl] uptime=454302018ms, frames_total=5670050, dropped=0
+[2026-08-10 17:20:54] [ctrl] uptime=454362098ms, frames_total=5670801, dropped=0
+[2026-08-10 17:21:54] [ctrl] uptime=454422177ms, frames_total=5671552, dropped=0
+[2026-08-10 17:22:54] [ctrl] uptime=454482258ms, frames_total=5672303, dropped=0
+[2026-08-10 17:23:54] [ctrl] uptime=454542351ms, frames_total=5673054, dropped=0
+[2026-08-10 17:24:54] [ctrl] uptime=454602418ms, frames_total=5673805, dropped=0
+[2026-08-10 17:25:54] [ctrl] uptime=454662521ms, frames_total=5674556, dropped=0
+[2026-08-10 17:26:54] [ctrl] uptime=454722578ms, frames_total=5675307, dropped=0
+[2026-08-10 17:27:54] [ctrl] uptime=454782675ms, frames_total=5676058, dropped=0
+[2026-08-10 17:28:54] [ctrl] uptime=454842738ms, frames_total=5676809, dropped=0
+[2026-08-10 17:29:54] [ctrl] uptime=454902818ms, frames_total=5677560, dropped=0
+[2026-08-10 17:30:55] [ctrl] uptime=454962920ms, frames_total=5678311, dropped=0
+[2026-08-10 17:31:55] [ctrl] uptime=455022978ms, frames_total=5679062, dropped=0
+[2026-08-10 17:32:55] [ctrl] uptime=455083058ms, frames_total=5679813, dropped=0
+[2026-08-10 17:33:55] [ctrl] uptime=455143137ms, frames_total=5680564, dropped=0
+[2026-08-10 17:34:55] [ctrl] uptime=455203218ms, frames_total=5681315, dropped=0
+[2026-08-10 17:35:55] [ctrl] uptime=455263298ms, frames_total=5682066, dropped=0
+[2026-08-10 17:36:55] [ctrl] uptime=455323378ms, frames_total=5682817, dropped=0
+[2026-08-10 17:37:55] [ctrl] uptime=455383458ms, frames_total=5683568, dropped=0
+[2026-08-10 17:38:55] [ctrl] uptime=455443538ms, frames_total=5684319, dropped=0
+[2026-08-10 17:39:55] [ctrl] uptime=455503618ms, frames_total=5685070, dropped=0
+[2026-08-10 17:40:55] [ctrl] uptime=455563698ms, frames_total=5685821, dropped=0
+[2026-08-10 17:41:55] [ctrl] uptime=455623778ms, frames_total=5686572, dropped=0
+[2026-08-10 17:42:55] [ctrl] uptime=455683870ms, frames_total=5687323, dropped=0
+[2026-08-10 17:43:56] [ctrl] uptime=455743937ms, frames_total=5688074, dropped=0
+[2026-08-10 17:44:56] [ctrl] uptime=455804038ms, frames_total=5688825, dropped=0
+[2026-08-10 17:45:56] [ctrl] uptime=455864098ms, frames_total=5689576, dropped=0
+[2026-08-10 17:46:56] [ctrl] uptime=455924194ms, frames_total=5690327, dropped=0
+[2026-08-10 17:47:56] [ctrl] uptime=455984278ms, frames_total=5691078, dropped=0
+[2026-08-10 17:48:56] [ctrl] uptime=456044338ms, frames_total=5691829, dropped=0
+[2026-08-10 17:49:56] [ctrl] uptime=456104440ms, frames_total=5692580, dropped=0
+[2026-08-10 17:50:56] [ctrl] uptime=456164509ms, frames_total=5693331, dropped=0
+[2026-08-10 17:51:56] [ctrl] uptime=456224578ms, frames_total=5694082, dropped=0
+[2026-08-10 17:52:56] [ctrl] uptime=456284658ms, frames_total=5694833, dropped=0
+[2026-08-10 17:53:56] [ctrl] uptime=456344755ms, frames_total=5695584, dropped=0
+[2026-08-10 17:54:56] [ctrl] uptime=456404841ms, frames_total=5696335, dropped=0
+[2026-08-10 17:55:56] [ctrl] uptime=456464898ms, frames_total=5697086, dropped=0
+[2026-08-10 17:56:57] [ctrl] uptime=456524978ms, frames_total=5697837, dropped=0
+[2026-08-10 17:57:57] [ctrl] uptime=456585058ms, frames_total=5698588, dropped=0
+[2026-08-10 17:58:57] [ctrl] uptime=456645151ms, frames_total=5699339, dropped=0
+[2026-08-10 17:59:57] [ctrl] uptime=456705236ms, frames_total=5700090, dropped=0
+[2026-08-10 18:00:00] 
+===== HOURLY SUMMARY 2026-08-10 18:00 =====
+  frames        : 45002 (~12.50/s)
+  cksum errors  : 0
+  seq dropped   : 0
+  dups          : 0
+  reboots       : 0
+  stream disc.  : 0
+  ctrl failures : 0
+  stalls        : 0
+  --- cumulative ---
+  frames        : 5700125
+  dropped total : 0
+  reboots total : 0
+==============================
+
+[2026-08-10 18:00:57] [ctrl] uptime=456765298ms, frames_total=5700841, dropped=0
+[2026-08-10 18:01:57] [ctrl] uptime=456825394ms, frames_total=5701592, dropped=0
+[2026-08-10 18:02:57] [ctrl] uptime=456885458ms, frames_total=5702343, dropped=0
+[2026-08-10 18:03:57] [ctrl] uptime=456945562ms, frames_total=5703094, dropped=0
+[2026-08-10 18:04:57] [ctrl] uptime=457005618ms, frames_total=5703845, dropped=0
+[2026-08-10 18:05:57] [ctrl] uptime=457065698ms, frames_total=5704596, dropped=0
+[2026-08-10 18:06:57] [ctrl] uptime=457125778ms, frames_total=5705347, dropped=0
+[2026-08-10 18:07:57] [ctrl] uptime=457185859ms, frames_total=5706098, dropped=0
+[2026-08-10 18:08:57] [ctrl] uptime=457245938ms, frames_total=5706849, dropped=0
+[2026-08-10 18:09:58] [ctrl] uptime=457306018ms, frames_total=5707600, dropped=0
+[2026-08-10 18:10:58] [ctrl] uptime=457366097ms, frames_total=5708351, dropped=0
+[2026-08-10 18:11:58] [ctrl] uptime=457426178ms, frames_total=5709102, dropped=0
+[2026-08-10 18:12:58] [ctrl] uptime=457486258ms, frames_total=5709853, dropped=0
+[2026-08-10 18:13:58] [ctrl] uptime=457546338ms, frames_total=5710604, dropped=0
+[2026-08-10 18:14:58] [ctrl] uptime=457606418ms, frames_total=5711355, dropped=0
+[2026-08-10 18:15:58] [ctrl] uptime=457666498ms, frames_total=5712106, dropped=0
+[2026-08-10 18:16:58] [ctrl] uptime=457726578ms, frames_total=5712857, dropped=0
+[2026-08-10 18:17:58] [ctrl] uptime=457786683ms, frames_total=5713608, dropped=0
+[2026-08-10 18:18:58] [ctrl] uptime=457846737ms, frames_total=5714359, dropped=0
+[2026-08-10 18:19:58] [ctrl] uptime=457906832ms, frames_total=5715110, dropped=0
+[2026-08-10 18:20:58] [ctrl] uptime=457966898ms, frames_total=5715861, dropped=0
+[2026-08-10 18:21:58] [ctrl] uptime=458026978ms, frames_total=5716612, dropped=0
+[2026-08-10 18:22:59] [ctrl] uptime=458087081ms, frames_total=5717363, dropped=0
+[2026-08-10 18:23:59] [ctrl] uptime=458147138ms, frames_total=5718114, dropped=0
+[2026-08-10 18:24:59] [ctrl] uptime=458207227ms, frames_total=5718865, dropped=0
+[2026-08-10 18:25:59] [ctrl] uptime=458267298ms, frames_total=5719616, dropped=0
+[2026-08-10 18:26:59] [ctrl] uptime=458327394ms, frames_total=5720367, dropped=0
+[2026-08-10 18:27:59] [ctrl] uptime=458387458ms, frames_total=5721118, dropped=0
+[2026-08-10 18:28:59] [ctrl] uptime=458447554ms, frames_total=5721869, dropped=0
+[2026-08-10 18:29:59] [ctrl] uptime=458507641ms, frames_total=5722620, dropped=0
+[2026-08-10 18:30:59] [ctrl] uptime=458567698ms, frames_total=5723371, dropped=0
+[2026-08-10 18:31:59] [ctrl] uptime=458627778ms, frames_total=5724122, dropped=0
+[2026-08-10 18:32:59] [ctrl] uptime=458687868ms, frames_total=5724873, dropped=0
+[2026-08-10 18:33:59] [ctrl] uptime=458747954ms, frames_total=5725624, dropped=0
+[2026-08-10 18:34:59] [ctrl] uptime=458808020ms, frames_total=5726375, dropped=0
+[2026-08-10 18:36:00] [ctrl] uptime=458868099ms, frames_total=5727126, dropped=0
+[2026-08-10 18:37:00] [ctrl] uptime=458928199ms, frames_total=5727877, dropped=0
+[2026-08-10 18:38:00] [ctrl] uptime=458988275ms, frames_total=5728628, dropped=0
+[2026-08-10 18:39:00] [ctrl] uptime=459048338ms, frames_total=5729379, dropped=0
+[2026-08-10 18:40:00] [ctrl] uptime=459108432ms, frames_total=5730130, dropped=0
+[2026-08-10 18:41:00] [ctrl] uptime=459168518ms, frames_total=5730881, dropped=0
+[2026-08-10 18:42:00] [ctrl] uptime=459228578ms, frames_total=5731632, dropped=0
+[2026-08-10 18:43:00] [ctrl] uptime=459288674ms, frames_total=5732383, dropped=0
+[2026-08-10 18:44:00] [ctrl] uptime=459348738ms, frames_total=5733134, dropped=0
+[2026-08-10 18:45:00] [ctrl] uptime=459408818ms, frames_total=5733885, dropped=0
+[2026-08-10 18:46:00] [ctrl] uptime=459468898ms, frames_total=5734636, dropped=0
+[2026-08-10 18:47:00] [ctrl] uptime=459528978ms, frames_total=5735387, dropped=0
+[2026-08-10 18:48:01] [ctrl] uptime=459589058ms, frames_total=5736138, dropped=0
+[2026-08-10 18:49:01] [ctrl] uptime=459649150ms, frames_total=5736889, dropped=0
+[2026-08-10 18:50:01] [ctrl] uptime=459709233ms, frames_total=5737640, dropped=0
+[2026-08-10 18:51:01] [ctrl] uptime=459769298ms, frames_total=5738391, dropped=0
+[2026-08-10 18:52:01] [ctrl] uptime=459829378ms, frames_total=5739142, dropped=0
+[2026-08-10 18:53:01] [ctrl] uptime=459889457ms, frames_total=5739893, dropped=0
+[2026-08-10 18:54:01] [ctrl] uptime=459949549ms, frames_total=5740644, dropped=0
+[2026-08-10 18:55:01] [ctrl] uptime=460009618ms, frames_total=5741395, dropped=0
+[2026-08-10 18:56:01] [ctrl] uptime=460069716ms, frames_total=5742146, dropped=0
+[2026-08-10 18:57:01] [ctrl] uptime=460129778ms, frames_total=5742897, dropped=0
+[2026-08-10 18:58:01] [ctrl] uptime=460189858ms, frames_total=5743648, dropped=0
+[2026-08-10 18:59:01] [ctrl] uptime=460249938ms, frames_total=5744399, dropped=0
+[2026-08-10 19:00:00] 
+===== HOURLY SUMMARY 2026-08-10 19:00 =====
+  frames        : 45001 (~12.50/s)
+  cksum errors  : 0
+  seq dropped   : 0
+  dups          : 0
+  reboots       : 0
+  stream disc.  : 0
+  ctrl failures : 0
+  stalls        : 0
+  --- cumulative ---
+  frames        : 5745126
+  dropped total : 0
+  reboots total : 0
+==============================
+
+[2026-08-10 19:00:01] [ctrl] uptime=460310019ms, frames_total=5745150, dropped=0
+[2026-08-10 19:01:02] [ctrl] uptime=460370113ms, frames_total=5745901, dropped=0
+[2026-08-10 19:02:02] [ctrl] uptime=460430178ms, frames_total=5746652, dropped=0
+[2026-08-10 19:03:02] [ctrl] uptime=460490277ms, frames_total=5747403, dropped=0
+[2026-08-10 19:04:02] [ctrl] uptime=460550359ms, frames_total=5748154, dropped=0
+[2026-08-10 19:05:02] [ctrl] uptime=460610434ms, frames_total=5748905, dropped=0
+[2026-08-10 19:06:02] [ctrl] uptime=460670498ms, frames_total=5749656, dropped=0

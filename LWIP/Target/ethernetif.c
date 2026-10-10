@@ -29,7 +29,6 @@
 #include "lwip/ethip6.h"
 #include "ethernetif.h"
 #include "dp83848.h"
-#include "gpio.h"
 #include <string.h>
 
 /* Within 'USER CODE' section, code will be kept by default at each generation */
@@ -207,10 +206,10 @@ static void low_level_init(struct netif *netif)
 
 /* USER CODE BEGIN PHY_PRE_CONFIG */
 #ifdef PHY_RST_BYPASS
-  /* 测试模式: PF11 永久置高，跳过复位脉冲 */
+  /* 测试模式: PF12 永久置高，跳过复位脉冲 */
   HAL_GPIO_WritePin(RESET_PHY_GPIO_Port, RESET_PHY_Pin, GPIO_PIN_SET);
 #else
-  /* PHY 硬件复位脉冲（PF11 LOW→HIGH），在 MAC 初始化之后、DP83848_Init 之前执行。
+  /* PHY 硬件复位脉冲（PF12 LOW→HIGH），在 MAC 初始化之后、DP83848_Init 之前执行。
      复位函数内部已等待 50ms 保证 PHY 寄存器/晶振就绪，再补 50ms 让晶振稳定 */
   MX_GPIO_PhyReset();
   HAL_Delay(50);

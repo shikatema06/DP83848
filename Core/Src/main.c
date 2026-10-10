@@ -18,6 +18,7 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+#include "i2c.h"
 #include "lwip.h"
 #include "spi.h"
 #include "tim.h"
@@ -28,6 +29,8 @@
 /* USER CODE BEGIN Includes */
 #include "tcp_echoserver.h"
 #include "net_config.h"
+
+#include "i2c.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -106,17 +109,17 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
-  HAL_GPIO_TogglePin(GPIOE, GPIO_PIN_7);   /* 诊断: App 跑到这里 → PE7 翻转 */
-  MX_USART1_UART_Init();    /* USART1 提前初始化：让 App 跳过来后第一行可见 */
-  HAL_UART_Transmit(&huart1, (uint8_t *)"BOOT OK\r\n", 9, 100);
   MX_SPI1_Init();
   MX_SPI2_Init();
   MX_SPI3_Init();
+  MX_USART1_UART_Init();
   MX_USART2_UART_Init();
   MX_USART3_UART_Init();
   MX_LWIP_Init();
+  MX_I2C2_Init();
   MX_TIM7_Init();
   /* USER CODE BEGIN 2 */
+  
   tcp_echoserver_init();
   /* USER CODE END 2 */
 

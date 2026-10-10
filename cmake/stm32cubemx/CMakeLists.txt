@@ -40,6 +40,7 @@ set(MX_Application_Src
     ${CMAKE_CURRENT_SOURCE_DIR}/../../LWIP/Target/ethernetif.c
     ${CMAKE_CURRENT_SOURCE_DIR}/../../Core/Src/main.c
     ${CMAKE_CURRENT_SOURCE_DIR}/../../Core/Src/gpio.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/../../Core/Src/i2c.c
     ${CMAKE_CURRENT_SOURCE_DIR}/../../Core/Src/spi.c
     ${CMAKE_CURRENT_SOURCE_DIR}/../../Core/Src/tim.c
     ${CMAKE_CURRENT_SOURCE_DIR}/../../Core/Src/usart.c
@@ -70,6 +71,8 @@ set(STM32_Drivers_Src
     ${CMAKE_CURRENT_SOURCE_DIR}/../../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c
     ${CMAKE_CURRENT_SOURCE_DIR}/../../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c
     ${CMAKE_CURRENT_SOURCE_DIR}/../../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_eth.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/../../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/../../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c_ex.c
     ${CMAKE_CURRENT_SOURCE_DIR}/../../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c
     ${CMAKE_CURRENT_SOURCE_DIR}/../../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c
     ${CMAKE_CURRENT_SOURCE_DIR}/../../Drivers/BSP/Components/dp83848/dp83848.c
@@ -166,15 +169,29 @@ set(MX_LINK_DIRS
 
 )
 # Project static libraries
-set(MX_LINK_LIBS
+set(MX_LINK_LIBS 
     STM32_Drivers
     ${TOOLCHAIN_LINK_LIBRARIES}
     LwIP
+	
 )
+# ============================================================================
+# !! The export block below is HAND-WRITTEN. CubeMX "GENERATE CODE" deletes it !!
+#
+# Symptoms when missing:
+#   - app_a / app_b / app_c get an empty MX_Application_Src / MX_LINK_LIBS
+#   - Bootloader: "No SOURCES given to target: STM32_Drivers_Boot"
+# Restore with: tools/restore_after_cubemx.ps1
+# CubeMX only knows the content it generated itself.
+# ============================================================================
 # Export to parent scope so extra App targets (e.g. Slot B builds) can reuse
 # the same CubeMX-generated application sources and link libs.
 set(MX_LINK_LIBS ${MX_LINK_LIBS} PARENT_SCOPE)
 set(MX_Application_Src ${MX_Application_Src} PARENT_SCOPE)
+# Exported so the Bootloader can build its own -Os copy of the HAL
+# (see Bootloader/CMakeLists.txt -> STM32_Drivers_Boot)
+set(STM32_Drivers_Src ${STM32_Drivers_Src} PARENT_SCOPE)
+
 # Interface library for includes and symbols
 add_library(stm32cubemx INTERFACE)
 target_include_directories(stm32cubemx INTERFACE ${MX_Include_Dirs})

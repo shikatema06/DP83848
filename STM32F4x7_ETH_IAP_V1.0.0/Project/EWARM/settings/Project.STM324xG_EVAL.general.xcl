@@ -1,0 +1,15 @@
+"C:\Program Files (x86)\IAR_For_Arm\arm\bin\armproc.dll" 
+
+"C:\Program Files (x86)\IAR_For_Arm\arm\bin\armjlink2.dll" 
+
+"D:\STM32_Code\STM32F4x7_ETH_IAP_V1.0.0\Project\EWARM\STM324xG_EVAL\Exe\Project.out" 
+
+--plugin "C:\Program Files (x86)\IAR_For_Arm\arm\bin\armbat.dll" 
+
+--device_macro "C:\Program Files (x86)\IAR_For_Arm\arm\config\debugger\ST\STM32F4xx.dmac" 
+
+--flash_loader "C:\Program Files (x86)\IAR_For_Arm\arm\config\flashloader\ST\FlashSTM32F4xxx.board" 
+
+
+
+

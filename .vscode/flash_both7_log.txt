@@ -1,0 +1,27 @@
+
+============================================
+ Generating App BIN from ELF ...
+============================================
+[OK] App BIN generated
+
+============================================
+ Generating Bootloader HEX from ELF ...
+============================================
+[OK] Bootloader HEX generated
+
+============================================
+ Patching boot_valid into Bootloader HEX ...
+============================================
+ADDED: Slot A meta at 0x0800FFD0
+       img_len=92432 (0x00016910), img_crc32=0x57644256
+ADDED: boot_slot=0x55AA0000 (active=A) at 0x0800FFFC
+OK: c:\ST_project\DP83848\.vscode\..\build\Debug\Bootloader\DP83848_BOOT.hex patched
+
+============================================
+ STEP 1/4: Erasing all Flash ...
+============================================
+STM32 ST-LINK CLI v3.6.0.0
+STM32 ST-LINK Command Line Interface
+
+No ST-LINK detected!
+[FAIL] Erase failed

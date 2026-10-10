@@ -1,0 +1,6 @@
+
+============================================
+ Generating App BIN from ELF ...
+============================================
+arm-none-eabi-objcopy: 'c:\ST_project\DP83848\.vscode\..\build\Debug\DP83848.elf': No such file
+[FAIL] App objcopy failed

@@ -47,6 +47,7 @@ target_sources(${CMAKE_PROJECT_NAME} PRIVATE
     # Add user sources here
     ${CMAKE_CURRENT_SOURCE_DIR}/Core/Src/net_config.c
     ${CMAKE_CURRENT_SOURCE_DIR}/Core/Src/tcp_echoserver.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/Core/Src/bsp_pins.c
     ${CMAKE_CURRENT_SOURCE_DIR}/ADS8354/ads8354.c
 )
 
@@ -94,6 +95,7 @@ function(add_slot_app NAME LINK_SCRIPT VMAJ VMIN VPATCH)
         ${MX_Application_Src}
         ${CMAKE_CURRENT_SOURCE_DIR}/Core/Src/net_config.c
         ${CMAKE_CURRENT_SOURCE_DIR}/Core/Src/tcp_echoserver.c
+        ${CMAKE_CURRENT_SOURCE_DIR}/Core/Src/bsp_pins.c
         ${CMAKE_CURRENT_SOURCE_DIR}/ADS8354/ads8354.c
     )
     target_compile_definitions(${NAME} PRIVATE
