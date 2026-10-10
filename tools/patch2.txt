@@ -1,4 +1,0 @@
-﻿ADDED: Slot A meta at 0x0800FFD0
-       img_len=92432 (0x00016910), img_crc32=0x57644256
-ADDED: boot_slot=0x55AA0000 (active=A) at 0x0800FFFC
-OK: c:\ST_project\DP83848\build\Debug\Bootloader\DP83848_BOOT.hex patched

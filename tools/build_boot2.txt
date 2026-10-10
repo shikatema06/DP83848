@@ -1,9 +1,0 @@
-﻿[1/2] Building C object Bootloader/CMakeFiles/DP83848_BOOT.dir/bootloader_main.c.obj
-[2/2] Linking C executable Bootloader\DP83848_BOOT.elf
-C:/Users/hhqk/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/bin/ld.exe:C:/ST_project/DP83848/Bootloader/STM32F407XX_BOOT.ld:9: warning: redeclaration of memory region `RAM'
-C:/Users/hhqk/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/bin/ld.exe:C:/ST_project/DP83848/Bootloader/STM32F407XX_BOOT.ld:10: warning: redeclaration of memory region `CCMRAM'
-C:/Users/hhqk/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/bin/ld.exe:C:/ST_project/DP83848/Bootloader/STM32F407XX_BOOT.ld:11: warning: redeclaration of memory region `FLASH'
-Memory region         Used Size  Region Size  %age Used
-             RAM:       35944 B       128 KB     27.42%
-          CCMRAM:           0 B        64 KB      0.00%
-           FLASH:       46508 B        48 KB     94.62%

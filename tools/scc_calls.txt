@@ -1,7 +1,0 @@
-
-08007c48 <SystemClock_Config>:
- 8007cda:	f000 f81f 	bl	8007d1c <Error_Handler>
- 8007d08:	f000 f808 	bl	8007d1c <Error_Handler>
- 800927a:	f7fe fd4f 	bl	8007d1c <Error_Handler>
-
-
