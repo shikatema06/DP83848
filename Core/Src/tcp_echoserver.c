@@ -87,6 +87,10 @@ static volatile uint8_t  stream_packet_ready;
 static volatile uint8_t  stream_wr_buf;         /* ISR 当前写入 0/1 */
 static volatile uint8_t  stream_rd_buf;         /* 待发送缓冲 0/1 */
 static uint8_t           stream_frame[2][PKT_FRAME_LEN];
+static volatile uint32_t stream_drop_cnt;      /* 累计丢帧数 */
+static volatile uint32_t stream_drop_consec;   /* 连续丢帧数 */
+static volatile uint8_t  stream_stalled;       /* 断流标志：consec 越限后置 1 */
+
 
 static int32_t  spi_acc[SPI_CHAN_NUM];          /* 累加器 (5 次求和) */
 static uint8_t  spi_avg_cnt;                    /* 0..4 */
@@ -525,6 +529,7 @@ static struct pbuf *tcp_echoserver_handle_text_cmd(const char *data, uint16_t le
       "  status   - System status\r\n"
       "  ver      - Firmware version\r\n"
       "  uptime   - System uptime\r\n"
+      "  drop     - Drop statistics\r\n"
       "  help/?   - This help\r\n"
       "  <other>  - Echo back\r\n"
       "Binary frames (8 bytes): 0x02 0x01 <CMD> ... 0xDD 0xAA\r\n"
@@ -568,6 +573,14 @@ static struct pbuf *tcp_echoserver_handle_text_cmd(const char *data, uint16_t le
     resp_len = snprintf(response, sizeof(response),
       "Uptime: %lums = %luh %lum %lus\r\n",
       ms, h, m % 60, s % 60);
+  }
+  else if (strcmp(cmd, "drop") == 0)
+  {
+    resp_len = snprintf(response, sizeof(response),
+      "Drop: total=%lu consec=%lu stall=%u\r\n",
+      (unsigned long)stream_drop_cnt,
+      (unsigned long)stream_drop_consec,
+      (unsigned)stream_stalled);
   }
   else
   {
@@ -709,8 +722,14 @@ void tcp_echoserver_tim7_isr(void)
         stream_packet_ready = 1U;
         stream_wr_buf ^= 1U;
       }
+      else
+      {
+        stream_drop_cnt++;
+        stream_drop_consec++;
+      }
       /* 上一帧尚未发出则丢弃本帧，避免覆盖 rd 缓冲 */
     }
+    
   }
 }
 
@@ -731,6 +750,9 @@ void tcp_echoserver_spi_stream_poll(void)
 
   if (!stream_packet_ready)
     return;
+
+  if (stream_drop_consec >= 25U)
+    stream_stalled = 1U;
 
   if (!stream_enabled)
   {
@@ -773,10 +795,17 @@ void tcp_echoserver_spi_stream_poll(void)
 
   err = tcp_write(es->pcb, tx, PKT_FRAME_LEN, TCP_WRITE_FLAG_COPY);
   if (err != ERR_OK)
+  {
+    stream_drop_cnt++;
+    stream_drop_consec++;
     return;
+  }
+    
 
   tcp_output(es->pcb);
   stream_packet_ready = 0U;
+  stream_drop_consec = 0;
+  stream_stalled = 0;
 }
 
 

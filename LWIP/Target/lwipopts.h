@@ -32,7 +32,7 @@
 /* USER CODE BEGIN 0 */
 
 /* TCP/IP memory configuration for data transmission */
-#define MEM_SIZE                (10*1024)
+#define MEM_SIZE                (16*1024)
 #define MEMP_NUM_PBUF           10
 #define MEMP_NUM_UDP_PCB        6
 #define MEMP_NUM_TCP_PCB        10
